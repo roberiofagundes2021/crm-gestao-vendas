@@ -637,7 +637,6 @@ pre code {
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
-  background-color: #0098f0;
 }
 
 .row {
@@ -13385,7 +13384,7 @@ img {
   padding: 10px 30px 10px 15px;
   width: 100%;
   z-index: 1050;
-  background: #1a1e34;
+  background: #FFF;
 }
 
 .navbar .photo {
