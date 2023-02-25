@@ -22,12 +22,12 @@
     </head>
     <body class="{{ $class ?? '' }}">
         @auth()
-            <div class="wrapper">
+            <div class="offset-0.5 wrapper text-dark fixed-floating">
                     @include('layouts.navbars.sidebar')
-                <div class="main-panel">
+                <div class="main-panel text-dark">
                     @include('layouts.navbars.navbar')
                     <!-- mudar a cor geral bg-color-do-bootstrap-->
-                    <div class="content bg-secondary">
+                    <div class="content bg-secondary text-dark ">
                         @yield('content')
                     </div>
 

@@ -1,10 +1,10 @@
 <link href="{{asset('black')}}/css/sidebar.css)" rel="stylesheet">
 <div class="sidebar">
-    <div class="sidebar-wrapper">
+    <div class="sidebar-wrapper text-dark mt-1 ">
         <div class="logo">
              
         </div>
-        <ul class="nav" >
+        <ul class="nav fixed-floating" >
             
             <li @if ($pageSlug == 'dashboard') class="active " @endif>
                 <a " href="{{ route('home') }}">
