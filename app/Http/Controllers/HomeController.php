@@ -1,6 +1,9 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Charts\Bar;
+use App\Charts\linechart;
+use App\Charts\MonthlyUsersChart;
 
 class HomeController extends Controller
 {
@@ -19,8 +22,10 @@ class HomeController extends Controller
      *
      * @return \Illuminate\View\View
      */
-    public function index()
+    public function index(MonthlyUsersChart $chart)
     {
-        return view('dashboard');
+             return view('dashboard', ['chart' => $chart->build()]);
     }
+  
+    
 }

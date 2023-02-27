@@ -1,10 +1,11 @@
 @extends('layouts.app', ['pageSlug' => 'dashboard'])
 
+
 @section('content')
       
-        <div class="row justify-content-end mt-0 mr-5 g-5">
+        <div class="row justify-content-start mt-0 mr-5 g-5">
               <div class="col justify-content-start text-Secondary float-start ">
-            <h1 class="mt-5 ml-5 text-dark display-2">Dashboard</h1>
+            <h1 class="mt-3 ml-5 text-dark display-2">Dashboard</h1>
         </div>
             <div class="offset-2 row-sm-6 text-Secondary">
                     <div class="row-cols-2 justify-content-end ">
@@ -26,7 +27,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-12 mt-5 g-5 ">
+            <div class="col-12 mt-0 g-5 ">
                 <div class="offset-0.7 card mt-0 bg-light">
                         <!--cards -->
                             <div class=" row bg-secondary pl-5">
@@ -34,26 +35,73 @@
                                 <div class="offset-0.5 card mb-2 bg-secondary mt-1" style="width: 24rem;">
                                         <div class="card-header  ">
                                             <h5 class="card-title text-dark">ECOMMERCE PERSONALIZADO R$ 30.000,00</h5>
-                                            <p class="card-text text-dark">R$ 300,00 
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="16"
-                                                height="16" fill="currentColor" class="bi bi-check-square"
-                                                viewBox="0 0 16 16">
-                                                    <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1
-                                                    1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2
-                                                    2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
-                                                    <path d="M10.97 4.97a.75.75 0 0 1 1.071 1.05l-3.992 4.99a.75.75 0 0
-                                                    1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094
-                                                        2.093 3.473-4.425a.235.235 0 0 1 .02-.022z"/>
-                                                </svg>
-                                                asdsdddd
-                                                sdffffdsaasddsdsa
-                                                ssdaasdsd</p> 
+                                            <p class="card-text text-dark">
+
+                                                João Ferreira
+                                                <div class="col conten-justify-end text-dark pl-0">
+                                                    origem: Google ADS   Responsável: Djane 
+                                                </div>
+                                                <div class="card-header text-dark">
+                                                    Primeiro Contato 
+                                                    <div class="progress">
+                                                        <div class="progress-bar" role="progressbar" 
+                                                        style="width: 25%;" aria-valuenow="25"
+                                                        aria-valuemin="0" aria-valuemax="100">
+                                                            25%
+                                                        </div>
+                                                    </div>
+                                                    <!--cards-->
+                                                        <div class="card bg-secondary mt-2 text-dark">
+                                                            <div class="card-header">
+                                                                
+                                                            </div>
+                                                            <div class="card-body bg-secondary">
+                                                                <h5 class="card-title text-dark display-4">
+                                                                    Este Cliente fez o pedido de um<br> e-commerce totalmente personalizavel
+                                                                </h5>
+                                                                <button type="button" class="btn btn-primary">não deu para ver o texto</button>
+                                                                <button type="button" class="btn btn-primary">não deu para ver o texto</button>
+                                                                <button type="button" class="btn btn-primary">não deu para ver o texto</button>
+
+                                                                <!-- input-->
+                                                                <div class="input-group mb-2">
+                                                                    <div class="input-group-prepend">
+                                                                        <div class="input-group-text">
+                                                                            <svg xmlns="http://www.w3.org/2000/svg"
+                                                                                 width="16" height="16" fill="currentColor"
+                                                                                  class="bi bi-send" viewBox="0 0 16 16">
+                                                                                    <path d="M15.854.146a.5.5 0 0 1
+                                                                                        .11.54l-5.819 14.547a.75.75
+                                                                                        0 0 1-1.329.124l-3.178-4.995L.643
+                                                                                        7.184a.75.75 0 0 1
+                                                                                        .124-1.33L15.314.037a.5.5
+                                                                                        0 0 1 .54.11ZM6.636 10.07l2.761
+                                                                                        4.338L14.13 2.576 6.636 
+                                                                                        10.07Zm6.787-8.201L1.591
+                                                                                        6.602l4.339 2.76 7.494-7.493Z"/>
+                                                                            </svg>
+                                                                            </i>
+                                                                        </div>
+                                                                    </div>
+                                                                    <input type="text" class="form-control"
+                                                                    id="inlineFormInputGroup">
+                                                                </div>                                                          
+                                                                <!--fim do input-->
+
+                                                                
+                                                            </div>
+                                                        </div>
+
+
+                                                    <!--fim do cards-->
+                                                </div>   
+                                            </p> 
                                         </div>
                                 </div>
 
                                 <div class="offset-0.5 card mb-2 bg-secondary mt-1 " style="width: 14rem;">
                                         <div class="card-header text-dark">
-                                        
+                                             <!--selo-->
                                             <span>R$ 300,00</span>
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                                 class="bi bi-check-circle" viewBox="0 0 16 16">
@@ -62,6 +110,25 @@
                                                 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 
                                                 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z"/>
                                                 </svg>
+                                                <!--fim do selo-->
+
+                                                <!--novo selo-->
+                                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" 
+                                                 height="16" fill="currentColor" class="bi bi-patch-check-fill"
+                                                  viewBox="0 0 16 16">
+                                                <path d="M10.067.87a2.89 2.89 0 0 0-4.134 0l-.622.638-.89-.011a2.89
+                                                2.89 0 0 0-2.924 2.924l.01.89-.636.622a2.89 2.89 0 0 0
+                                                    0 4.134l.637.622-.011.89a2.89 2.89 0 0 0 2.924 2.924l.89-.01.622.636a2.89 2.89
+                                                    0 0 0 4.134 0l.622-.637.89.011a2.89 2.89 0 0 0
+                                                    2.924-2.924l-.01-.89.636-.622a2.89 2.89 0 0 0
+                                                    0-4.134l-.637-.622.011-.89a2.89 2.89 0 0 
+                                                    0-2.924-2.924l-.89.01-.622-.636zm.287
+                                                        5.984-3 3a.5.5 0 0 1-.708
+                                                        0l-1.5-1.5a.5.5 0 1 1 .708-.708L7 
+                                                        8.793l2.646-2.647a.5.5 0 0 1 .708.708z"/>
+                                                </svg>           
+                                                <!--fim do novo-->
+                                                
                                                 <!--trofeu-->
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                                 class="bi bi-trophy" viewBox="0 0 16 16">
@@ -79,127 +146,218 @@
                                                 </svg>
                                     
                                 </div>
-                                <div class="row mt-5 ">
-                                    <div class="col">
-                                        <div class="row ml-1">
+                                <div class="card-header text-dark">
+                                    Acessos aos Detalhes
+                                </div>
+
+                                <div class="card-header text-dark">
+                                    Acessos a Listagem
+                                </div>
+                               
+                                    <div class="row mt-5 ">
+                                        <div class="col">
+                                            <div class="row ml-1">
+                                                <!--whatsap -->
+                                                <i class="fab fa-whatsapp"></i>
+                                            </div>
+                                            <div class="row ml-1">
+                                                <!--telefone-->
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                            class="bi bi-telephone-fill" viewBox="0 0 16 16">
+                                            <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0
+                                            0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547
+                                                2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0
+                                                .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306
+                                                1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846
+                                                1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634
+                                                    0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/>
+                                            </svg>
+                                            </div>   
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <br>
+                                    
+
+                                <footer class="bg-secondary text-center text-dark position-static">
+                                    <div class="row mt-2">
+                                        <div class="col">
+                                        <i class="telephone">
+                                            <!--microfone -->
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                            class="bi bi-mic-fill" viewBox="0 0 16 16">
+                                                <path d="M5 3a3 3 0 0 1 6 0v5a3 3 0 0 1-6 0V3z"/>
+                                                <path d="M3.5 6.5A.5.5 0 0 1 4 7v1a4 4 0 0 0 8 0V7a.5.5 0 0
+                                                1 1 0v1a5 5 0 0 1-4.5 4.975V15h3a.5.5 0 0 1 0 1h-7a.5.5
+                                                0 0 1 0-1h3v-2.025A5 5 0 0 1 3 8V7a.5.5 0 0 1 .5-.5z"/>
+                                            </svg>
                                             <!--whatsap -->
                                             <i class="fab fa-whatsapp"></i>
-                                        </div>
-                                        <div class="row ml-1">
-                                            <!--telefone-->
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                        class="bi bi-telephone-fill" viewBox="0 0 16 16">
-                                        <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0
-                                        0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547
-                                            2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0
-                                            .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306
-                                            1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846
-                                            1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634
-                                                0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/>
-                                        </svg>
-                                        </div>   
+                                        <!--telefone-->
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                            class="bi bi-telephone-fill" viewBox="0 0 16 16">
+                                            <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0
+                                            0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547
+                                                2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0
+                                                .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306
+                                                1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846
+                                                1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634
+                                                    0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/>
+                                            </svg>
+                                            <!-- email-->
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                            class="bi bi-envelope" viewBox="0 0 16 16">
+                                            <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 
+                                            0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13
+                                            2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8
+                                                9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0
+                                                0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"/>
+                                            </svg>
+                                                                        
+                                            <!-- olhos -->
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                            class="bi bi-eye-fill" viewBox="0 0 16 16">
+                                                <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"/>
+                                                <path d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z"/>
+                                            </svg>
+                                        </i>
+                                        </div>    
+                                    </div>      
                                     </div>
-                                </div>
-
-
-                                <div class="row mt-2">
-                                    <div class="col">
-                                    <i class="telephone">
-                                        <!--microfone -->
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                        class="bi bi-mic-fill" viewBox="0 0 16 16">
-                                            <path d="M5 3a3 3 0 0 1 6 0v5a3 3 0 0 1-6 0V3z"/>
-                                            <path d="M3.5 6.5A.5.5 0 0 1 4 7v1a4 4 0 0 0 8 0V7a.5.5 0 0
-                                            1 1 0v1a5 5 0 0 1-4.5 4.975V15h3a.5.5 0 0 1 0 1h-7a.5.5
-                                            0 0 1 0-1h3v-2.025A5 5 0 0 1 3 8V7a.5.5 0 0 1 .5-.5z"/>
-                                        </svg>
-                                        <!--whatsap -->
-                                        <i class="fab fa-whatsapp"></i>
-                                    <!--telefone-->
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                        class="bi bi-telephone-fill" viewBox="0 0 16 16">
-                                        <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0
-                                        0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547
-                                            2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0
-                                            .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306
-                                            1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846
-                                            1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634
-                                                0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/>
-                                        </svg>
-                                        <!-- email-->
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                        class="bi bi-envelope" viewBox="0 0 16 16">
-                                        <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 
-                                        0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13
-                                        2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8
-                                            9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0
-                                            0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"/>
-                                        </svg>
-                                                                    
-                                        <!-- olhos -->
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                        class="bi bi-eye-fill" viewBox="0 0 16 16">
-                                            <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"/>
-                                            <path d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z"/>
-                                        </svg>
-                                    </i>
-                                    </div>    
-                                </div>      
-                                </div>
-
+                            </footer>
                                 <div class=" card mb-2 bg-secondary mt-0.5" style="width: 24rem;">
-                                        <div class="card-header ">
-                                        
-                                            <span class="offset-0.5 card-text text-dark">ECOMMERCE PERSONALIZADO
-                                                <span class="card-text text-sucess">
-                                                    R$ 30.000,00
-                                                </span>
-                                            
-                                                asdsdddd
-                                                sdffffdsaasddsdsa
-                                                ssdaasdsd</span> 
-                                        </div>
-                                </div>
-                            </div>      
+                                        <!--inicio do cards -->
+                                             <div class="card-header  ">
+                                            <h5 class="card-title text-dark">ECOMMERCE PERSONALIZADO R$ 30.000,00</h5>
+                                            <p class="card-text text-dark">
 
-                            <div class="row bg-secondary pl-5">
-                                
-                                <div class="card mb-2 bg-secondary me-2  mt-1 mr-2" style="width: 24rem;">
-                                <div class="h1 pt-0 display-4">Metas de Venda</div> 
-                                        <div class="card-header text-dark mt-5 pt-0  ">
-                                            <!--Barra de progresso-->
-                                                <!-- Added heading of the page -->                                         
-                                                    <!-- Creating a container class that 
-                                                        hold other useful classes -->
-                                                    <div class="container mt-5 pt-5">
-                                                        <div class="ui-widgets">
-                                                            <div class="ui-labels">Porcentagem do Objetivo</div>
-                                                            <div class="ui-values">50%</div>
-                                                            
+                                                João Ferreira
+                                                <div class="col conten-justify-end text-dark pl-0">
+                                                    origem: Google ADS   Responsável: Djane 
+                                                </div>
+                                                <div class="card-header text-dark">
+                                                    Primeiro Contato 
+                                                    <div class="progress">
+                                                        <div class="progress-bar" role="progressbar" 
+                                                        style="width: 25%;" aria-valuenow="25"
+                                                        aria-valuemin="0" aria-valuemax="100">
+                                                            25%
                                                         </div>
                                                     </div>
-                                            <!--fim da progresso-->
-                                        </div>
-                                </div>
+                                                        <div class="card bg-secondary mt-2 text-dark">
+                                                            <div class="card-header">
+                                                                
+                                                            </div>
+                                                            <div class="card-body bg-secondary">
+                                                                <h5 class="card-title text-dark display-4">
+                                                                    Este Cliente fez o pedido de um<br> e-commerce totalmente personalizavel
+                                                                </h5>
+                                                                <button type="button" class="btn btn-primary">não deu para ver o texto</button>
+                                                                <button type="button" class="btn btn-primary">não deu para ver o texto</button>
+                                                                <button type="button" class="btn btn-primary">não deu para ver o texto</button>
 
+                                                                <!-- input-->
+                                                                <div class="input-group mb-2">
+                                                                    <div class="input-group-prepend">
+                                                                        <div class="input-group-text">
+                                                                            <svg xmlns="http://www.w3.org/2000/svg"
+                                                                                 width="16" height="16" fill="currentColor"
+                                                                                  class="bi bi-send" viewBox="0 0 16 16">
+                                                                                    <path d="M15.854.146a.5.5 0 0 1
+                                                                                        .11.54l-5.819 14.547a.75.75
+                                                                                        0 0 1-1.329.124l-3.178-4.995L.643
+                                                                                        7.184a.75.75 0 0 1
+                                                                                        .124-1.33L15.314.037a.5.5
+                                                                                        0 0 1 .54.11ZM6.636 10.07l2.761
+                                                                                        4.338L14.13 2.576 6.636 
+                                                                                        10.07Zm6.787-8.201L1.591
+                                                                                        6.602l4.339 2.76 7.494-7.493Z"/>
+                                                                            </svg>
+                                                                            </i>
+                                                                        </div>
+                                                                    </div>
+                                                                    <input type="text" class="form-control"
+                                                                    id="inlineFormInputGroup">
+                                                                </div>                                                          
+                                                                <!--fim do input--> 
+                                                                                                                               
+                                                            </div>
+                                                            
+                                                        </div>
+                                                        
+                                                </div>   
+                                            </p> 
+
+                                        </div>
+
+                                        <!-- fim do cards-->
+
+                                        
+                                </div>
+                                <!--inicio do submenu-->
+                                
+
+                                <!-- fim do submenu-->
+                            </div> 
+                             
+                            <div class="row bg-secondary pl-5">
+                                <div class="card mb-2 bg-secondary me-2  mt-0 mr-2" style="width: 24rem;">
+                                <div class="card-header text-dark">
+                                    Metas de Venda
+                                </div> 
+                                    <div class="card-body ">
+                                        <!--Barra de progresso-->
+                                        <!-- Added heading of the page -->                                         
+                                        <!-- Creating a container class that 
+                                        hold other useful classes -->
+                                        <div class="container mt-0 pt-0">
+                                            <div class="ui-widgets">
+                                                <div class="ui-labels">Porcentagem do Objetivo</div>
+                                                    <div class="ui-values">50%</div>  
+                                                </div>
+                                            </div>
+                                            <!--fim da progresso--> 
+                                    </div>   
+                                </div>
                                 <div class="offset-0.5 card mb-2 bg-secondary mt-1" style="width: 14rem;">
                                         <div class="card-header ">
-                                            <h5 class="card-title text-dark ">Balanço</h5>
-                                            <h5 class="card-title text-dark ">R$ 27.540,00</h5>
-                                            <h5 class="card-title text-dark ">R$ 32.898,00</h5>
-                                                asdsdddd
-                                                sdffffdsaasddsdsa
-                                                ssdaasdsd</p> 
+                                           
                                         </div>
                                 </div>
                                 <div class="offset-0.5 card mb-2 bg-secondary mt-1" style="width: 24rem;">
-                                        <div class="card-header ">
-                                            <h5 class="card-title text-dark">ECOMMERCE PERSONALIZADO</h5>
-                                            <p class="card-text text-dark">João Ferreira asddddddddddddddddddddddddd
-                                                sdfffddddss
-                                                asdsdddd
-                                                sdffffdsaasddsdsa
-                                                ssdaasdsd</p> 
+                                        <div class="card-header h-50 mt-0 mx-6 ">
+                                            <h5 class="card-title text-dark display-3">Gráfico</h5>
+                                                <!-- Grafico-->
+                                                        <div class="container-sm px-4 my-5 mt-0 h-50 w-250">
+                                                            
+                                                            <div class="p-6 m-20 h-10 bg-white rounded shadow">
+                                                                {!! $chart->container() !!}
+                                                            </div>
+
+                                                        </div>
+
+                                                        <script src="{{ $chart->cdn() }}"></script>
+
+                                                        {{ $chart->script() }}
+                                                   
+                                                <!--fim do Grafico-->
+                                           
+                                            <canvas id="myChart" width="400" height="400"></canvas>
+                                        <script src="{{ mix('/js/app.js') }}"></script>
                                         </div>
                                 </div>
                             </div>   

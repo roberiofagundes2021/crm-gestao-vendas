@@ -5,6 +5,7 @@
  */
 
 import './bootstrap';
+import './mychart.js';
 import { createApp } from 'vue';
 
 /**
