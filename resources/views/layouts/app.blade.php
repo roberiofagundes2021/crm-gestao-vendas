@@ -22,7 +22,7 @@
     </head>
     <body class="{{ $class ?? '' }}">
         @auth()
-            <div class="offset-0.5 wrapper text-dark fixed-floating">
+            <div class="offset-0.5 wrapper text-dark position-relative">
                     @include('layouts.navbars.sidebar')
                 <div class="main-panel text-dark">
                     @include('layouts.navbars.navbar')
