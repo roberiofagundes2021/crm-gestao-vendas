@@ -311,7 +311,7 @@
                     <!--aqui -->
                     <!--inicio-->
                     <div class="card w-25 bg-secondary" >
-                        <div class="card-header text-dark"style="width: 9rem;">
+                        <div class="card-header text-dark"style="width: 10rem;">
                             <!--selo-->
                             <span>R$ 300,00</span>
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
