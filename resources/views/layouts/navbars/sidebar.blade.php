@@ -48,6 +48,114 @@
 
                     </ul>
                 </div>
+
+                <div  class="collapse show" id="empresa" aria-expanded="true" >
+                    <ul class="nav pl-4">
+                        <li @if ($pageSlug == 'profile') class="active " @endif>
+                            <a  href="{{ route('profile.edit') }}">
+                                <i class="tim-icons icon-single-02"></i>
+                                <p style="color:black;">{{ __('Usuario') }}</p>
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+
+                <div  class="collapse show" id="empresa" aria-expanded="true" >
+                    <ul class="nav pl-4">
+                        <li @if ($pageSlug == 'profile') class="active " @endif>
+                            <a  href="{{ route('profile.edit') }}">
+                                <i class="tim-icons icon-single-02"></i>
+                                <p style="color:black;">{{ __('Pessoas') }}</p>
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+
+                <div  class="collapse show" id="empresa" aria-expanded="true" >
+                    <ul class="nav pl-4">
+                        <li @if ($pageSlug == 'profile') class="active " @endif>
+                            <a  href="{{ route('profile.edit') }}">
+                                <i class="tim-icons icon-single-02"></i>
+                                <p style="color:black;">{{ __('Categorias') }}</p>
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+
+                <div  class="collapse show" id="empresa" aria-expanded="true" >
+                    <ul class="nav pl-4">
+                        <li @if ($pageSlug == 'profile') class="active " @endif>
+                            <a  href="{{ route('profile.edit') }}">
+                                <i class="tim-icons icon-single-02"></i>
+                                <p style="color:black;">{{ __('Segmentos') }}</p>
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+
+                <div  class="collapse show" id="empresa" aria-expanded="true" >
+                    <ul class="nav pl-4">
+                        <li @if ($pageSlug == 'profile') class="active " @endif>
+                            <a  href="{{ route('profile.edit') }}">
+                                <i class="tim-icons icon-single-02"></i>
+                                <p style="color:black;">{{ __('Responsável') }}</p>
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+
+                <div  class="collapse show" id="empresa" aria-expanded="true" >
+                    <ul class="nav pl-4">
+                        <li @if ($pageSlug == 'profile') class="active " @endif>
+                            <a  href="{{ route('profile.edit') }}">
+                                <i class="tim-icons icon-single-02"></i>
+                                <p style="color:black;">{{ __('Grupo de Administradores') }}</p>
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+
+                <div  class="collapse show" id="empresa" aria-expanded="true" >
+                    <ul class="nav pl-4">
+                        <li @if ($pageSlug == 'profile') class="active " @endif>
+                            <a  href="{{ route('profile.edit') }}">
+                                <i class="tim-icons icon-single-02"></i>
+                                <p style="color:black;">{{ __('Estado') }}</p>
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+
+                <div  class="collapse show" id="empresa" aria-expanded="true" >
+                    <ul class="nav pl-4">
+                        <li @if ($pageSlug == 'profile') class="active " @endif>
+                            <a  href="{{ route('profile.edit') }}">
+                                <i class="tim-icons icon-single-02"></i>
+                                <p style="color:black;">{{ __('Filtros') }}</p>
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+
+                <div  class="collapse show" id="empresa" aria-expanded="true" >
+                    <ul class="nav pl-4">
+                        <li @if ($pageSlug == 'profile') class="active " @endif>
+                            <a  href="{{ route('profile.edit') }}">
+                                <i class="tim-icons icon-single-02"></i>
+                                <p style="color:black;">{{ __('Módulos') }}</p>
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
             </li>
             <!-- fim de empresas-->
 
@@ -60,26 +168,175 @@
                     <span  class="nav-link-text">{{ __('Negocio') }}</span>
                     <b class="caret mt-1"></b>
                 </a>
-
-                <div  class="collapse show" id="negocio" >
+                <div  class="collapse show" id="negocio" aria-expanded="true" >
                     <ul class="nav pl-4">
                         <li @if ($pageSlug == 'profile') class="active " @endif>
                             <a  href="{{ route('profile.edit') }}">
                                 <i class="tim-icons icon-single-02"></i>
-                                <p style="color:black;">{{ __('User Profile') }}</p>
+                                <p style="color:black;">{{ __('Listar Todos') }}</p>
                             </a>
                         </li>
 
-                        <li  @if ($pageSlug == 'users') class="active " @endif>
-                            <a href="{{ route('user.index') }}">
-                                <i class="tim-icons icon-bullet-list-67"></i>
-                                <p style="color:black;">{{ __('User Management') }}</p>
+                    </ul>
+                </div>
+
+                <div  class="collapse show" id="negocio" aria-expanded="true" >
+                    <ul class="nav pl-4">
+                        <li @if ($pageSlug == 'profile') class="active " @endif>
+                            <a  href="{{ route('profile.edit') }}">
+                                <i class="tim-icons icon-single-02"></i>
+                                <p style="color:black;">{{ __('Listar sem Responsáveis') }}</p>
                             </a>
                         </li>
                     </ul>
                 </div>
+
+                <div  class="collapse show" id="negocio" aria-expanded="true" >
+                    <ul class="nav pl-4">
+                        <li @if ($pageSlug == 'profile') class="active " @endif>
+                            <a  href="{{ route('profile.edit') }}">
+                                <i class="tim-icons icon-single-02"></i>
+                                <p style="color:black;">{{ __('Funil') }}</p>
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+
+                <div  class="collapse show" id="negocio" aria-expanded="true" >
+                    <ul class="nav pl-4">
+                        <li @if ($pageSlug == 'profile') class="active " @endif>
+                            <a  href="{{ route('profile.edit') }}">
+                                <i class="tim-icons icon-single-02"></i>
+                                <p style="color:black;">{{ __('Cadastrar Novo') }}</p>
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+
+                <div  class="collapse show" id="negocio" aria-expanded="true" >
+                    <ul class="nav pl-4">
+                        <li @if ($pageSlug == 'profile') class="active " @endif>
+                            <a  href="{{ route('profile.edit') }}">
+                                <i class="tim-icons icon-single-02"></i>
+                                <p style="color:black;">{{ __('Responsável') }}</p>
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+
+                <div  class="collapse show" id="negocio" aria-expanded="true" >
+                    <ul class="nav pl-4">
+                        <li @if ($pageSlug == 'profile') class="active " @endif>
+                            <a  href="{{ route('profile.edit') }}">
+                                <i class="tim-icons icon-single-02"></i>
+                                <p style="color:black;">{{ __('Etapas') }}</p>
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+
+                <div  class="collapse show" id="negocio" aria-expanded="true" >
+                    <ul class="nav pl-4">
+                        <li @if ($pageSlug == 'profile') class="active " @endif>
+                            <a  href="{{ route('profile.edit') }}">
+                                <i class="tim-icons icon-single-02"></i>
+                                <p style="color:black;">{{ __('Status') }}</p>
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+
+                <div  class="collapse show" id="negocio" aria-expanded="true" >
+                    <ul class="nav pl-4">
+                        <li @if ($pageSlug == 'profile') class="active " @endif>
+                            <a  href="{{ route('profile.edit') }}">
+                                <i class="tim-icons icon-single-02"></i>
+                                <p style="color:black;">{{ __('Status 2') }}</p>
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+
+                <div  class="collapse show" id="negocio" aria-expanded="true" >
+                    <ul class="nav pl-4">
+                        <li @if ($pageSlug == 'profile') class="active " @endif>
+                            <a  href="{{ route('profile.edit') }}">
+                                <i class="tim-icons icon-single-02"></i>
+                                <p style="color:black;">{{ __('Filtros ') }}</p>
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+
+                <div  class="collapse show" id="negocio" aria-expanded="true" >
+                    <ul class="nav pl-4">
+                        <li @if ($pageSlug == 'profile') class="active " @endif>
+                            <a  href="{{ route('profile.edit') }}">
+                                <i class="tim-icons icon-single-02"></i>
+                                <p style="color:black;">{{ __('Categoria') }}</p>
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+
+                <div  class="collapse show" id="negocio" aria-expanded="true" >
+                    <ul class="nav pl-4">
+                        <li @if ($pageSlug == 'profile') class="active " @endif>
+                            <a  href="{{ route('profile.edit') }}">
+                                <i class="tim-icons icon-single-02"></i>
+                                <p style="color:black;">{{ __('Ação') }}</p>
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+
+                <div  class="collapse show" id="negocio" aria-expanded="true" >
+                    <ul class="nav pl-4">
+                        <li @if ($pageSlug == 'profile') class="active " @endif>
+                            <a  href="{{ route('profile.edit') }}">
+                                <i class="tim-icons icon-single-02"></i>
+                                <p style="color:black;">{{ __('Grupo de Administradores') }}</p>
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+
+                <div  class="collapse show" id="negocio" aria-expanded="true" >
+                    <ul class="nav pl-4">
+                        <li @if ($pageSlug == 'profile') class="active " @endif>
+                            <a  href="{{ route('profile.edit') }}">
+                                <i class="tim-icons icon-single-02"></i>
+                                <p style="color:black;">{{ __('Motivo') }}</p>
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+
+                <div  class="collapse show" id="negocio" aria-expanded="true" >
+                    <ul class="nav pl-4">
+                        <li @if ($pageSlug == 'profile') class="active " @endif>
+                            <a  href="{{ route('profile.edit') }}">
+                                <i class="tim-icons icon-single-02"></i>
+                                <p style="color:black;">{{ __('Módulos') }}</p>
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
             </li>
             <!-- Fim do negocio-->
+
             <!--Inicio de Tarefas-->
             <li >
                 <a data-toggle="collapse" href="#tarefa" aria-expanded="true">
@@ -91,20 +348,153 @@
                     <b class="caret mt-1"></b>
                 </a>
 
-                <div  class="collapse show" id="tarefa" >
+                 <div  class="collapse show" id="tarefa" aria-expanded="true" >
                     <ul class="nav pl-4">
                         <li @if ($pageSlug == 'profile') class="active " @endif>
                             <a  href="{{ route('profile.edit') }}">
                                 <i class="tim-icons icon-single-02"></i>
-                                <p style="color:black;">{{ __('User Profile') }}</p>
+                                <p style="color:black;">{{ __('Listar todas') }}</p>
                             </a>
                         </li>
-                        <li  @if ($pageSlug == 'users') class="active " @endif>
-                            <a href="{{ route('user.index') }}">
-                                <i class="tim-icons icon-bullet-list-67"></i>
-                                <p style="color:black;">{{ __('User Management') }}</p>
+
+                    </ul>
+                </div>
+
+                
+                 <div  class="collapse show" id="tarefa" aria-expanded="true" >
+                    <ul class="nav pl-4">
+                        <li @if ($pageSlug == 'profile') class="active " @endif>
+                            <a  href="{{ route('profile.edit') }}">
+                                <i class="tim-icons icon-single-02"></i>
+                                <p style="color:black;">{{ __('Cadastrar Tarefa') }}</p>
                             </a>
                         </li>
+                    </ul>
+                </div>
+
+                
+                 <div  class="collapse show" id="tarefa" aria-expanded="true" >
+                    <ul class="nav pl-4">
+                        <li @if ($pageSlug == 'profile') class="active " @endif>
+                            <a  href="{{ route('profile.edit') }}">
+                                <i class="tim-icons icon-single-02"></i>
+                                <p style="color:black;">{{ __('Listar Apenas Não Finalizadas') }}</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                
+                 <div  class="collapse show" id="tarefa" aria-expanded="true" >
+                    <ul class="nav pl-4">
+                        <li @if ($pageSlug == 'profile') class="active " @endif>
+                            <a  href="{{ route('profile.edit') }}">
+                                <i class="tim-icons icon-single-02"></i>
+                                <p style="color:black;">{{ __('Calendário de conclusão') }}</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                
+                <div  class="collapse show" id="tarefa" aria-expanded="true" >
+                    <ul class="nav pl-4">
+                        <li @if ($pageSlug == 'profile') class="active " @endif>
+                            <a  href="{{ route('profile.edit') }}">
+                                <i class="tim-icons icon-single-02"></i>
+                                <p style="color:black;">{{ __('A quem se Destina') }}</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                
+                 <div  class="collapse show" id="tarefa" aria-expanded="true" >
+                    <ul class="nav pl-4">
+                        <li @if ($pageSlug == 'profile') class="active " @endif>
+                            <a  href="{{ route('profile.edit') }}">
+                                <i class="tim-icons icon-single-02"></i>
+                                <p style="color:black;">{{ __('Filtros') }}</p>
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+
+                
+                 <div  class="collapse show" id="tarefa" aria-expanded="true" >
+                    <ul class="nav pl-4">
+                        <li @if ($pageSlug == 'profile') class="active " @endif>
+                            <a  href="{{ route('profile.edit') }}">
+                                <i class="tim-icons icon-single-02"></i>
+                                <p style="color:black;">{{ __('Categoria') }}</p>
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+
+                
+                 <div  class="collapse show" id="tarefa" aria-expanded="true" >
+                    <ul class="nav pl-4">
+                        <li @if ($pageSlug == 'profile') class="active " @endif>
+                            <a  href="{{ route('profile.edit') }}">
+                                <i class="tim-icons icon-single-02"></i>
+                                <p style="color:black;">{{ __('Ação') }}</p>
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+
+                
+                 <div  class="collapse show" id="tarefa" aria-expanded="true" >
+                    <ul class="nav pl-4">
+                        <li @if ($pageSlug == 'profile') class="active " @endif>
+                            <a  href="{{ route('profile.edit') }}">
+                                <i class="tim-icons icon-single-02"></i>
+                                <p style="color:black;">{{ __('Grupo de Administradores') }}</p>
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+
+                
+                 <div  class="collapse show" id="tarefa" aria-expanded="true" >
+                    <ul class="nav pl-4">
+                        <li @if ($pageSlug == 'profile') class="active " @endif>
+                            <a  href="{{ route('profile.edit') }}">
+                                <i class="tim-icons icon-single-02"></i>
+                                <p style="color:black;">{{ __('Motivo (execução)') }}</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                
+                 <div  class="collapse show" id="tarefa" aria-expanded="true" >
+                    <ul class="nav pl-4">
+                        <li @if ($pageSlug == 'profile') class="active " @endif>
+                            <a  href="{{ route('profile.edit') }}">
+                                <i class="tim-icons icon-single-02"></i>
+                                <p style="color:black;">{{ __('Motivo (Finalização)') }}</p>
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+
+                
+                 <div  class="collapse show" id="tarefa" aria-expanded="true" >
+                    <ul class="nav pl-4">
+                        <li @if ($pageSlug == 'profile') class="active " @endif>
+                            <a  href="{{ route('profile.edit') }}">
+                                <i class="tim-icons icon-single-02"></i>
+                                <p style="color:black;">{{ __('Módulos') }}</p>
+                            </a>
+                        </li>
+
                     </ul>
                 </div>
             </li>
@@ -119,24 +509,50 @@
                     <span  class="nav-link-text">{{ __('configurações') }}</span>
                     <b class="caret mt-1"></b>
                 </a>
+                
 
-                <div  class="collapse show" id="configuracao" >
+                   <div  class="collapse show" id="configuracao" aria-expanded="true" >
                     <ul class="nav pl-4">
                         <li @if ($pageSlug == 'profile') class="active " @endif>
                             <a  href="{{ route('profile.edit') }}">
                                 <i class="tim-icons icon-single-02"></i>
-                                <p style="color:black;">{{ __('User Profile') }}</p>
+                                <p style="color:black;">{{ __('Grupos
+                                 de
+                                 administradores') }}</p>
                             </a>
                         </li>
-                        <li  @if ($pageSlug == 'users') class="active " @endif>
-                            <a href="{{ route('user.index') }}">
-                                <i class="tim-icons icon-bullet-list-67"></i>
-                                <p style="color:black;">{{ __('User Management') }}</p>
+
+                    </ul>
+                </div>
+
+                
+                 <div  class="collapse show" id="configuracao" aria-expanded="true" >
+                    <ul class="nav pl-4">
+                        <li @if ($pageSlug == 'profile') class="active " @endif>
+                            <a  href="{{ route('profile.edit') }}">
+                                <i class="tim-icons icon-single-02"></i>
+                                <p style="color:black;">{{ __('Campanhas - Informativas') }}</p>
                             </a>
                         </li>
                     </ul>
                 </div>
-            </li>
+
+                
+                 <div  class="collapse show" id="configuracao" aria-expanded="true" >
+                    <ul class="nav pl-4">
+                        <li @if ($pageSlug == 'profile') class="active " @endif>
+                            <a  href="{{ route('profile.edit') }}">
+                                <i class="tim-icons icon-single-02"></i>
+                                <p style="color:black;">{{ __('E-mails Configurações') }}</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                
+                 
+
+                            </li>
             
         </ul>
         

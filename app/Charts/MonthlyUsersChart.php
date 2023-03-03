@@ -16,11 +16,12 @@ class MonthlyUsersChart extends Chart
    
     public function build()
     {
-        return $this->chart->lineChart()
+        return $this->chart->LineChart()
             ->setTitle('Dia    Semana Mês  Ano')
             ->setSubtitle('Este mês vs Mês Passado')
-            ->addData('Este mês', [40, 93, 35, 42, 18, 82])
-            ->addData('Mês Passado', [70, 29, 77, 28, 55, 45])
-            ->setXAxis(['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun']);
+            ->addData('Este mês', [40, 93, 35, 42])
+            ->addData('Mês Passado', [70, 29, 77, 28])
+            ->setXAxis(['Dia', 'Semana', 'Mês', 'Ano']);
+
     }
 }

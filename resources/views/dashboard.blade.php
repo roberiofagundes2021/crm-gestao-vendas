@@ -2,7 +2,7 @@
 
 
 @section('content')
-    <div class="row justify-content-start mt-0 mr-5 g-5">
+    <div class="row justify-content-start mx-2 mr-5 g-5">
         <div class="col justify-content-start text-Secondary float-start ">
             <h1 class="mt-3 ml-5 text-dark display-2">Dashboard</h1>
         </div>
@@ -28,19 +28,19 @@
         </div>
 
         <!------------------------------------------------------------------>
-        <div class="col-16 mt-0 p-2 ml-0 me-2 position-sticky">
-            <div class=" card mt-0 bg-light">
+        <div class="col-14 mt-0 p-2 ml-0 me-2 position-sticky">
+            <div class=" card-3 mt-0 bg-light">
                 <!--cards -->
                 <div class=" row bg-secondary pl-5">
-                    <div class="ml-0 card mb-2 bg-secondary mt-1" style="width: 14rem;">
-                        <div class="card-header  ">
-                            <h5 class="card-title text-dark">ECOMMERCE PERSONALIZADO R$ 30.000,00</h5>
+                    <div class="ml-0 card-4 mb-2 bg-secondary mt-2" style="width: 18rem;">
+                        <div class="card-header-3  ">
+                            <h5 class="card-title text-dark mt-5">ECOMMERCE PERSONALIZADO R$ 30.000,00</h5>
                             <p class="card-text text-dark">
                                 João Ferreira
                             <div class="col conten-justify-end text-dark pl-0">
                                 origem: Google ADS Responsável: Djane
                             </div>
-                            <div class="card-header text-dark">
+                            <div class="card-header-3 text-dark mt-3">
                                 Primeiro Contato
                                 <div class="progress">
                                     <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25"
@@ -92,8 +92,8 @@
                         </div>
 
                     </div>
-                    <div class="card w-25 bg-secondary" >
-                        <div class="card-header text-dark"style="width: 13rem;">
+                    <div class="card mr-2 mr-5 bg-secondary pl-3" style="width:10rem; height:31rem;">
+                        <div class=" card-header-3 my-5 text-dark mr-2"style="width:10rem;">
                             <!--selo-->
                             <span>R$ 300,00</span>
 
@@ -181,18 +181,9 @@
                         <br>
                         <br>
                         <br>
-                        <br>
-                        <br>
-                        <br>
-                        <br>
-                        <br>
-                        <br>
-                        <br>
-                        <br>
-
-
-                        <footer class="bg-secondary text-center text-dark position-static">
-                            <div class="row mt-2">
+                        
+                        <footer class="bg-secondary text-center text-dark position-static" >
+                            <div class="row h-25" >
                                 <div class="col">
                                     <i class="telephone">
                                         <!--microfone -->
@@ -242,13 +233,12 @@
                     </div>
                     </footer>
 
-                    <div class=" card mb-2 bg-secondary mt-0.5" style="width: 13rem;">
+                    <div class="card-4 mb-2 bg-secondary mt-4 mr-2" style="width: 18rem;">
                         <!--inicio do cards -->
-                        <div class="card-header  ">
-                            <h5 class="card-title text-dark">ECOMMERCE PERSONALIZADO R$ 30.000,00</h5>
-                            <p class="card-text text-dark">
-
-                                João Ferreir
+                        <div class="card-header-4 mt-3">
+                            <h5 class="card-title text-dark mt-3">ECOMMERCE PERSONALIZADO R$ 30.000,00</h5>
+                            <p class="card-text text-dark mt-2">
+                                João Ferreira
                             <div class="col conten-justify-end text-dark pl-0">
                                 origem: Google ADS Responsável: Djane
                             </div>
@@ -261,16 +251,13 @@
                                     </div>
                                 </div>
                                 <div class="card bg-secondary mt-2 text-dark">
-                                    <div class="card-header">
-
-                                    </div>
                                     <div class="card-body bg-secondary">
                                         <h5 class="card-title text-dark display-5">
                                             Este Cliente fez o pedido de um<br> e-commerce totalmente personalizavel
                                         </h5>
-                                        <button type="button" class="btn btn-primary">texto</button>
-                                        <button type="button" class="btn btn-primary">texto</button>
-                                        <button type="button" class="btn btn-primary">texto</button>
+                                        <button type="button" class="offset-0 btn btn-primary w-100 ">texto</button>
+                                        <button type="button" class="btn btn-primary w-100">texto</button>
+                                        <button type="button" class="btn btn-primary w-100">texto</button>
 
                                         <!-- input-->
                                         <div class="input-group mb-2">
@@ -310,8 +297,8 @@
                     </div>
                     <!--aqui -->
                     <!--inicio-->
-                    <div class="card w-25 bg-secondary" >
-                        <div class="card-header text-dark"style="width: 10rem;">
+                    <div class="card mr-2 bg-secondary" style="width:8rem">
+                        <div class=" card-header-2 my-5 text-dark"style="width: 10rem;">
                             <!--selo-->
                             <span>R$ 300,00</span>
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
@@ -395,20 +382,10 @@
                         <br>
                         <br>
                         <br>
-                        <br>
-                        <br>
-                        <br>
-                        <br>
-                        <br>
-                        <br>
-                        <br>
-                        <br>
-                        <br>
-                        <br>
-                        <br>
-                        <br>
-                        <br>
-                        <br>
+                        
+                        
+                        
+                       
                         <footer class="bg-secondary text-center text-dark position-static">
                             <div class="row mt-2">
                                 <div class="col">
@@ -478,7 +455,7 @@
                             <!--Barra de progresso-->
                             <!-- Added heading of the page -->
                             <!-- Creating a container class that
-                                                        hold other useful classes -->
+                                                                    hold other useful classes -->
                             <div class="container mt-5 pt-0">
                                 <div class="ui-widgets mt-2">
                                     <div class="ui-labels">Porcentagem do Objetivo</div>
@@ -510,114 +487,112 @@
                         </div>
                     </div>
 
-                    <div class="card mb-2 bg-secondary me-2  mt-0 mr-2" style="width: 24rem; height: 28rem">
+                    <div class="row bg-write">
+                        <div class="card mb-2 bg-secondary me-2  mt-0 mr-2" style="width: 24rem; height: 36rem">
 
-                        <div class="card-header text-dark">
-                            Gráfico
+                            <div class="card-header text-dark">
+                                Graficos
+                                <div class="grafico" style="height:10px">
+                                     {!! $chart->container() !!}
+                                <script src="{{ $chart->cdn() }}"></script>
+                                {{ $chart->script() }}
+                                </div>
+                               
+
+                            </div>
+
+
                         </div>
-                       
-                            <div class="container px-4 mt-0 " style="width: 24rem; height:10rem">
 
-                                            <div class="bg-white rounded shadow " style="width: 20rem; height:24rem;">
-                                                {!! $chart->container() !!}
-                                            </div>
+                        <!--metas de vendas -->
 
-                                        </div>
+                        <!--fim de metas de vendas -->
 
-                                        <script src="{{ $chart->cdn() }}"></script>
 
-                                        {{ $chart->script() }}
-                            <!--fim da progresso-->
-                       
                     </div>
-
-
-
-                    
                 </div>
+                <!--fim do cards-->
+
             </div>
-            <!--fim do cards-->
-
         </div>
-    </div>
-@endsection
+    @endsection
 
-@push('js')
-    <script src="{{ asset('black') }}/js/plugins/chartjs.min.js"></script>
-    <script>
-        $(document).ready(function() {
-            demo.initDashboardPageCharts();
-        });
-    </script>
-@endpush
+    @push('js')
+        <script src="{{ asset('black') }}/js/plugins/chartjs.min.js"></script>
+        <script>
+            $(document).ready(function() {
+                demo.initDashboardPageCharts();
+            });
+        </script>
+    @endpush
 
-<!--style-->
-<style>
-    /* Apply css properties to h1 element */
-    h1 {
-        text-align: center;
-        color: black;
-        margin-top: 20px;
+    <!--style-->
+    <style>
+        /* Apply css properties to h1 element */
+        h1 {
+            text-align: center;
+            color: black;
+            margin-top: 20px;
 
-    }
+        }
 
-    /* Create a container using css properties */
-    .container {
-        top: 30%;
-        left: 50%;
-        position: absolute;
-        text-align: center;
-        transform: translate(-50%, -50%);
-    }
+        /* Create a container using css properties */
+        .container {
+            top: 30%;
+            left: 50%;
+            position: absolute;
+            text-align: center;
+            transform: translate(-50%, -50%);
+        }
 
-    /* Apply css properties to ui-widgets class */
-    .ui-widgets {
-        position: relative;
-        display: inline-block;
-        width: 10rem;
-        height: 10rem;
-        border-radius: 9rem;
-        margin: 1.5rem;
-        border: 1.2rem solid palegreen;
-        box-shadow: inset 0 0 7px grey;
-        border-left-color: palegreen;
-        border-top-color: chartreuse;
-        border-right-color: darkgreen;
-        border-bottom-color: white;
-        text-align: center;
-        box-sizing: border-box;
-    }
+        /* Apply css properties to ui-widgets class */
+        .ui-widgets {
+            position: relative;
+            display: inline-block;
+            width: 10rem;
+            height: 10rem;
+            border-radius: 9rem;
+            margin: 1.5rem;
+            border: 1.2rem solid palegreen;
+            box-shadow: inset 0 0 7px grey;
+            border-left-color: palegreen;
+            border-top-color: chartreuse;
+            border-right-color: darkgreen;
+            border-bottom-color: white;
+            text-align: center;
+            box-sizing: border-box;
+        }
 
-    /* Apply css properties to the second
+        /* Apply css properties to the second
     child of ui-widgets class */
-    .ui-widgets:nth-child(2) {
-        border-top-color: chartreuse;
-        border-right-color: white;
-        border-left-color: palegreen;
-        border-bottom-color: white;
-    }
+        .ui-widgets:nth-child(2) {
+            border-top-color: chartreuse;
+            border-right-color: white;
+            border-left-color: palegreen;
+            border-bottom-color: white;
+        }
 
-    /* Apply css properties to ui-widgets
+        /* Apply css properties to ui-widgets
    class and ui-values class */
-    .ui-widgets .ui-values {
-        top: 40px;
-        position: absolute;
-        left: 10px;
-        right: 0;
-        font-weight: 700;
-        font-size: 2.0rem;
-    }
+        .ui-widgets .ui-values {
+            top: 40px;
+            position: absolute;
+            left: 10px;
+            right: 0;
+            font-weight: 700;
+            font-size: 2.0rem;
+        }
 
-    /*  Apply css properties to ui-widgets
+        /*  Apply css properties to ui-widgets
 class and ui-labels class */
-    .ui-widgets .ui-labels {
-        left: 0;
-        bottom: -16px;
-        text-shadow: 0 0 4px grey;
-        color: black;
-        position: absolute;
-        width: 100%;
-        font-size: 16px;
-    }
-</style>
-<!--fim do style -->
+        .ui-widgets .ui-labels {
+            left: 0;
+            bottom: -16px;
+            text-shadow: 0 0 4px grey;
+            color: black;
+            position: absolute;
+            width: 100%;
+            font-size: 16px;
+        }
+    </style>
+    <!--fim do style -->

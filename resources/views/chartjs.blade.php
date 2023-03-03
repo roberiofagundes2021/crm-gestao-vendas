@@ -9,7 +9,7 @@
 <body>
 
 
-<div style="width: 600px; margin: auto;">
+<div style="width: 600px;">
     <canvas id="myChart"></canvas>
 </div>
 

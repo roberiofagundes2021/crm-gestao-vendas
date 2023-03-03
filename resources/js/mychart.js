@@ -22,7 +22,9 @@ const data = {
 const config = {
     type: 'line',
     data: data,
-    options: {}
+    options: {
+        backgroundColor:#FFF;
+    }
 };
 
 new Chart(
