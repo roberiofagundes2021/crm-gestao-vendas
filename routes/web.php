@@ -1,9 +1,11 @@
 <?php
 
+use App\Models\Web4Administradores;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\GraficolineController;
 use App\Http\Controllers\CidadeController;
 use App\Http\Controllers\EstadoController;
+use App\Http\Controllers\FaliedJobsController;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\PasswordResetsController;
 use App\Http\Controllers\PersonalAcessTokenController;
@@ -11,6 +13,54 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\RelatorioPaginaController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\Web4AcessoController;
+use App\Http\Controllers\PaginaAcaoController;
+use App\Http\Controllers\Web4AdministradoresApiTokenController;
+use App\Http\Controllers\Web4AdministradoresController;
+use App\Http\Controllers\Web4AdministradoresEtapasController;
+use App\Http\Controllers\Web4AdministradoresGrupoPaginaController;
+use App\Http\Controllers\Web4AdministradoresGruposAcoesController;
+use App\Http\Controllers\Web4AdministradoresGruposController;
+use App\Http\Controllers\Web4AdministradoresGruposPaginaController;
+use App\Http\Controllers\Web4AdministradoresOnesignalController;
+use App\Http\Controllers\Web4AdministradoresRevendaController;
+use App\Http\Controllers\Web4AdministradoresTokenAcessoController;
+use App\Http\Controllers\Web4ArquivoController;
+use App\Http\Controllers\Web4AutavisoController;
+use App\Http\Controllers\Web4CampanhaController;
+use App\Http\Controllers\Web4CampanhaDestinatarioController;
+use App\Http\Controllers\Web4ConfiguracaoController;
+use App\Http\Controllers\Web4EmailLogController;
+use App\Http\Controllers\Web4InformativoAdministradoresController;
+use App\Http\Controllers\Web4InformativoController;
+use App\Http\Controllers\Web4InformativoRevendaController;
+use App\Http\Controllers\Web4InformativosAdministradoresController;
+use App\Http\Controllers\Web4InformativoVisualizacaoController;
+use App\Http\Controllers\Web4ModeloEmailsController;
+use App\Http\Controllers\Web4NegocioController;
+use App\Http\Controllers\Web4NegociosAcoesController;
+use App\Http\Controllers\Web4NegociosCategoriaController;
+use App\Http\Controllers\Web4NegociosEtapaController;
+use App\Http\Controllers\Web4NegociosLogEtapaController;
+use App\Http\Controllers\Web4NegociosLogStatusController;
+use App\Http\Controllers\Web4NegociosMotivoController;
+use App\Http\Controllers\Web4NegociosStatus2Controller;
+use App\Http\Controllers\Web4NegociosStatusController;
+use App\Http\Controllers\Web4OperadoraController;
+use App\Http\Controllers\Web4PaginaController;
+use App\Http\Controllers\Web4PessoaController;
+use App\Http\Controllers\Web4RelatorioAcessoController;
+use App\Http\Controllers\Web4RevendaCategoriaController;
+use App\Http\Controllers\Web4RevendaController;
+use App\Http\Controllers\Web4RevendalogacessoController;
+use App\Http\Controllers\Web4RevendaSetoreController;
+use App\Http\Controllers\Web4TarefaAcoesController;
+use App\Http\Controllers\Web4TarefaAgendamentoController;
+use App\Http\Controllers\Web4TarefaCategoriaController;
+use App\Http\Controllers\Web4TarefaController;
+use App\Http\Controllers\Web4TarefaMotivoController;
+use App\Http\Controllers\Web4TarefaResponsavelController;
+
+
 
 
 
