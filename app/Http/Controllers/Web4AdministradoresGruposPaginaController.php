@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\StoreWebAdministradoresGrupoPaginaRequest;
 use Illuminate\Http\Request;
+use App\Models\Web4AdministradoresGrupoPagina;
 
 class Web4AdministradoresGruposPaginaController extends Controller
 {
@@ -35,7 +37,7 @@ class Web4AdministradoresGruposPaginaController extends Controller
     }
 
 
-    public function store(StoreWeb4AdministradoresGrupoPaginaRequest $request){
+    public function store(StoreWebAdministradoresGrupoPaginaRequest $request){
 
         $Web4AdministradoresGrupoPagina = new Web4AdministradoresGrupoPagina();
         $Web4AdministradoresGrupoPagina->nome=$request->nome;

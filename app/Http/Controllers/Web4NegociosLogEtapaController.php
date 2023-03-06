@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\StoreWeb4NegociosLogEtapaRequest;
 use Illuminate\Http\Request;
+use App\Models\Web4NegociosLogEtapa;
 
 class Web4NegociosLogEtapaController extends Controller
 {

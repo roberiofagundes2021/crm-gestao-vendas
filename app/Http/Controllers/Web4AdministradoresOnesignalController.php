@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\StoreWebAdministradoresOnesignalRequest;
+use App\Models\Web4AdministradoresOnesignal;
 use Illuminate\Http\Request;
 
 class Web4AdministradoresOnesignalController extends Controller
@@ -35,7 +37,7 @@ class Web4AdministradoresOnesignalController extends Controller
     }
 
 
-    public function store(StoreWeb4AdministradoresOnesignalRequest $request){
+    public function store(StoreWebAdministradoresOnesignalRequest $request){
 
         $Web4AdministradoresOnesignal = new Web4AdministradoresOnesignal();
         $Web4AdministradoresOnesignal->nome=$request->nome;

@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\StoreWeb4NegocioRequest;
 use Illuminate\Http\Request;
+use App\Models\Web4Negocio;
 
 class Web4NegocioController extends Controller
 {

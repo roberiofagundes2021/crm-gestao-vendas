@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\StoreWeb4emailsLogRequest;
 use Illuminate\Http\Request;
+use App\Models\Web4emailsLog;
 
 class Web4EmailLogController extends Controller
 {

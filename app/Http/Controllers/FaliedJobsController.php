@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\StoreFailedJobsRequest;
+use App\Models\FailedJobs;
 use Illuminate\Http\Request;
 
 class FaliedJobsController extends Controller

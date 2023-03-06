@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\StoreCidadeRequest;
 use App\Models\Cidade;
 use Illuminate\Http\Request;
 

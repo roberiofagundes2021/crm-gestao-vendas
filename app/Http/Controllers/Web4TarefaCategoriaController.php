@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\StoreWeb4TarefaCategoriaRequest;
+use App\Models\Web4TarefaCategoria;
 use Illuminate\Http\Request;
 
 class Web4TarefaCategoriaController extends Controller

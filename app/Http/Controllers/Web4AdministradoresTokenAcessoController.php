@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\StoreWeb4AdministradoresTokenAcessoRequest;
 use Illuminate\Http\Request;
+use App\Models\Web4AdministradoresTokenAcesso;
 
 class Web4AdministradoresTokenAcessoController extends Controller
 {

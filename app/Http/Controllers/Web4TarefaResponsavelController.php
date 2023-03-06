@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\StoreWeb4TarefaResponsavelRequest;
+use App\Models\Web4TarefaResponsavel;
 use Illuminate\Http\Request;
 
 class Web4TarefaResponsavelController extends Controller
@@ -9,6 +11,8 @@ class Web4TarefaResponsavelController extends Controller
     //
      public function create(){
     $Web4TarefaResponsavel = Web4TarefaResponsavel::get();
+
+
     return view('Web4TarefaResponsavel.create',compact('Web4TarefaResponsavel'));
     }
 

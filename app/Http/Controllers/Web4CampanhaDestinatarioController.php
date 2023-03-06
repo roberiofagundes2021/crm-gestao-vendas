@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\StoreWeb4CampanasDestinatariosRequest;
 use Illuminate\Http\Request;
+use App\Models\Web4CampanasDestinatarios;
 
 class Web4CampanhaDestinatarioController extends Controller
 {

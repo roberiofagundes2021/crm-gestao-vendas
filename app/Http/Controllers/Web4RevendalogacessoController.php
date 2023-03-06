@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\StoreWeb4RevendalogacessoRequest;
+use App\Models\Web4Revendalogacesso;
 use Illuminate\Http\Request;
 
 class Web4RevendalogacessoController extends Controller

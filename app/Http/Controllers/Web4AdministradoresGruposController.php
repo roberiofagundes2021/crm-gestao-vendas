@@ -2,45 +2,47 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\StoreWebAdministradoresGrupoRequest;
 use Illuminate\Http\Request;
+use App\Models\Web4AdministradoresGrupo;
 
 class Web4AdministradoresGruposController extends Controller
 {
     //
      public function create(){
-    $WebAdministradoresGrupo = WebAdministradoresGrupo::get();
-    return view('WebAdministradoresGrupo.create',compact('WebAdministradoresGrupo'));
+    $WebAdministradoresGrupo = Web4AdministradoresGrupo::get();
+    return view('Web4AdministradoresGrupo.create',compact('Web4AdministradoresGrupo'));
     }
 
     public function edit($id){
-        $WebAdministradoresGrupo = WebAdministradoresGrupo::findorFail($id);
-        return view('WebAdministradoresGrupo.edit',['WebAdministradoresGrupo'=>$WebAdministradoresGrupo]);
+        $Web4AdministradoresGrupo = Web4AdministradoresGrupo::findorFail($id);
+        return view('Web4AdministradoresGrupo.edit',['Web4AdministradoresGrupo'=>$Web4AdministradoresGrupo]);
     }
 
      public function update(Request $request){
-        WebAdministradoresGrupo::find($request->id)->update($request->except('_token'));
-        return redirect('index/WebAdministradoresGrupo')->with('msg', 'alteração realdizado com sucesso');
+        Web4AdministradoresGrupo::find($request->id)->update($request->except('_token'));
+        return redirect('index/Web4AdministradoresGrupo')->with('msg', 'alteração realdizado com sucesso');
 
     }
 
      public function destroy($id)
     {
-      WebAdministradoresGrupo::findorFail($id)->delete();
-      return redirect('WebAdministradoresGrupo.index')->with('msg', 'WebAdministradoresGrupo apagada');
+      Web4AdministradoresGrupo::findorFail($id)->delete();
+      return redirect('Web4AdministradoresGrupo.index')->with('msg', 'Web4AdministradoresGrupo apagada');
     }
 
     public function index(){
-        $WebAdministradoresGrupo = WebAdministradoresGrupo::all();
-        return view('WebAdministradoresGrupo.index',compact('WebAdministradoresGrupo'));
+        $Web4AdministradoresGrupo = Web4AdministradoresGrupo::all();
+        return view('Web4AdministradoresGrupo.index',compact('Web4AdministradoresGrupo'));
     }
 
 
     public function store(StoreWebAdministradoresGrupoRequest $request){
 
-        $WebAdministradoresGrupo = new WebAdministradoresGrupo();
-        $WebAdministradoresGrupo->nome=$request->nome;
-        $WebAdministradoresGrupo->timestamps=$request->timestamps;
-        $WebAdministradoresGrupo->save();
+        $Web4AdministradoresGrupo = new Web4AdministradoresGrupo();
+        $Web4AdministradoresGrupo->nome=$request->nome;
+        $Web4AdministradoresGrupo->timestamps=$request->timestamps;
+        $Web4AdministradoresGrupo->save();
         
     }
 }

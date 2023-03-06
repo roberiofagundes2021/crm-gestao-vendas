@@ -1,6 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Http\Requests\StoreWeb4AdministradoresRequest;
+use App\Models\Web4Administradores;
 
 use Illuminate\Http\Request;
 
@@ -8,39 +10,39 @@ class Web4AdministradoresController extends Controller
 {
     //
      public function create(){
-    $WebAdministradores = WebAdministradores::get();
-    return view('WebAdministradores.create',compact('WebAdministradores'));
+    $Web4Administradores = Web4Administradores::get();
+    return view('Web4Administradores.create',compact('Web4Administradores'));
     }
 
     public function edit($id){
-        $WebAdministradores = WebAdministradores::findorFail($id);
-        return view('WebAdministradores.edit',['WebAdministradores'=>$WebAdministradores]);
+        $Web4Administradores = Web4Administradores::findorFail($id);
+        return view('Web4Administradores.edit',['Web4Administradores'=>$Web4Administradores]);
     }
 
      public function update(Request $request){
-        WebAdministradores::find($request->id)->update($request->except('_token'));
-        return redirect('index/WebAdministradores')->with('msg', 'alteração realdizado com sucesso');
+        Web4Administradores::find($request->id)->update($request->except('_token'));
+        return redirect('index/Web4Administradores')->with('msg', 'alteração realdizado com sucesso');
 
     }
 
      public function destroy($id)
     {
-      WebAdministradores::findorFail($id)->delete();
-      return redirect('WebAdministradores.index')->with('msg', 'WebAdministradores apagada');
+      Web4Administradores::findorFail($id)->delete();
+      return redirect('Web4Administradores.index')->with('msg', 'Web4Administradores apagada');
     }
 
     public function index(){
-        $WebAdministradores = WebAdministradores::all();
-        return view('WebAdministradores.index',compact('WebAdministradores'));
+        $Web4Administradores = Web4Administradores::all();
+        return view('Web4Administradores.index',compact('Web4Administradores'));
     }
 
 
-    public function store(StoreWebAdministradoresRequest $request){
+    public function store(StoreWeb4AdministradoresRequest $request){
 
-        $WebAdministradores = new WebAdministradores();
-        $WebAdministradores->nome=$request->nome;
-        $WebAdministradores->timestamps=$request->timestamps;
-        $WebAdministradores->save();
+        $Web4Administradores = new Web4Administradores();
+        $Web4Administradores->nome=$request->nome;
+        $Web4Administradores->timestamps=$request->timestamps;
+        $Web4Administradores->save();
         
     }
 }

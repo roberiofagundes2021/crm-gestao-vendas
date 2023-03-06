@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\StoreRelatorioPaginaRequest;
+use App\Models\RelatorioPagina;
 use Illuminate\Http\Request;
+
 
 class RelatorioPaginaController extends Controller
 {

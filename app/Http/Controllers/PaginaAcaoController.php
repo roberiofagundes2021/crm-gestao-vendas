@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\StorePaginaAcaoRequest;
+use App\Models\PaginaAcao;
 use Illuminate\Http\Request;
 
 class PaginaAcaoController extends Controller

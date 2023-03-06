@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\StoreWeb4NegociosMotivoRequest;
 use Illuminate\Http\Request;
+use App\Models\Web4NegociosMotivo;
 
 class Web4NegociosMotivoController extends Controller
 {

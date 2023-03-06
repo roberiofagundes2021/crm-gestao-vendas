@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\StoreWeb4NegociosStatusRequest;
 use Illuminate\Http\Request;
+use App\Models\Web4NegociosStatus;
 
 class Web4NegociosStatusController extends Controller
 {

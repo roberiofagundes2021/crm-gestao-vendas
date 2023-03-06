@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\StoreWeb4RelatorioAcessoRequest;
 use Illuminate\Http\Request;
+use App\Models\Web4RelatorioAcesso;
 
 class Web4RelatorioAcessoController extends Controller
 {

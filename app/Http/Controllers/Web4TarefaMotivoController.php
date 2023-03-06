@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\StoreWeb4TarefaMotivoRequest;
+use App\Models\Web4TarefaMotivo;
 use Illuminate\Http\Request;
 
 class Web4TarefaMotivoController extends Controller

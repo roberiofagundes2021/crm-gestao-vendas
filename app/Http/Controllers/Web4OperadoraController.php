@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\StoreWeb4OperadoraRequest;
 use Illuminate\Http\Request;
+use App\Models\Web4Operadora;
 
 class Web4OperadoraController extends Controller
 {

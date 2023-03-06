@@ -2,45 +2,47 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\StoreWebAdministradoresGrupoPaginaRequest;
 use Illuminate\Http\Request;
+use App\Models\Web4AdministradoresGrupoPagina;
 
 class Web4AdministradoresGrupoPaginaController extends Controller
 {
     //
      public function create(){
-    $WebAdministradoresGrupoPagina = WebAdministradoresGrupoPagina::get();
-    return view('WebAdministradoresGrupoPagina.create',compact('WebAdministradoresGrupoPagina'));
+    $Web4AdministradoresGrupoPagina = Web4AdministradoresGrupoPagina::get();
+    return view('Web4AdministradoresGrupoPagina.create',compact('Web4AdministradoresGrupoPagina'));
     }
 
     public function edit($id){
-        $WebAdministradoresGrupoPagina = WebAdministradoresGrupoPagina::findorFail($id);
-        return view('WebAdministradoresGrupoPagina.edit',['WebAdministradoresGrupoPagina'=>$WebAdministradoresGrupoPagina]);
+        $Web4AdministradoresGrupoPagina = Web4AdministradoresGrupoPagina::findorFail($id);
+        return view('Web4AdministradoresGrupoPagina.edit',['Web4AdministradoresGrupoPagina'=>$Web4AdministradoresGrupoPagina]);
     }
 
      public function update(Request $request){
-        WebAdministradoresGrupoPagina::find($request->id)->update($request->except('_token'));
-        return redirect('index/WebAdministradoresGrupoPagina')->with('msg', 'alteração realdizado com sucesso');
+        Web4AdministradoresGrupoPagina::find($request->id)->update($request->except('_token'));
+        return redirect('index/Web4AdministradoresGrupoPagina')->with('msg', 'alteração realdizado com sucesso');
 
     }
 
      public function destroy($id)
     {
-      WebAdministradoresGrupoPagina::findorFail($id)->delete();
-      return redirect('WebAdministradoresGrupoPagina.index')->with('msg', 'WebAdministradoresGrupoPagina apagada');
+      Web4AdministradoresGrupoPagina::findorFail($id)->delete();
+      return redirect('Web4AdministradoresGrupoPagina.index')->with('msg', 'Web4AdministradoresGrupoPagina apagada');
     }
 
     public function index(){
-        $WebAdministradoresGrupoPagina = WebAdministradoresGrupoPagina::all();
-        return view('WebAdministradoresGrupoPagina.index',compact('WebAdministradoresGrupoPagina'));
+        $Web4AdministradoresGrupoPagina = Web4AdministradoresGrupoPagina::all();
+        return view('Web4AdministradoresGrupoPagina.index',compact('Web4AdministradoresGrupoPagina'));
     }
 
 
     public function store(StoreWebAdministradoresGrupoPaginaRequest $request){
 
-        $WebAdministradoresGrupoPagina = new WebAdministradoresGrupoPagina();
-        $WebAdministradoresGrupoPagina->nome=$request->nome;
-        $WebAdministradoresGrupoPagina->timestamps=$request->timestamps;
-        $WebAdministradoresGrupoPagina->save();
+        $Web4AdministradoresGrupoPagina = new Web4AdministradoresGrupoPagina();
+        $Web4AdministradoresGrupoPagina->nome=$request->nome;
+        $Web4AdministradoresGrupoPagina->timestamps=$request->timestamps;
+        $Web4AdministradoresGrupoPagina->save();
         
     }
 }

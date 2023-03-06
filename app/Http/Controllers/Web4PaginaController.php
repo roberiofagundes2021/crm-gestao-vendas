@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\StoreWeb4PaginaRequest;
 use Illuminate\Http\Request;
+use App\Models\Web4Pagina;
 
 class Web4PaginaController extends Controller
 {

@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\StoreWeb4RevendaSetoreRequest;
+use App\Models\Web4RevendaSetore;
 use Illuminate\Http\Request;
 
 class Web4RevendaSetoreController extends Controller

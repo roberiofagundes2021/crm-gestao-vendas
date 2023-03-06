@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\StoreWeb4AutavisosRequest;
 use Illuminate\Http\Request;
+use App\Models\Web4Autavisos;
 
 class Web4AutavisoController extends Controller
 {

@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\StoreWeb4TarefaAgendamentoRequest;
+use App\Models\Web4TarefaAgendamento;
 use Illuminate\Http\Request;
 
 class Web4TarefaAgendamentoController extends Controller

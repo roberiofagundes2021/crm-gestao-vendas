@@ -2,45 +2,47 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\StoreWebAdministradoresEtapasRequest;
 use Illuminate\Http\Request;
+use App\Models\Web4AdministradoresEtapas;
 
 class Web4AdministradoresEtapasController extends Controller
 {
     //
      public function create(){
-    $WebAdministradoresEtapas = WebAdministradoresEtapas::get();
-    return view('WebAdministradoresEtapas.create',compact('WebAdministradoresEtapas'));
+    $Web4AdministradoresEtapas = Web4AdministradoresEtapas::get();
+    return view('Web4AdministradoresEtapas.create',compact('Web4AdministradoresEtapas'));
     }
 
     public function edit($id){
-        $WebAdministradoresEtapas = WebAdministradoresEtapas::findorFail($id);
-        return view('WebAdministradoresEtapas.edit',['WebAdministradoresEtapas'=>$WebAdministradoresEtapas]);
+        $Web4AdministradoresEtapas = Web4AdministradoresEtapas::findorFail($id);
+        return view('Web4AdministradoresEtapas.edit',['Web4AdministradoresEtapas'=>$Web4AdministradoresEtapas]);
     }
 
      public function update(Request $request){
-        WebAdministradoresEtapas::find($request->id)->update($request->except('_token'));
-        return redirect('index/WebAdministradoresEtapas')->with('msg', 'alteração realdizado com sucesso');
+        Web4AdministradoresEtapas::find($request->id)->update($request->except('_token'));
+        return redirect('index/Web4AdministradoresEtapas')->with('msg', 'alteração realdizado com sucesso');
 
     }
 
      public function destroy($id)
     {
-      WebAdministradoresEtapas::findorFail($id)->delete();
-      return redirect('WebAdministradoresEtapas.index')->with('msg', 'WebAdministradoresEtapas apagada');
+      Web4AdministradoresEtapas::findorFail($id)->delete();
+      return redirect('Web4AdministradoresEtapas.index')->with('msg', 'Web4AdministradoresEtapas apagada');
     }
 
     public function index(){
-        $WebAdministradoresEtapas = WebAdministradoresEtapas::all();
-        return view('WebAdministradoresEtapas.index',compact('WebAdministradoresEtapas'));
+        $Web4AdministradoresEtapas = Web4AdministradoresEtapas::all();
+        return view('Web4AdministradoresEtapas.index',compact('Web4AdministradoresEtapas'));
     }
 
 
     public function store(StoreWebAdministradoresEtapasRequest $request){
 
-        $WebAdministradoresEtapas = new WebAdministradoresEtapas();
-        $WebAdministradoresEtapas->nome=$request->nome;
-        $WebAdministradoresEtapas->timestamps=$request->timestamps;
-        $WebAdministradoresEtapas->save();
+        $Web4AdministradoresEtapas = new Web4AdministradoresEtapas();
+        $Web4AdministradoresEtapas->nome=$request->nome;
+        $Web4AdministradoresEtapas->timestamps=$request->timestamps;
+        $Web4AdministradoresEtapas->save();
         
     }
 }

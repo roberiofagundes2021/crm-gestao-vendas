@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\StoreWeb4ModeloEmailsRequest;
 use Illuminate\Http\Request;
+use App\Models\Web4ModeloEmails;
 
 class Web4ModeloEmailsController extends Controller
 {

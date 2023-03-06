@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\StoreWeb4HistoricoRequest;
 use Illuminate\Http\Request;
+use App\Models\Web4Historico;
 
 class Web4HistoricoController extends Controller
 {

@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\StoreEstadoRequest;
+use App\Models\Estado;
 use Illuminate\Http\Request;
 
 class EstadoController extends Controller

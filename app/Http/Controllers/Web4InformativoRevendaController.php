@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\StoreWeb4InformativoRevendaRequest;
 use Illuminate\Http\Request;
+use App\Models\Web4InformativoRevenda;
 
 class Web4InformativoRevendaController extends Controller
 {

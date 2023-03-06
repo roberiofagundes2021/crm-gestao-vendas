@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\StoreWeb4TarefaAcoesRequest;
+use App\Models\Web4TarefaAcoes;
 use Illuminate\Http\Request;
 
 class Web4TarefaAcoesController extends Controller

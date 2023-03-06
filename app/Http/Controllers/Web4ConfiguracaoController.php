@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\StoreWeb4ConfiguracoesRequest;
 use Illuminate\Http\Request;
+use App\Models\Web4Configuracoes;
 
 class Web4ConfiguracaoController extends Controller
 {

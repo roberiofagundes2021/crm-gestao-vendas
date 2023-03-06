@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\StoreWeb4ArquivosRequest;
 use Illuminate\Http\Request;
+use App\Models\Web4Arquivos;
 
 class Web4ArquivoController extends Controller
 {
