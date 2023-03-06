@@ -10,7 +10,8 @@
             </div>
             <a class="navbar-brand" href="#">{{ $page ?? '' }}</a>
         </div>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" 
+        data-target="#navigation" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-bar navbar-kebab"></span>
             <span class="navbar-toggler-bar navbar-kebab"></span>
             <span class="navbar-toggler-bar navbar-kebab"></span>
@@ -18,10 +19,9 @@
         <div class="collapse navbar-collapse" id="navigation">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a href="{{ route('home') }}" class="nav-link text-primary">
-                        <i class="tim-icons icon-minimal-left"></i> {{ __('Back to Dashboard') }}
-                    </a>
+                    
                 </li>
+                <!-- para ir fazer o registro no banco de dados 
                 <li class="nav-item ">
                     <a href="{{ route('register') }}" class="nav-link">
                         <i class="tim-icons icon-laptop"></i> {{ __('Register') }}
@@ -32,6 +32,7 @@
                         <i class="tim-icons icon-single-02"></i> {{ __('Login') }}
                     </a>
                 </li>
+                -->
             </ul>
         </div>
     </div>
