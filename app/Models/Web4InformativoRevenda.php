@@ -8,4 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Web4InformativoRevenda extends Model
 {
     use HasFactory;
+
+     protected $table ="web4_informativos_revendas";
+    protected $guarded = [];
 }

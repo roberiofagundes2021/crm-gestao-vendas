@@ -8,4 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class Web4Historico extends Model
 {
     use HasFactory;
+    protected $table ="web4_historico";
+    protected $guarded = [];
 }

@@ -8,4 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class Web4emailsLog extends Model
 {
     use HasFactory;
+          protected $table ="web4_emails_log";
+          protected $guarded = [];
 }

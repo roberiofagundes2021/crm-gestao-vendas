@@ -8,4 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Web4InformativoAdministradores extends Model
 {
     use HasFactory;
+    
+     protected $table ="web4_informativos_administradores";
+    protected $guarded = [];
 }

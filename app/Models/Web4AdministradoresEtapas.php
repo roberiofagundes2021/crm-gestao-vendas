@@ -8,4 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Web4AdministradoresEtapas extends Model
 {
     use HasFactory;
+    
+          protected $table ="com_estados";
+          protected $guarded = [];
 }
