@@ -40,9 +40,18 @@ class Web4AdministradoresOnesignalController extends Controller
     public function store(StoreWebAdministradoresOnesignalRequest $request){
 
         $Web4AdministradoresOnesignal = new Web4AdministradoresOnesignal();
-        $Web4AdministradoresOnesignal->nome=$request->nome;
-        $Web4AdministradoresOnesignal->timestamps=$request->timestamps;
-        $Web4AdministradoresOnesignal->save();
+         $Web4AdministradoresOnesignal->comment;
+         $Web4AdministradoresOnesignal->Codigo;
+         $Web4AdministradoresOnesignal->CodigoAdministrador;
+         $Web4AdministradoresOnesignal->userId;
+         $Web4AdministradoresOnesignal->Detalhes;
+         $Web4AdministradoresOnesignal->IsDeletado;
+         $Web4AdministradoresOnesignal->CadastroData;
+         $Web4AdministradoresOnesignal->CadastroIP;
+         $Web4AdministradoresOnesignal->DeletadoData;
+         $Web4AdministradoresOnesignal->DeletadoIP;
+         
+         $Web4AdministradoresOnesignal->save();
         
     }
 }

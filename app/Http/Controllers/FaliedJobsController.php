@@ -40,8 +40,13 @@ class FaliedJobsController extends Controller
     public function store(StoreFailedJobsRequest $request){
 
         $FailedJobs = new FailedJobs();
-        $FailedJobs->nome=$request->nome;
-        $FailedJobs->timestamps=$request->timestamps;
+        $FailedJobs->$request->comment;
+        $FailedJobs->$request->id;
+        $FailedJobs->$request->uuid;
+        $FailedJobs->$request->connection;
+        $FailedJobs->$request->queue;
+        $FailedJobs->$request->payload;
+        $FailedJobs->$request->exception;
         $FailedJobs->save();
         
     }

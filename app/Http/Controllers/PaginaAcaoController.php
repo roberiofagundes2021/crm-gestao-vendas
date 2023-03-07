@@ -40,8 +40,11 @@ class PaginaAcaoController extends Controller
     public function store(StorePaginaAcaoRequest $request){
 
         $PaginaAcao = new PaginaAcao();
-        $PaginaAcao->nome=$request->nome;
-        $PaginaAcao->timestamps=$request->timestamps;
+        $PaginaAcao->$request->comment;
+        $PaginaAcao->$request->Codigo;
+        $PaginaAcao->$request->CodigoPagina;
+        $PaginaAcao->$request->Nome;
+        $PaginaAcao->$request->CodNome;
         $PaginaAcao->save();
         
     }

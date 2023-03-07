@@ -41,8 +41,12 @@ class RelatorioPaginaController extends Controller
     public function store(StoreRelatorioPaginaRequest $request){
 
         $RelatorioPagina = new RelatorioPagina();
-        $RelatorioPagina->nome=$request->nome;
-        $RelatorioPagina->timestamps=$request->timestamps;
+            $RelatorioPagina->$request->Codigo;
+            $RelatorioPagina->$request->Agrupador;
+            $RelatorioPagina->$request->Nome;
+            $RelatorioPagina->$request->Link;
+            $RelatorioPagina->$request->Ordem;
+            $RelatorioPagina->$request->OrdemAgrupador;
         $RelatorioPagina->save();
         
     }

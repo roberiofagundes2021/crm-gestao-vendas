@@ -38,10 +38,13 @@ class EstadoController extends Controller
 
 
     public function store(StoreEstadoRequest $request){
-
         $Estado = new Estado();
-        $Estado->nome=$request->nome;
-        $Estado->timestamps=$request->timestamps;
+        $Estado->$request->comment;
+        $Estado->$request->Codigo;
+        $Estado->$request->CodigoIBGE;
+        $Estado->$request->Sigla;
+        $Estado->$request->Nome;
+        $Estado->$request->Regiao;
         $Estado->save();
         
     }

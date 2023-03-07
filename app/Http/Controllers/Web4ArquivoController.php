@@ -40,8 +40,15 @@ class Web4ArquivoController extends Controller
     public function store(StoreWeb4ArquivosRequest $request){
 
         $Web4Arquivos = new Web4Arquivos();
-        $Web4Arquivos->nome=$request->nome;
-        $Web4Arquivos->timestamps=$request->timestamps;
+        $Web4Arquivos->$request->comment;
+        $Web4Arquivos->$request->Codigo;
+        $Web4Arquivos->$request->IsDeletado;
+        $Web4Arquivos->$request->DataCadastro;
+        $Web4Arquivos->$request->IP;
+        $Web4Arquivos->$request->OrigemTipo;
+        $Web4Arquivos->$request->OrigemCodigo;
+        $Web4Arquivos->$request->Arquivo;
+        $Web4Arquivos->$request->Legenda;
         $Web4Arquivos->save();
         
     }

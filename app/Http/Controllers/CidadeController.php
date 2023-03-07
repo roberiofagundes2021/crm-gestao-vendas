@@ -39,9 +39,16 @@ class CidadeController extends Controller
 
     public function store(StoreCidadeRequest $request){
 
+         
+
         $Cidade = new Cidade();
-        $Cidade->nome=$request->nome;
-        $Cidade->timestamps=$request->timestamps;
+        $Cidade->$request->comment;
+        $Cidade->$request->Codigo;
+        $Cidade->$request->id_uf;
+        $Cidade->$request->CodigoIBGE;
+        $Cidade->$request->Estado;
+        $Cidade->$request->Nome;
+        $Cidade->$request->timestamps;
         $Cidade->save();
         
     }

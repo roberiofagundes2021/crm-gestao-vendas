@@ -40,8 +40,20 @@ class Web4AdministradoresGruposController extends Controller
     public function store(StoreWebAdministradoresGrupoRequest $request){
 
         $Web4AdministradoresGrupo = new Web4AdministradoresGrupo();
-        $Web4AdministradoresGrupo->nome=$request->nome;
-        $Web4AdministradoresGrupo->timestamps=$request->timestamps;
+        $Web4AdministradoresGrupo->$request->comment;
+        $Web4AdministradoresGrupo->$request->Codigo;
+        $Web4AdministradoresGrupo->$request->CodigoRevenda;
+        $Web4AdministradoresGrupo->$request->Status;
+        $Web4AdministradoresGrupo->$request->IsDeletado;
+        $Web4AdministradoresGrupo->$request->DataCadastro;
+        $Web4AdministradoresGrupo->$request->IP;
+        $Web4AdministradoresGrupo->$request->Nome;
+        $Web4AdministradoresGrupo->$request->IsTipo;
+        $Web4AdministradoresGrupo->$request->IsEditar;
+        $Web4AdministradoresGrupo->$request->Tipo;
+        $Web4AdministradoresGrupo->$request->IsDeletado;
+        $Web4AdministradoresGrupo->$request->Status;
+        
         $Web4AdministradoresGrupo->save();
         
     }

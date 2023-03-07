@@ -40,8 +40,10 @@ class Web4AutavisoController extends Controller
     public function store(StoreWeb4AutavisosRequest $request){
 
         $Web4Autavisos = new Web4Autavisos();
-        $Web4Autavisos->nome=$request->nome;
-        $Web4Autavisos->timestamps=$request->timestamps;
+        $Web4Autavisos->$request->comment;
+        $Web4Autavisos->$request->Codigo;
+        $Web4Autavisos->$request->Tipo;
+        $Web4Autavisos->$request->DataUltimoEnvio;
         $Web4Autavisos->save();
         
     }

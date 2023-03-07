@@ -8,39 +8,39 @@ class Web4AdministradoresGruposAcoesController extends Controller
 {
     //
      public function create(){
-    $Categoria = Categoria::get();
-    return view('categoria.create',compact('Categoria'));
+    $Web4AdministradoresGruposAcoes = Web4AdministradoresGruposAcoes::get();
+    return view('Web4AdministradoresGruposAcoes.create',compact('Web4AdministradoresGruposAcoes'));
     }
 
     public function edit($id){
-        $Categoria = Categoria::findorFail($id);
-        return view('categoria.edit',['Categoria'=>$Categoria]);
+        $Web4AdministradoresGruposAcoes = Web4AdministradoresGruposAcoes::findorFail($id);
+        return view('Web4AdministradoresGruposAcoes.edit',['Web4AdministradoresGruposAcoes'=>$Web4AdministradoresGruposAcoes]);
     }
 
      public function update(Request $request){
-        Categoria::find($request->id)->update($request->except('_token'));
-        return redirect('index/categoria')->with('msg', 'alteração realdizado com sucesso');
+        Web4AdministradoresGruposAcoes::find($request->id)->update($request->except('_token'));
+        return redirect('index/Web4AdministradoresGruposAcoes')->with('msg', 'alteração realdizado com sucesso');
 
     }
 
      public function destroy($id)
     {
-      Categoria::findorFail($id)->delete();
-      return redirect('categoria.index')->with('msg', 'categoria apagada');
+      Web4AdministradoresGruposAcoes::findorFail($id)->delete();
+      return redirect('Web4AdministradoresGruposAcoes.index')->with('msg', 'Web4AdministradoresGruposAcoes apagada');
     }
 
     public function index(){
-        $Categoria = Categoria::all();
-        return view('categoria.index',compact('Categoria'));
+        $Web4AdministradoresGruposAcoes = Web4AdministradoresGruposAcoes::all();
+        return view('Web4AdministradoresGruposAcoes.index',compact('Web4AdministradoresGruposAcoes'));
     }
 
 
-    public function store(StoreCategoriaRequest $request){
+    public function store(StoreWeb4AdministradoresGruposAcoesRequest $request){
 
-        $Categoria = new Categoria();
-        $Categoria->nome=$request->nome;
-        $Categoria->timestamps=$request->timestamps;
-        $Categoria->save();
+        $Web4AdministradoresGruposAcoes = new Web4AdministradoresGruposAcoes();
+        $Web4AdministradoresGruposAcoes->nome=$request->nome;
+        $Web4AdministradoresGruposAcoes->timestamps=$request->timestamps;
+        $Web4AdministradoresGruposAcoes->save();
         
     }
 }

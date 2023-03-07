@@ -40,8 +40,10 @@ class Web4AdministradoresRevendaController extends Controller
     public function store(StoreWeb4AdministradoresRevendasRequest $request){
 
         $Web4AdministradoresRevendas = new Web4AdministradoresRevendas();
-        $Web4AdministradoresRevendas->nome=$request->nome;
-        $Web4AdministradoresRevendas->timestamps=$request->timestamps;
+        $Web4AdministradoresRevendas->$request->comment;
+        $Web4AdministradoresRevendas->$request->Codigo;
+        $Web4AdministradoresRevendas->$request->CodigoAdministrador;
+        $Web4AdministradoresRevendas->$request->CodigoRevenda;
         $Web4AdministradoresRevendas->save();
         
     }
