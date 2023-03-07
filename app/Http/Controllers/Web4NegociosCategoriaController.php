@@ -39,10 +39,9 @@ class Web4NegociosCategoriaController extends Controller
 
     public function store(StoreWeb4NegociosCategoriaRequest $request){
 
-        $Web4NegociosCategoria = new Web4NegociosCategoria();
-        $Web4NegociosCategoria->nome=$request->nome;
-        $Web4NegociosCategoria->timestamps=$request->timestamps;
-        $Web4NegociosCategoria->save();
+        $Web4NegociosCategoria = $request->all();
+        Web4NegociosCategoria::create($Web4NegociosCategoria);
+       
         
     }
 }

@@ -40,8 +40,26 @@ class Web4CampanhaController extends Controller
     public function store(StoreWeb4CampanasRequest $request){
 
         $Web4Campanas = new Web4Campanas();
-        $Web4Campanas->nome=$request->nome;
-        $Web4Campanas->timestamps=$request->timestamps;
+         $Web4Campanas->$request->comment;
+             $Web4Campanas->$request->Codigo;
+             $Web4Campanas->$request->IsDeletado;
+             $Web4Campanas->$request->DataCadastro;
+             $Web4Campanas->$request->IP;
+             $Web4Campanas->$request->Assunto;
+             $Web4Campanas->$request->Mensagem;
+             $Web4Campanas->$request->Status;
+             $Web4Campanas->$request->EmailsQtd;
+             $Web4Campanas->$request->EmailsAtual;
+             $Web4Campanas->$request->DataUltimoEnvio;
+             $Web4Campanas->$request->Tipo;
+             $Web4Campanas->$request->CodigoStatus;
+             $Web4Campanas->$request->CodigoEtapa;
+             $Web4Campanas->$request->DataCadastroDe;
+             $Web4Campanas->$request->DataCadastroAte;
+             $Web4Campanas->$request->DataCadastroIs;
+             $Web4Campanas->$request->ResponderParaNome;
+             $Web4Campanas->$request->ResponderParaEmail;
+             $Web4Campanas->$request->IsDeletado;
         $Web4Campanas->save();
         
     }

@@ -39,10 +39,8 @@ class Web4PaginaController extends Controller
 
     public function store(StoreWeb4PaginaRequest $request){
 
-        $Web4Pagina = new Web4Pagina();
-        $Web4Pagina->nome=$request->nome;
-        $Web4Pagina->timestamps=$request->timestamps;
-        $Web4Pagina->save();
+        $Web4Pagina = $request->all();
+        Web4Pagina::create($Web4Pagina);
         
     }
 }

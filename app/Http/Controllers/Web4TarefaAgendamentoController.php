@@ -39,10 +39,9 @@ class Web4TarefaAgendamentoController extends Controller
 
     public function store(StoreWeb4TarefaAgendamentoRequest $request){
 
-        $Web4TarefaAgendamento = new Web4TarefaAgendamento();
-        $Web4TarefaAgendamento->nome=$request->nome;
-        $Web4TarefaAgendamento->timestamps=$request->timestamps;
-        $Web4TarefaAgendamento->save();
+        $Web4TarefaAgendamento = $request->all();
+        Web4TarefaAgendamento::create($Web4TarefaAgendamento);
+        
         
     }
 }

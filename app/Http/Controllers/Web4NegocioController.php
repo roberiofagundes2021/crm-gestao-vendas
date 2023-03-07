@@ -39,10 +39,7 @@ class Web4NegocioController extends Controller
 
     public function store(StoreWeb4NegocioRequest $request){
 
-        $Web4Negocio = new Web4Negocio();
-        $Web4Negocio->nome=$request->nome;
-        $Web4Negocio->timestamps=$request->timestamps;
-        $Web4Negocio->save();
-        
+        $Web4Negocio = $request->all();
+        $Web4Negocio::create($Web4Negocio);        
     }
 }

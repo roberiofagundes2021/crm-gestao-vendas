@@ -40,8 +40,10 @@ class Web4AdministradoresEtapasController extends Controller
     public function store(StoreWebAdministradoresEtapasRequest $request){
 
         $Web4AdministradoresEtapas = new Web4AdministradoresEtapas();
-        $Web4AdministradoresEtapas->nome=$request->nome;
-        $Web4AdministradoresEtapas->timestamps=$request->timestamps;
+        Web4AdministradoresEtapas->$request->comment;
+        Web4AdministradoresEtapas->$request->Codigo;
+        Web4AdministradoresEtapas->$request->CodigoAdministrador;
+        Web4AdministradoresEtapas->$request->CodigoEtapa;
         $Web4AdministradoresEtapas->save();
         
     }

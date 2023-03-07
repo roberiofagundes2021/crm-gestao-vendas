@@ -40,8 +40,11 @@ class Web4ConfiguracaoController extends Controller
     public function store(StoreWeb4ConfiguracoesRequest $request){
 
         $Web4Configuracoes = new Web4Configuracoes();
-        $Web4Configuracoes->nome=$request->nome;
-        $Web4Configuracoes->timestamps=$request->timestamps;
+         $Web4Configuracoes->$request->comment;
+            $Web4Configuracoes->$request->Codigo;
+            $Web4Configuracoes->$request->Nome;
+            $Web4Configuracoes->$request->Valor;
+            $Web4Configuracoes->$request->Tipo;
         $Web4Configuracoes->save();
         
     }

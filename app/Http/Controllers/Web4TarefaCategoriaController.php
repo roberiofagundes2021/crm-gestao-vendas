@@ -39,10 +39,8 @@ class Web4TarefaCategoriaController extends Controller
 
     public function store(StoreWeb4TarefaCategoriaRequest $request){
 
-        $Web4TarefaCategoria = new Web4TarefaCategoria();
-        $Web4TarefaCategoria->nome=$request->nome;
-        $Web4TarefaCategoria->timestamps=$request->timestamps;
-        $Web4TarefaCategoria->save();
+        $Web4TarefaCategoria = $request->all();
+        Web4TarefaCategoria::create($Web4TarefaCategoria);
         
     }
 }

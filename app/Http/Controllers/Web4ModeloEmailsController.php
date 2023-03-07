@@ -39,10 +39,7 @@ class Web4ModeloEmailsController extends Controller
 
     public function store(StoreWeb4ModeloEmailsRequest $request){
 
-        $Web4ModeloEmails = new Web4ModeloEmails();
-        $Web4ModeloEmails->nome=$request->nome;
-        $Web4ModeloEmails->timestamps=$request->timestamps;
-        $Web4ModeloEmails->save();
-        
+        $Web4ModeloEmails =$request->all();
+        Web4ModeloEmails::create($Web4ModeloEmails);        
     }
 }

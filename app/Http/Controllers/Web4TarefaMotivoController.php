@@ -38,11 +38,8 @@ class Web4TarefaMotivoController extends Controller
 
 
     public function store(StoreWeb4TarefaMotivoRequest $request){
-
-        $Web4TarefaMotivo = new Web4TarefaMotivo();
-        $Web4TarefaMotivo->nome=$request->nome;
-        $Web4TarefaMotivo->timestamps=$request->timestamps;
-        $Web4TarefaMotivo->save();
         
+        $Web4TarefaMotivo = $request->all();
+        Web4TarefaMotivo::$Web4TarefaMotivo;
     }
 }

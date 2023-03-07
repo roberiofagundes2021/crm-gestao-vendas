@@ -39,10 +39,7 @@ class Web4NegociosAcoesController extends Controller
 
     public function store(StoreWeb4NegociosAcoesRequest $request){
 
-        $Web4NegociosAcoes = new Web4NegociosAcoes();
-        $Web4NegociosAcoes->nome=$request->nome;
-        $Web4NegociosAcoes->timestamps=$request->timestamps;
-        $Web4NegociosAcoes->save();
-        
+        $Web4NegociosAcoes = $request->all();
+        Web4NegociosAcoes::create($Web4NegociosAcoes);        
     }
 }

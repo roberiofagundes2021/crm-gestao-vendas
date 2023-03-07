@@ -39,10 +39,8 @@ class Web4InformativosAdministradoresController extends Controller
 
     public function store(StoreWeb4InformativoAdministradoresRequest $request){
 
-        $Web4InformativoAdministradores = new Web4InformativoAdministradores();
-        $Web4InformativoAdministradores->nome=$request->nome;
-        $Web4InformativoAdministradores->timestamps=$request->timestamps;
-        $Web4InformativoAdministradores->save();
+        $Web4InformativoAdministradores = $request->all();
+        Web4InformativoAdministradores::create($Web4InformativoAdministradores);
         
     }
 }

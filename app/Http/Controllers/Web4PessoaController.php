@@ -39,10 +39,8 @@ class Web4PessoaController extends Controller
 
     public function store(StoreWeb4PessoaRequest $request){
 
-        $Web4Pessoa = new Web4Pessoa();
-        $Web4Pessoa->nome=$request->nome;
-        $Web4Pessoa->timestamps=$request->timestamps;
-        $Web4Pessoa->save();
+        $Web4Pessoa=$request->all();
+        Web4Pessoa::create($Web4Pessoa);
         
     }
 }

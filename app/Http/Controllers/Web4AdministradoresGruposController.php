@@ -53,7 +53,6 @@ class Web4AdministradoresGruposController extends Controller
         $Web4AdministradoresGrupo->$request->Tipo;
         $Web4AdministradoresGrupo->$request->IsDeletado;
         $Web4AdministradoresGrupo->$request->Status;
-        
         $Web4AdministradoresGrupo->save();
         
     }

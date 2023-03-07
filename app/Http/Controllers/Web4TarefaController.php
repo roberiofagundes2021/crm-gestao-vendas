@@ -39,10 +39,9 @@ class Web4TarefaController extends Controller
 
     public function store(StoreWeb4TarefaRequest $request){
 
-        $Web4Tarefa = new Web4Tarefa();
-        $Web4Tarefa->nome=$request->nome;
-        $Web4Tarefa->timestamps=$request->timestamps;
-        $Web4Tarefa->save();
+        $Web4Tarefa = $request->all();
+        Web4Tarefa::create($Web4Tarefa);
+       
         
     }
 }

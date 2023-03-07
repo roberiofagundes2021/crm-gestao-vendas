@@ -40,8 +40,12 @@ class Web4CampanhaDestinatarioController extends Controller
     public function store(StoreWeb4CampanasDestinatariosRequest $request){
 
         $Web4CampanasDestinatarios = new Web4CampanasDestinatarios();
-        $Web4CampanasDestinatarios->nome=$request->nome;
-        $Web4CampanasDestinatarios->timestamps=$request->timestamps;
+        $Web4CampanasDestinatarios->$request->comment;
+        $Web4CampanasDestinatarios->$request->Codigo;
+        $Web4CampanasDestinatarios->$request->CodigoOrigem;
+        $Web4CampanasDestinatarios->$request->IsEnviado;
+        $Web4CampanasDestinatarios->$request->Nome;
+        $Web4CampanasDestinatarios->$request->Email;
         $Web4CampanasDestinatarios->save();
         
     }

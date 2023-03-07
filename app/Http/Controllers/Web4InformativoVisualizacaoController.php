@@ -39,10 +39,8 @@ class Web4InformativoVisualizacaoController extends Controller
 
     public function store(StoreWeb4InformativoVisualizacaoRequest $request){
 
-        $Web4InformativoVisualizacao = new Web4InformativoVisualizacao();
-        $Web4InformativoVisualizacao->nome=$request->nome;
-        $Web4InformativoVisualizacao->timestamps=$request->timestamps;
-        $Web4InformativoVisualizacao->save();
-        
+        $Web4InformativoVisualizacao = $request->all();
+        Web4InformativoVisualizacao::create($Web4InformativoVisualizacao);
+                
     }
 }

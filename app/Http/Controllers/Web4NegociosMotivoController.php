@@ -39,10 +39,9 @@ class Web4NegociosMotivoController extends Controller
 
     public function store(StoreWeb4NegociosMotivoRequest $request){
 
-        $Web4NegociosMotivo = new Web4NegociosMotivo();
-        $Web4NegociosMotivo->nome=$request->nome;
-        $Web4NegociosMotivo->timestamps=$request->timestamps;
-        $Web4NegociosMotivo->save();
+        $Web4NegociosMotivo = $request->all();
+        Web4NegociosMotivo::create($Web4NegociosMotivo);
+        
         
     }
 }

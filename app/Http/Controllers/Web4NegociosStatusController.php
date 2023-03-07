@@ -39,10 +39,9 @@ class Web4NegociosStatusController extends Controller
 
     public function store(StoreWeb4NegociosStatusRequest $request){
 
-        $Web4NegociosStatus = new Web4NegociosStatus();
-        $Web4NegociosStatus->nome=$request->nome;
-        $Web4NegociosStatus->timestamps=$request->timestamps;
-        $Web4NegociosStatus->save();
+        $Web4NegociosStatus = $request->all();
+        Web4NegociosStatus::create($Web4NegociosStatus);
+        
         
     }
 }

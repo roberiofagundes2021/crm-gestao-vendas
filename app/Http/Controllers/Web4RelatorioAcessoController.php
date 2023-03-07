@@ -39,10 +39,8 @@ class Web4RelatorioAcessoController extends Controller
 
     public function store(StoreWeb4RelatorioAcessoRequest $request){
 
-        $Web4RelatorioAcesso = new Web4RelatorioAcesso();
-        $Web4RelatorioAcesso->nome=$request->nome;
-        $Web4RelatorioAcesso->timestamps=$request->timestamps;
-        $Web4RelatorioAcesso->save();
+        $Web4RelatorioAcesso = $request->all();
+        Web4RelatorioAcesso::create($Web4RelatorioAcesso);       
         
     }
 }

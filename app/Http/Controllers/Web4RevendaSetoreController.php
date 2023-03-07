@@ -39,10 +39,8 @@ class Web4RevendaSetoreController extends Controller
 
     public function store(StoreWeb4RevendaSetoreRequest $request){
 
-        $Web4RevendaSetore = new Web4RevendaSetore();
-        $Web4RevendaSetore->nome=$request->nome;
-        $Web4RevendaSetore->timestamps=$request->timestamps;
-        $Web4RevendaSetore->save();
+        $Web4RevendaSetore = $request->all();
+        Web4RevendaSetore::create($Web4RevendaSetore);
         
     }
 }

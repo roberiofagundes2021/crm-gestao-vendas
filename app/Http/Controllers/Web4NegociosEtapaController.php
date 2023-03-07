@@ -39,10 +39,8 @@ class Web4NegociosEtapaController extends Controller
 
     public function store(StoreWeb4NegociosEtapaRequest $request){
 
-        $Web4NegociosEtapa = new Web4NegociosEtapa();
-        $Web4NegociosEtapa->nome=$request->nome;
-        $Web4NegociosEtapa->timestamps=$request->timestamps;
-        $Web4NegociosEtapa->save();
-        
+        $Web4NegociosEtapa = $request->all();
+        Web4NegociosEtapa::create($Web4NegociosEtapa);
+                
     }
 }

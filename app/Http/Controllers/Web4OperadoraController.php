@@ -39,10 +39,8 @@ class Web4OperadoraController extends Controller
 
     public function store(StoreWeb4OperadoraRequest $request){
 
-        $Web4Operadora = new Web4Operadora();
-        $Web4Operadora->nome=$request->nome;
-        $Web4Operadora->timestamps=$request->timestamps;
-        $Web4Operadora->save();
+        $Web4Operadora = $request->all();
+        Web4Operadora::create($Web4Operadora);
         
     }
 }

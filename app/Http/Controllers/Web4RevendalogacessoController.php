@@ -39,10 +39,7 @@ class Web4RevendalogacessoController extends Controller
 
     public function store(StoreWeb4RevendalogacessoRequest $request){
 
-        $Web4Revendalogacesso = new Web4Revendalogacesso();
-        $Web4Revendalogacesso->nome=$request->nome;
-        $Web4Revendalogacesso->timestamps=$request->timestamps;
-        $Web4Revendalogacesso->save();
-        
+        $Web4Revendalogacesso = $request->all();
+        Web4Revendalogacesso::create($Web4Revendalogacesso);        
     }
 }

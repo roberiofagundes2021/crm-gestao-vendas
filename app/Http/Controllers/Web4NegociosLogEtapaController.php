@@ -39,10 +39,8 @@ class Web4NegociosLogEtapaController extends Controller
 
     public function store(StoreWeb4NegociosLogEtapaRequest $request){
 
-        $Web4NegociosLogEtapa = new Web4NegociosLogEtapa();
-        $Web4NegociosLogEtapa->nome=$request->nome;
-        $Web4NegociosLogEtapa->timestamps=$request->timestamps;
-        $Web4NegociosLogEtapa->save();
+        $Web4NegociosLogEtapa = $request->all();
+        Web4NegociosLogEtapa::create($Web4NegociosLogEtapa);
         
     }
 }

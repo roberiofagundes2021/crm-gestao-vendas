@@ -40,10 +40,9 @@ class Web4RevendaCategoriaController extends Controller
 
     public function store(StoreWeb4RevendaCategoriaRequest $request){
 
-        $Web4RevendaCategoria = new Web4RevendaCategoria();
-        $Web4RevendaCategoria->nome=$request->nome;
-        $Web4RevendaCategoria->timestamps=$request->timestamps;
-        $Web4RevendaCategoria->save();
+        $Web4RevendaCategoria = $request->all();
+        Web4RevendaCategoria::create($Web4RevendaCategoria);
+       
         
     }
 }

@@ -40,8 +40,11 @@ class Web4AdministradoresTokenAcessoController extends Controller
     public function store(StoreWeb4AdministradoresTokenAcessoRequest $request){
 
         $Web4AdministradoresTokenAcesso = new Web4AdministradoresTokenAcesso();
-        $Web4AdministradoresTokenAcesso->nome=$request->nome;
-        $Web4AdministradoresTokenAcesso->timestamps=$request->timestamps;
+        $Web4AdministradoresTokenAcesso->$request->comment;
+            $Web4AdministradoresTokenAcesso->$request->Codigo;
+            $Web4AdministradoresTokenAcesso->$request->CodigoAdministrador;
+            $Web4AdministradoresTokenAcesso->$request->DataCadastro;
+            $Web4AdministradoresTokenAcesso->$request->IP;
         $Web4AdministradoresTokenAcesso->save();
         
     }

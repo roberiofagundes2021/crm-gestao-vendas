@@ -39,10 +39,9 @@ class Web4RevendaController extends Controller
 
     public function store(StoreWeb4RevendaRequest $request){
 
-        $Web4Revenda = new Web4Revenda();
-        $Web4Revenda->nome=$request->nome;
-        $Web4Revenda->timestamps=$request->timestamps;
-        $Web4Revenda->save();
+        $Web4Revenda = $request->all();
+        Web4Revenda::create($Web4Revenda);
+        
         
     }
 }

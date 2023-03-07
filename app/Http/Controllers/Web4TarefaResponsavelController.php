@@ -11,8 +11,6 @@ class Web4TarefaResponsavelController extends Controller
     //
      public function create(){
     $Web4TarefaResponsavel = Web4TarefaResponsavel::get();
-
-
     return view('Web4TarefaResponsavel.create',compact('Web4TarefaResponsavel'));
     }
 
@@ -41,10 +39,8 @@ class Web4TarefaResponsavelController extends Controller
 
     public function store(StoreWeb4TarefaResponsavelRequest $request){
 
-        $Web4TarefaResponsavel = new Web4TarefaResponsavel();
-        $Web4TarefaResponsavel->nome=$request->nome;
-        $Web4TarefaResponsavel->timestamps=$request->timestamps;
-        $Web4TarefaResponsavel->save();
+        $Web4TarefaResponsavel = $request->all();
+        Web4TarefaResponsavel::create($Web4TarefaResponsavel);
         
     }
 }
