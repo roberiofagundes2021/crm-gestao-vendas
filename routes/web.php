@@ -59,6 +59,7 @@ use App\Http\Controllers\Web4TarefaCategoriaController;
 use App\Http\Controllers\Web4TarefaController;
 use App\Http\Controllers\Web4TarefaMotivoController;
 use App\Http\Controllers\Web4TarefaResponsavelController;
+use App\Http\Controllers\TarefaController;
 
 
 
@@ -605,6 +606,15 @@ Route::get('/index/Web4TarefaCategoria',[Web4TarefaCategoriaController::class,'i
 Route::delete('/Web4TarefaCategoria/{id}',[Web4TarefaCategoriaController::class,'destroy'])->name('Web4TarefaCategoria.delete');
 Route::post('/Web4TarefaCategoria/edit/{id}',[Web4TarefaCategoriaController::class,'edit'])->name('Web4TarefaCategoria.edit');
 Route::put('/Web4TarefaCategoria/update/{id}',[Web4TarefaCategoriaController::class,'update'])->name('Web4TarefaCategoria.update');
+
+Route::get('/create/Tarefa',[TarefaAcoesControllerController::class,'create'])->name('Tarefa.create');
+Route::post('/create/Tarefa',[TarefaController::class,'create'])->name('Tarefa.create');
+
+Route::post('/storeTarefa',[TarefaController::class,'store'])->name('Tarefa.store');
+Route::get('/index/Tarefa',[TarefaController::class,'index'])->name('Tarefa.index');
+Route::delete('/Tarefa/{id}',[TarefaController::class,'destroy'])->name('Tarefa.delete');
+Route::post('/Tarefa/edit/{id}',[TarefaController::class,'edit'])->name('Tarefa.edit');
+Route::put('/Tarefa/update/{id}',[TarefaController::class,'update'])->name('Tarefa.update');
 
 Route::get('/create/Web4Tarefa',[Web4TarefaController::class,'create'])->name('Web4Tarefa.create');
 Route::post('/create/Web4Tarefa',[Web4TarefaController::class,'create'])->name('Web4Tarefa.create');

@@ -4,10 +4,14 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\StoreWeb4RevendaRequest;
 use App\Models\Web4Administradores;
+use App\Models\Web4AdministradoresGrupo;
 use App\Models\Web4Revenda;
 use Illuminate\Http\Request;
 
-class Web4RevendaController extends Controller
+/**
+ * Summary of TarefaController
+ */
+class TarefaController extends Controller
 {
     //
      public function create(){
@@ -35,10 +39,17 @@ class Web4RevendaController extends Controller
     public function index(){
         $Web4Revenda = Web4Revenda::all();
         $Web4Administradores = Web4Administradores::all();
-        return view('tarefa.index',compact('Web4Revenda','Web4Administradores'));
+        $Web4AdministradoresGrupo = Web4AdministradoresGrupo::all();
+        return view('tarefa.index',compact('Web4Revenda','Web4Administradores'
+        ,'Web4AdministradoresGrupo'));
     }
 
 
+    /**
+     * Summary of store
+     * @param StoreWeb4RevendaRequest $request
+     * @return void
+     */
     public function store(StoreWeb4RevendaRequest $request){
 
         $Web4Revenda = $request->all();

@@ -2,46 +2,57 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\StoreWeb4RevendaRequest;
 use App\Http\Requests\StoreWeb4TarefaRequest;
+use App\Models\Web4Administradores;
+use App\Models\Web4Revenda;
 use App\Models\Web4Tarefa;
 use Illuminate\Http\Request;
 
+/**
+ * Summary of Web4TarefaController
+ */
 class Web4TarefaController extends Controller
 {
-    //
      public function create(){
-    $Web4Tarefa = Web4Tarefa::get();
-    return view('Web4Tarefa.create',compact('Web4Tarefa'));
+    $Web4Revenda = Web4Revenda::get();
+    return view('Web4Revenda.create',compact('Web4Revenda'));
     }
 
     public function edit($id){
-        $Web4Tarefa = Web4Tarefa::findorFail($id);
-        return view('Web4Tarefa.edit',['Web4Tarefa'=>$Web4Tarefa]);
+        $Web4Revenda = Web4Revenda::findorFail($id);
+        return view('Web4Revenda.edit',['Web4Revenda'=>$Web4Revenda]);
     }
 
      public function update(Request $request){
-        Web4Tarefa::find($request->id)->update($request->except('_token'));
-        return redirect('index/Web4Tarefa')->with('msg', 'alteração realdizado com sucesso');
+        Web4Revenda::find($request->id)->update($request->except('_token'));
+        return redirect('index/Web4Revenda')->with('msg', 'alteração realdizado com sucesso');
 
     }
 
      public function destroy($id)
     {
-      Web4Tarefa::findorFail($id)->delete();
-      return redirect('Web4Tarefa.index')->with('msg', 'Web4Tarefa apagada');
+      Web4Revenda::findorFail($id)->delete();
+      return redirect('Web4Revenda.index')->with('msg', 'Web4Revenda apagada');
     }
 
     public function index(){
-        $Web4Tarefa = Web4Tarefa::all();
-        return view('Web4Tarefa.index',compact('Web4Tarefa'));
+        $Web4Revenda = Web4Revenda::all();
+        $Web4Administradores = Web4Administradores::all();
+        return view('tarefa.index',compact('Web4Revenda','Web4Administradores'));
     }
 
 
-    public function store(StoreWeb4TarefaRequest $request){
+    /**
+     * Summary of store
+     * @param StoreWeb4RevendaRequest $request
+     * @return void
+     */
+    public function store(StoreWeb4RevendaRequest $request){
 
-        $Web4Tarefa = $request->all();
-        Web4Tarefa::create($Web4Tarefa);
-       
+        $Web4Revenda = $request->all();
+        Web4Revenda::create($Web4Revenda);
+        
         
     }
 }

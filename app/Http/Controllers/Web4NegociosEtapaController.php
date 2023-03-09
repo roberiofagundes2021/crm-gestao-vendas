@@ -9,6 +9,7 @@ use App\Models\Web4NegociosAcoes;
 use App\Models\Web4NegociosCategoria;
 use App\Models\Web4NegociosStatus;
 use App\Models\Web4NegociosStatus2;
+use App\Models\Web4Revenda;
 use Illuminate\Http\Request;
 use App\Models\Web4NegociosEtapa;
 
@@ -45,9 +46,10 @@ class Web4NegociosEtapaController extends Controller
         $Web4NegociosAcoes = Web4NegociosAcoes::all();
         $Web4NegociosCategoria=Web4NegociosCategoria::all();
         $Web4AdministradoresGrupo = Web4AdministradoresGrupo::all();
+        $Web4Revenda=Web4Revenda::all();
         return view('negocio.index',compact('Web4NegociosEtapa','Web4Administradores', 
         'Web4NegociosStatus', 'Web4NegociosStatus2',
-         'Web4NegociosAcoes','Web4NegociosCategoria','Web4AdministradoresGrupo'));
+         'Web4NegociosAcoes','Web4NegociosCategoria','Web4AdministradoresGrupo','Web4Revenda'));
     }
 
 
