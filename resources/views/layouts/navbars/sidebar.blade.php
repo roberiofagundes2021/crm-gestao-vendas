@@ -4,7 +4,7 @@
         <div class="logo">
 
         </div>
-        <ul class="nav fixed-floating">
+        <ul class="nav fixed">
 
             <li @if ($pageSlug == 'dashboard') class="active " @endif>
                 <a " href="{{ route('home') }}">

@@ -3,6 +3,12 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\StoreWeb4NegociosEtapaRequest;
+use App\Models\Web4Administradores;
+use App\Models\Web4AdministradoresGrupo;
+use App\Models\Web4NegociosAcoes;
+use App\Models\Web4NegociosCategoria;
+use App\Models\Web4NegociosStatus;
+use App\Models\Web4NegociosStatus2;
 use Illuminate\Http\Request;
 use App\Models\Web4NegociosEtapa;
 
@@ -33,7 +39,15 @@ class Web4NegociosEtapaController extends Controller
 
     public function index(){
         $Web4NegociosEtapa = Web4NegociosEtapa::all();
-        return view('Web4NegociosEtapa.index',compact('Web4NegociosEtapa'));
+        $Web4Administradores = Web4Administradores::all();
+        $Web4NegociosStatus = Web4NegociosStatus::all();
+        $Web4NegociosStatus2 = Web4NegociosStatus2::all();
+        $Web4NegociosAcoes = Web4NegociosAcoes::all();
+        $Web4NegociosCategoria=Web4NegociosCategoria::all();
+        $Web4AdministradoresGrupo = Web4AdministradoresGrupo::all();
+        return view('negocio.index',compact('Web4NegociosEtapa','Web4Administradores', 
+        'Web4NegociosStatus', 'Web4NegociosStatus2',
+         'Web4NegociosAcoes','Web4NegociosCategoria','Web4AdministradoresGrupo'));
     }
 
 

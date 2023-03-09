@@ -3,7 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\StoreEstadoRequest;
+use App\Models\Cidade;
 use App\Models\Estado;
+use App\Models\Web4Administradores;
+use App\Models\Web4Tarefa;
+use App\Models\Web4Negocio;
 use Illuminate\Http\Request;
 
 class EstadoController extends Controller
@@ -33,7 +37,11 @@ class EstadoController extends Controller
 
     public function index(){
         $Estado = Estado::all();
-        return view('Estado.index',compact('Estado'));
+        $Cidade = Cidade::all();
+        $Web4Tarefa = Web4Tarefa::all();
+        $Web4Administradores = Web4Administradores::all();
+        $Web4Negocio=Web4Negocio::all();
+        return view('Estado.index',compact('Estado','Cidade','Web4Tarefa','Web4Administradores','Web4Negocio'));
     }
 
 
