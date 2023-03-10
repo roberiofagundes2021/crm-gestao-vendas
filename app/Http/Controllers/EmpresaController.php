@@ -64,4 +64,10 @@ class EmpresaController extends Controller
         $Estado->save();
         
     }
+
+    public function mostrar_usuarios_menu(){
+        $Web4Administradores = Web4Administradores::all();
+
+         return view('layouts.navbars.sidebar',compact('Web4Administradores'));
+    }
 }

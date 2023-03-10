@@ -2,6 +2,8 @@
 
 namespace App\Providers;
 
+use App\Models\Web4Administradores;
+use App\Models\Web4AdministradoresGrupo;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -23,6 +25,11 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        //aqui estou compartilhando uma variavel com as views 
+        $Web4Administradores = Web4Administradores::all();
+        $Web4AdministradoresGrupo = Web4AdministradoresGrupo::all();
+
+        view()->share('Web4Administradores', $Web4Administradores);
+        view()->share('Web4AdministradoresGrupo', $Web4AdministradoresGrupo);
     }
 }

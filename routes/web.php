@@ -73,6 +73,8 @@ use App\Http\Controllers\NegocioController;
 
 
 
+
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -556,15 +558,16 @@ Route::delete('/Web4TarefaCategoria/{id}',[Web4TarefaCategoriaController::class,
 Route::post('/Web4TarefaCategoria/edit/{id}',[Web4TarefaCategoriaController::class,'edit'])->name('Web4TarefaCategoria.edit');
 Route::put('/Web4TarefaCategoria/update/{id}',[Web4TarefaCategoriaController::class,'update'])->name('Web4TarefaCategoria.update');
 
-Route::get('/create/Empresa',[EmpresaControllerController::class,'create'])->name('Empresa.create');
+Route::get('/create/Empresa',[EmpresaController::class,'create'])->name('Empresa.create');
 Route::post('/create/Empresa',[EmpresaController::class,'create'])->name('Empresa.create');
 Route::post('/store/Empresa',[EmpresaController::class,'store'])->name('Empresa.store');
+Route::get('/index/mostrar_usuarios',[EmpresaController::class,'mostrar_usuarios_menu'])->name('Empresa.menu_usuario');
 Route::get('/index/Empresa',[EmpresaController::class,'index'])->name('Empresa.index');
 Route::delete('/Empresa/{id}',[EmpresaController::class,'destroy'])->name('Empresa.delete');
 Route::post('/Empresa/edit/{id}',[EmpresaController::class,'edit'])->name('Empresa.edit');
 Route::put('/Empresa/update/{id}',[EmpresaController::class,'update'])->name('Empresa.update');
 
-Route::get('/create/Negocio',[NegocioControllerController::class,'create'])->name('Negocio.create');
+Route::get('/create/Negocio',[NegocioController::class,'create'])->name('Negocio.create');
 Route::post('/create/Negocio',[NegocioController::class,'create'])->name('Negocio.create');
 Route::post('/store/Negocio',[NegocioController::class,'store'])->name('Negocio.store');
 Route::get('/index/Negocio',[NegocioController::class,'index'])->name('Negocio.index');
@@ -572,13 +575,7 @@ Route::delete('/Negocio/{id}',[NegocioController::class,'destroy'])->name('Negoc
 Route::post('/Negocio/edit/{id}',[NegocioController::class,'edit'])->name('Negocio.edit');
 Route::put('/Negocio/update/{id}',[NegocioController::class,'update'])->name('Negocio.update');
 
-Route::get('/create/Tarefa',[TarefaAcoesControllerController::class,'create'])->name('Tarefa.create');
-Route::post('/create/Tarefa',[TarefaController::class,'create'])->name('Tarefa.create');
-Route::post('/store/Tarefa',[TarefaController::class,'store'])->name('Tarefa.store');
-Route::get('/index/Tarefa',[TarefaController::class,'index'])->name('Tarefa.index');
-Route::delete('/Tarefa/{id}',[TarefaController::class,'destroy'])->name('Tarefa.delete');
-Route::post('/Tarefa/edit/{id}',[TarefaController::class,'edit'])->name('Tarefa.edit');
-Route::put('/Tarefa/update/{id}',[TarefaController::class,'update'])->name('Tarefa.update');
+
 
 Route::get('/create/Web4Tarefa',[Web4TarefaController::class,'create'])->name('Web4Tarefa.create');
 Route::post('/create/Web4Tarefa',[Web4TarefaController::class,'create'])->name('Web4Tarefa.create');
