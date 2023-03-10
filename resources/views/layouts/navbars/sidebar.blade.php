@@ -1001,10 +1001,27 @@
                 <div  class="collapse show" id="negocio" aria-expanded="false" >
                     <ul class="nav pl-4">
                         <li @if ($pageSlug == 'profile') class="active " @endif>
-                            <a  href="{{ route('profile.edit') }}">
-                               
+                             <a data-toggle="collapse" href="#responsavel" aria-expanded="true">
                                 <p style="color:black;">{{ __('Responsável') }}</p>
+                                <b class="caret mt-1"></b>
+                               
                             </a>
+
+                            <div  class="collapse show" id="responsavel" aria-expanded="false" >
+                                <ul class="nav pl-4 ">
+                                    <li @if ($pageSlug == 'profile') class="active " @endif>
+                                        <a  href="#">
+                                            @forelse ($Web4Administradores as $web4Administradores)
+                                                {{$web4Administradores->Nome}}
+                                            @empty
+                                                <h6>não dados encontrado</h6>
+                                            @endforelse
+                                        </a>
+                                    </li>
+
+                                </ul>
+                            </div>
+
                         </li>
 
                     </ul>
@@ -1013,10 +1030,26 @@
                 <div  class="collapse show" id="negocio" aria-expanded="false" >
                     <ul class="nav pl-4">
                         <li @if ($pageSlug == 'profile') class="active " @endif>
-                            <a  href="{{ route('profile.edit') }}">
+                           <a data-toggle="collapse" href="#etapa" aria-expanded="true">
                                
                                 <p style="color:black;">{{ __('Etapas') }}</p>
+                                <b class="caret mt-1"></b>
                             </a>
+
+                            <div  class="collapse show" id="etapa" aria-expanded="false" >
+                                <ul class="nav pl-4 ">
+                                    <li @if ($pageSlug == 'profile') class="active " @endif>
+                                        <a  href="#">
+                                            @forelse ($Web4NegociosEtapa as $web4NegociosEtapa)
+                                                {{$web4NegociosEtapa->Titulo}}
+                                            @empty
+                                                <h6>não dados encontrado</h6>
+                                            @endforelse
+                                        </a>
+                                    </li>
+
+                                </ul>
+                            </div>
                         </li>
 
                     </ul>
@@ -1027,44 +1060,187 @@
                         <li @if ($pageSlug == 'profile') class="active " @endif>
                             <a  href="{{ route('profile.edit') }}">
                                
+                                <a data-toggle="collapse" href="#status" aria-expanded="true">
                                 <p style="color:black;">{{ __('Status') }}</p>
+                                <b class="caret mt-1"></b>
                             </a>
-                        </li>
-
-                    </ul>
-                </div>
-
-                <div  class="collapse show" id="negocio" aria-expanded="false" >
-                    <ul class="nav pl-4">
-                        <li @if ($pageSlug == 'profile') class="active " @endif>
-                            <a  href="{{ route('profile.edit') }}">
-                               
-                                <p style="color:black;">{{ __('Status 2') }}</p>
-                            </a>
-                        </li>
-
-                    </ul>
-                </div>
-
-                <div  class="collapse show" id="negocio" aria-expanded="false" >
-                    <ul class="nav pl-4">
-                        <li @if ($pageSlug == 'profile') class="active " @endif>
-                            <a  href="{{ route('profile.edit') }}">
-                             
-                                <p style="color:black;">{{ __('Filtros ') }}</p>
-                            </a>
-                        </li>
-
-                    </ul>
-                </div>
-
-                <div  class="collapse show" id="negocio" aria-expanded="false" >
-                    <ul class="nav pl-4">
-                        <li @if ($pageSlug == 'profile') class="active " @endif>
-                            <a  href="{{ route('profile.edit') }}">
                             
+                            <div  class="collapse show" id="status" aria-expanded="false" >
+                                <ul class="nav pl-4">
+                                    <li @if ($pageSlug == 'profile') class="active " @endif>
+                                        <a  href="#">
+                                        
+                                            @forelse ($Web4NegociosStatus as $web4NegociosStatus)
+                                                
+                                                {{$web4NegociosStatus->CodigoImportacao}}<br>
+
+                                            @empty
+                                                
+                                            @endforelse
+                                        </a>
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </li>
+
+                    </ul>
+                </div>
+
+                <div  class="collapse show" id="negocio" aria-expanded="false" >
+                    <ul class="nav pl-4">
+                        <li @if ($pageSlug == 'profile') class="active " @endif>
+                            <a  href="{{ route('profile.edit') }}">
+                                <a data-toggle="collapse" href="#status2" aria-expanded="true">
+                                <p style="color:black;">{{ __('Status 2') }}</p>
+                                <b class="caret mt-1"></b>
+                            </a>
+                           
+                            <div  class="collapse show" id="status2" aria-expanded="false" >
+                                <ul class="nav pl-4">
+                                    <li @if ($pageSlug == 'profile') class="active " @endif>
+                                        <a  href="{{ route('profile.edit') }}">
+                                        
+                                            @forelse ($Web4NegociosStatus2 as $web4NegociosStatus2)
+                                                
+                                                    {{$web4NegociosStatus2->Titulo}}<br>
+
+                                            @empty
+                                                
+                                            @endforelse
+                                        </a>
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </li>
+
+                    </ul>
+                </div>
+
+                <div  class="collapse show" id="negocio" aria-expanded="false" >
+                    <ul class="nav pl-4">
+                        <li @if ($pageSlug == 'profile') class="active " @endif>
+                            <a  href="{{ route('profile.edit') }}">
+                              <a data-toggle="collapse" href="#filtro" aria-expanded="true">
+                                <p style="color:black;">{{ __('Filtros ') }}</p>
+                                <b class="caret mt-1"></b>
+                            </a>
+
+                            <div  class="collapse show" id="filtro" aria-expanded="false" >
+                                <ul class="nav pl-4">
+                                    <li @if ($pageSlug == 'profile') class="active " @endif>
+                                        <a  href="{{ route('profile.edit') }}">
+                                        
+                                            <p style="color:black;">
+                                                {{ __('Data de Inicio Ainda não Alcançada') }}
+                                            </p>
+                                        </a>
+                                    </li>
+
+                                </ul>
+                            </div>
+
+                             <div  class="collapse show" id="filtro" aria-expanded="false" >
+                                <ul class="nav pl-4">
+                                    <li @if ($pageSlug == 'profile') class="active " @endif>
+                                        <a  href="{{ route('profile.edit') }}">
+                                        
+                                            <p style="color:black;">
+                                                {{ __('Data de Inicio - Hoje') }}
+                                            </p>
+                                        </a>
+                                    </li>
+
+                                </ul>
+                            </div>
+
+                             <div  class="collapse show" id="filtro" aria-expanded="false" >
+                                <ul class="nav pl-4">
+                                    <li @if ($pageSlug == 'profile') class="active " @endif>
+                                        <a  href="{{ route('profile.edit') }}">
+                                        
+                                            <p style="color:black;">
+                                                {{ __('Data de Inicio - Ultrapassada') }}
+                                            </p>
+                                        </a>
+                                    </li>
+
+                                </ul>
+                            </div>
+
+                             <div  class="collapse show" id="filtro" aria-expanded="false" >
+                                <ul class="nav pl-4">
+                                    <li @if ($pageSlug == 'profile') class="active " @endif>
+                                        <a  href="{{ route('profile.edit') }}">
+                                        
+                                            <p style="color:black;">
+                                                {{ __('Data de Conclusão - Ainda não Alcançada') }}
+                                            </p>
+                                        </a>
+                                    </li>
+
+                                </ul>
+                            </div>
+
+                             <div  class="collapse show" id="filtro" aria-expanded="false" >
+                                <ul class="nav pl-4">
+                                    <li @if ($pageSlug == 'profile') class="active " @endif>
+                                        <a  href="{{ route('profile.edit') }}">
+                                        
+                                            <p style="color:black;">
+                                                {{ __('Data de Conclusão - Hoje') }}
+                                            </p>
+                                        </a>
+                                    </li>
+
+                                </ul>
+                            </div>
+
+                             <div  class="collapse show" id="filtro" aria-expanded="false" >
+                                <ul class="nav pl-4">
+                                    <li @if ($pageSlug == 'profile') class="active " @endif>
+                                        <a  href="{{ route('profile.edit') }}">
+                                        
+                                            <p style="color:black;">
+                                                {{ __('Data de Conclusão - Ultrapassada') }}
+                                            </p>
+                                        </a>
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </li>
+
+                    </ul>
+                </div>
+
+                <div  class="collapse show" id="negocio" aria-expanded="false" >
+                    <ul class="nav pl-4">
+                        <li @if ($pageSlug == 'profile') class="active " @endif>
+                            <a  href="{{ route('profile.edit') }}">
+                                 <a data-toggle="collapse" href="#negociocategoria" aria-expanded="true">
                                 <p style="color:black;">{{ __('Categoria') }}</p>
+                                <b class="caret mt-1"></b>
                             </a>
+
+                            <div  class="collapse show" id="negociocategoria" aria-expanded="false" >
+                                <ul class="nav pl-4">
+                                    <li @if ($pageSlug == 'profile') class="active " @endif>
+                                        <a  href="#">
+                                        @forelse ($Web4NegociosCategoria as $web4NegociosCategoria)
+
+                                            {{$web4NegociosCategoria->Titulo}}
+                                            
+                                        @empty
+                                            
+                                        @endforelse
+                                            
+                                        </a>
+                                    </li>
+
+                                </ul>
+                            </div>
                         </li>
 
                     </ul>
@@ -1075,8 +1251,28 @@
                         <li @if ($pageSlug == 'profile') class="active " @endif>
                             <a  href="{{ route('profile.edit') }}">
                                
+                                <a data-toggle="collapse" href="#negocioacao" aria-expanded="true">
                                 <p style="color:black;">{{ __('Ação') }}</p>
+                                <b class="caret mt-1"></b>
                             </a>
+
+                            <div  class="collapse show" id="negocioacao" aria-expanded="false" >
+                                <ul class="nav pl-4">
+                                    <li @if ($pageSlug == 'profile') class="active " @endif>
+                                        <a  href="#">
+                                        
+                                            @forelse ($Web4NegociosAcoes as $web4NegociosAcoes)
+                                                {{$web4NegociosAcoes->Titulo}}<br>
+                                            @empty
+                                                
+                                            @endforelse
+
+                                        </a>
+                                    </li>
+
+                                </ul>
+                            </div>
+
                         </li>
 
                     </ul>
@@ -1086,9 +1282,29 @@
                     <ul class="nav pl-4">
                         <li @if ($pageSlug == 'profile') class="active " @endif>
                             <a  href="{{ route('profile.edit') }}">
-                               
+                                <a data-toggle="collapse" href="#negociogrupoadm" aria-expanded="true">
                                 <p style="color:black;">{{ __('Grupo de Administradores') }}</p>
+                            <b class="caret mt-1"></b>
                             </a>
+                             <div  class="collapse show" id="negociogrupoadm" aria-expanded="false" >
+                                <ul class="nav pl-4">
+                                    <li @if ($pageSlug == 'profile') class="active " @endif>
+                                        <a  href="{{ route('profile.edit') }}">
+                                        
+                                           @forelse ($Web4AdministradoresGrupo as $web4AdministradoresGrupo)
+                                               
+                                                {{$web4AdministradoresGrupo->Nome}}
+
+                                           @empty
+                                               
+                                           @endforelse
+                                           
+                                        </a>
+                                    </li>
+
+                                </ul>
+                            </div>
+                            
                         </li>
 
                     </ul>
@@ -1099,8 +1315,30 @@
                         <li @if ($pageSlug == 'profile') class="active " @endif>
                             <a  href="{{ route('profile.edit') }}">
                                
+                                 <a data-toggle="collapse" href="#negociomotivo" aria-expanded="true">
                                 <p style="color:black;">{{ __('Motivo') }}</p>
+                                <b class="caret mt-1"></b>
+
                             </a>
+                          
+
+                            <div  class="collapse show" id="negociomotivo" aria-expanded="false" >
+                                <ul class="nav pl-4">
+                                    <li @if ($pageSlug == 'profile') class="active " @endif>
+                                        <a  href="{{ route('profile.edit') }}">
+                                        
+                                            @forelse ($Web4NegociosMotivo as   $web4NegociosMotivo)
+                                                
+                                                {{$web4NegociosMotivo->Titulo}}
+
+                                            @empty
+                                                
+                                            @endforelse
+                                        </a>
+                                    </li>
+
+                                </ul>
+                            </div>
                         </li>
 
                     </ul>
@@ -1109,10 +1347,83 @@
                 <div  class="collapse show" id="negocio" aria-expanded="false" >
                     <ul class="nav pl-4">
                         <li @if ($pageSlug == 'profile') class="active " @endif>
-                            <a  href="{{ route('profile.edit') }}">
+
+                             <a data-toggle="collapse" href="#negociomodulo" aria-expanded="true">
                                
                                 <p style="color:black;">{{ __('Módulos') }}</p>
+                            <b class="caret mt-1"></b>
+
                             </a>
+                            <!--inicio-->
+                
+                            <div  class="collapse show" id="negociomodulo" aria-expanded="false" >
+                                <ul class="nav pl-4">
+                                    <li @if ($pageSlug == 'profile') class="active " @endif>
+                                        <a  href="{{ route('profile.edit') }}">
+                                        
+                                           <p style="color:black;">{{ __('Categorias') }}</p> 
+
+                                        </a>
+                                    </li>
+
+                                </ul>
+                            </div>
+
+                            
+                            <div  class="collapse show" id="negociomodulo" aria-expanded="false" >
+                                <ul class="nav pl-4">
+                                    <li @if ($pageSlug == 'profile') class="active " @endif>
+                                        <a  href="{{ route('profile.edit') }}">
+                                        
+                                             <p style="color:black;">{{ __('Ações') }}</p>
+
+                                        </a>
+                                    </li>
+
+                                </ul>
+                            </div>
+
+                            
+                            <div  class="collapse show" id="negociomodulo" aria-expanded="false" >
+                                <ul class="nav pl-4">
+                                    <li @if ($pageSlug == 'profile') class="active " @endif>
+                                        <a  href="{{ route('profile.edit') }}">
+                                        
+                                             <p style="color:black;">{{ __('Status') }}</p>
+                                        </a>
+                                    </li>
+
+                                </ul>
+                            </div>
+
+                            
+                            <div  class="collapse show" id="negociomodulo" aria-expanded="false" >
+                                <ul class="nav pl-4">
+                                    <li @if ($pageSlug == 'profile') class="active " @endif>
+                                        <a  href="{{ route('profile.edit') }}">
+                                        
+                                             <p style="color:black;">{{ __('Status 2') }}</p>
+                                        </a>
+                                    </li>
+
+                                </ul>
+                            </div>
+
+                            
+                            <div  class="collapse show" id="negociomodulo" aria-expanded="false" >
+                                <ul class="nav pl-4">
+                                    <li @if ($pageSlug == 'profile') class="active " @endif>
+                                        <a  href="{{ route('profile.edit') }}">
+                                        
+                                            <p style="color:black;">{{ __('Motivos') }}</p>
+
+                                        </a>
+                                    </li>
+
+                                </ul>
+                            </div>   
+
+                            <!--fim-->
                         </li>
 
                     </ul>
@@ -1184,9 +1495,28 @@
                     <ul class="nav pl-4">
                         <li @if ($pageSlug == 'profile') class="active " @endif>
                             <a  href="{{ route('profile.edit') }}">
-                                
+                                 <a data-toggle="collapse" href="#aquemsedestina" aria-expanded="true">
+
                                 <p style="color:black;">{{ __('A quem se Destina') }}</p>
+
+                                <b class="caret mt-1"></b>
+
                             </a>
+                            <div  class="collapse show" id="aquemsedestina" aria-expanded="false" >
+                                <ul class="nav pl-4">
+                                    <li @if ($pageSlug == 'profile') class="active " @endif>
+                                        <a  href="{{ route('profile.edit') }}">
+                                        @forelse ($Web4Administradores as $web4Administradores)
+                                            <p style="color:black;">{{$web4Administradores->Usuario}}</p>
+                                        @empty
+                                            
+                                        @endforelse
+                                            
+                                            
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
                         </li>
                     </ul>
                 </div>
@@ -1195,10 +1525,85 @@
                  <div  class="collapse show" id="tarefa" aria-expanded="false" >
                     <ul class="nav pl-4">
                         <li @if ($pageSlug == 'profile') class="active " @endif>
-                            <a  href="{{ route('profile.edit') }}">
-                               
+                            
+                                <a data-toggle="collapse" href="#tarefafiltro" aria-expanded="true">
                                 <p style="color:black;">{{ __('Filtros') }}</p>
+
+                                <b class="caret mt-1"></b>
                             </a>
+
+                             <div  class="collapse show" id="tarefafiltro" aria-expanded="false" >
+                                <ul class="nav pl-4">
+                                    <li @if ($pageSlug == 'profile') class="active " @endif>
+                                        <a  href="{{ route('profile.edit') }}">
+                                        
+                                            <p style="color:black;">{{ __('Finalizada') }}</p>
+                                        </a>
+                                    </li>
+
+                                </ul>
+                            </div>
+
+                             <div  class="collapse show" id="tarefafiltro" aria-expanded="false" >
+                                <ul class="nav pl-4">
+                                    <li @if ($pageSlug == 'profile') class="active " @endif>
+                                        <a  href="{{ route('profile.edit') }}">
+                                        
+                                            <p style="color:black;">{{ __('Não Finalizada') }}</p>
+                                        </a>
+                                    </li>
+
+                                </ul>
+                            </div>
+
+                             <div  class="collapse show" id="tarefafiltro" aria-expanded="false" >
+                                <ul class="nav pl-4">
+                                    <li @if ($pageSlug == 'profile') class="active " @endif>
+                                        <a  href="{{ route('profile.edit') }}">
+                                        
+                                            <p style="color:black;">{{ __('Finaliza Hoje') }}</p>
+                                        </a>
+                                    </li>
+
+                                </ul>
+                            </div>
+
+                             <div  class="collapse show" id="tarefafiltro" aria-expanded="false" >
+                                <ul class="nav pl-4">
+                                    <li @if ($pageSlug == 'profile') class="active " @endif>
+                                        <a  href="{{ route('profile.edit') }}">
+                                        
+                                            <p style="color:black;">{{ __('Finalização Atrasada') }}</p>
+                                        </a>
+                                    </li>
+
+                                </ul>
+                            </div>
+
+                             <div  class="collapse show" id="tarefafiltro" aria-expanded="false" >
+                                <ul class="nav pl-4">
+                                    <li @if ($pageSlug == 'profile') class="active " @endif>
+                                        <a  href="{{ route('profile.edit') }}">
+                                        
+                                            <p style="color:black;">{{ __('Executadas em Atraso') }}</p>
+                                        </a>
+                                    </li>
+
+                                </ul>
+                            </div>
+
+                             <div  class="collapse show" id="tarefafiltro" aria-expanded="false" >
+                                <ul class="nav pl-4">
+                                    <li @if ($pageSlug == 'profile') class="active " @endif>
+                                        <a  href="{{ route('profile.edit') }}">
+                                        
+                                            <p style="color:black;">{{ __('Executadas no Prazo') }}</p>
+                                        </a>
+                                    </li>
+
+                                </ul>
+                            </div>
+
                         </li>
 
                     </ul>
@@ -1209,7 +1614,7 @@
                     <ul class="nav pl-4">
                         <li @if ($pageSlug == 'profile') class="active " @endif>
                             <a  href="{{ route('profile.edit') }}">
-                               
+                             
                                 <p style="color:black;">{{ __('Categoria') }}</p>
                             </a>
                         </li>
@@ -1234,10 +1639,31 @@
                  <div  class="collapse show" id="tarefa" aria-expanded="false" >
                     <ul class="nav pl-4">
                         <li @if ($pageSlug == 'profile') class="active " @endif>
-                            <a  href="{{ route('profile.edit') }}">
+                            
+                            <a data-toggle="collapse" href="#tarefagrupoadm" aria-expanded="true">
                                
                                 <p style="color:black;">{{ __('Grupo de Administradores') }}</p>
+                                <b class="caret mt-1"></b>
                             </a>
+                             <div  class="collapse show" id="tarefagrupoadm" aria-expanded="false" >
+                                    <ul class="nav pl-4">
+                                        <li @if ($pageSlug == 'profile') class="active " @endif>
+                                            <a  href="{{ route('profile.edit') }}">
+                                            
+                                                
+                                                @forelse ($Web4AdministradoresGrupo as $web4AdministradoresGrupo)
+                                                    <p
+                                                    style="color:black;">
+                                                        {{$web4AdministradoresGrupo->Nome}}<br>
+                                                    </p>
+                                                @empty
+                                                    
+                                                @endforelse
+                                            </a>
+                                        </li>
+
+                                    </ul>
+                                </div>
                         </li>
 
                     </ul>
@@ -1272,10 +1698,49 @@
                  <div  class="collapse show" id="tarefa" aria-expanded="false" >
                     <ul class="nav pl-4">
                         <li @if ($pageSlug == 'profile') class="active " @endif>
-                            <a  href="{{ route('profile.edit') }}">
+                             <a data-toggle="collapse" href="#tarefamodulo" aria-expanded="true">
                               
                                 <p style="color:black;">{{ __('Módulos') }}</p>
+
+                            <b class="caret mt-1"></b>
+
                             </a>
+
+                             <div  class="collapse show" id="tarefamodulo" aria-expanded="false" >
+                                <ul class="nav pl-4">
+                                    <li @if ($pageSlug == 'profile') class="active " @endif>
+                                        <a  href="{{ route('profile.edit') }}">
+                                        
+                                            <p style="color:black;">{{ __('Categorias') }}</p>
+                                        </a>
+                                    </li>
+
+                                </ul>
+                            </div>
+
+                            <div  class="collapse show" id="tarefamodulo" aria-expanded="false" >
+                                <ul class="nav pl-4">
+                                    <li @if ($pageSlug == 'profile') class="active " @endif>
+                                        <a  href="{{ route('profile.edit') }}">
+                                        
+                                            <p style="color:black;">{{ __('Ações') }}</p>
+                                        </a>
+                                    </li>
+
+                                </ul>
+                            </div>
+
+                            <div  class="collapse show" id="tarefamodulo" aria-expanded="false" >
+                                <ul class="nav pl-4">
+                                    <li @if ($pageSlug == 'profile') class="active " @endif>
+                                        <a  href="{{ route('profile.edit') }}">
+                                        
+                                            <p style="color:black;">{{ __('Motivos') }}</p>
+                                        </a>
+                                    </li>
+
+                                </ul>
+                            </div>
                         </li>
 
                     </ul>
@@ -1297,12 +1762,698 @@
                    <div  class="collapse show" id="configuracao" aria-expanded="false" >
                     <ul class="nav pl-4">
                         <li @if ($pageSlug == 'profile') class="active " @endif>
-                            <a  href="{{ route('profile.edit') }}">
+                            
+                             <a data-toggle="collapse" href="#configuracaoadministradores" aria-expanded="true">
                                
-                                <p style="color:black;">{{ __('Grupos
-                                 de
-                                 administradores') }}</p>
+                                <p style="color:black;">{{ __('Administradores') }}</p>
+                                 <b class="caret mt-1"></b>
                             </a>
+
+                            <div  class="collapse show" id="configuracaoadministradores" aria-expanded="false" >
+                                <ul class="nav pl-4">
+                                    <li @if ($pageSlug == 'profile') class="active " @endif>
+                                        <a  href="{{ route('profile.edit') }}">
+                                        
+                                            <p style="color:black;">{{ __('Listar Todos') }}</p>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            
+                            <div  class="collapse show" id="configuracaoadministradores" aria-expanded="false" >
+                                <ul class="nav pl-4">
+                                    <li @if ($pageSlug == 'profile') class="active " @endif>
+                                        <a  href="{{ route('profile.edit') }}">
+                                        
+                                            <p style="color:black;">{{ __('Cadastrar Novo') }}</p>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                             <div  class="collapse show" id="configuracaoadministradores" aria-expanded="false" >
+                                <ul class="nav pl-4">
+                                    <li @if ($pageSlug == 'profile') class="active " @endif>
+                                        <a data-toggle="collapse" href="#configuracaoadministradoresgrupo" aria-expanded="true">
+                                        
+
+                                            <p style="color:black;">{{ __('Grupos') }}</p>
+
+                                            <b class="caret mt-1"></b>
+                                        </a>
+
+                                         <div  class="collapse show" id="configuracaoadministradoresgrupo" aria-expanded="false" >
+                                            <ul class="nav pl-4">
+                                                <li @if ($pageSlug == 'profile') class="active " @endif>
+                                                    <a  href="{{ route('profile.edit') }}">
+                                                    
+                                                        <p style="color:black;">{{ __('Administrador Global') }}</p>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>  
+
+                                        <div  class="collapse show" id="configuracaoadministradoresgrupo" aria-expanded="false" >
+                                            <ul class="nav pl-4">
+                                                <li @if ($pageSlug == 'profile') class="active " @endif>
+                                                    <a  href="{{ route('profile.edit') }}">
+                                                    
+                                                        <p style="color:black;">{{ __('Comercial') }}</p>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div> 
+
+                                        <div  class="collapse show" id="configuracaoadministradoresgrupo" aria-expanded="false" >
+                                            <ul class="nav pl-4">
+                                                <li @if ($pageSlug == 'profile') class="active " @endif>
+                                                    <a  href="{{ route('profile.edit') }}">
+                                                    
+                                                        <p style="color:black;">{{ __('Revendas') }}</p>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div> 
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div  class="collapse show" id="configuracaoadministradores" aria-expanded="false" >
+                                <ul class="nav pl-4">
+                                    <li @if ($pageSlug == 'profile') class="active " @endif>
+                                        <a  href="{{ route('profile.edit') }}">
+
+                                              <a data-toggle="collapse" href="#configuracaoadministradoresdepartamento" aria-expanded="true"> 
+
+                                            <p style="color:black;">{{ __('Departamentos') }}</p>
+                                                <b class="caret mt-1"></b>
+
+                                        </a>
+
+                                         <div  class="collapse show" id="configuracaoadministradoresdepartamento" aria-expanded="false" >
+                                            <ul class="nav pl-4">
+                                                <li @if ($pageSlug == 'profile') class="active " @endif>
+                                                    <a  href="{{ route('profile.edit') }}">
+                                                                
+                                                        <p style="color:black;">{{ __('Web4Business') }}</p>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div> 
+
+                                         <div  class="collapse show" id="configuracaoadministradoresdepartamento" aria-expanded="false" >
+                                            <ul class="nav pl-4">
+                                                <li @if ($pageSlug == 'profile') class="active " @endif>
+                                                    <a  href="{{ route('profile.edit') }}">
+                                                                
+                                                        <p style="color:black;">{{ __('Comercial') }}</p>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div> 
+
+                                         <div  class="collapse show" id="configuracaoadministradoresdepartamento" aria-expanded="false" >
+                                            <ul class="nav pl-4">
+                                                <li @if ($pageSlug == 'profile') class="active " @endif>
+                                                    <a  href="{{ route('profile.edit') }}">
+                                                                
+                                                        <p style="color:black;">{{ __('Diretoria') }}</p>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div> 
+
+                                    </li>
+
+                                </ul>
+
+                                <div  class="collapse show" id="configuracaoadministradores" aria-expanded="false" >
+                                    <ul class="nav pl-4">
+                                        <li @if ($pageSlug == 'profile') class="active " @endif>
+                                            <a  href="{{ route('profile.edit') }}">
+                                                  <a data-toggle="collapse" href="#configuracaocargo" aria-expanded="true">
+
+                                                <p style="color:black;">{{ __('Cargos') }}</p>
+                                                <b class="caret mt-1"></b>
+
+                                            </a>
+                                            <!--inicio de cargo-->
+                                            <div  class="collapse show" id="configuracaocargo" aria-expanded="false" >
+                                                    <ul>
+                                                        <li @if ($pageSlug == 'profile') class="active " @endif>
+                                                            <a  href="{{ route('profile.edit') }}">
+                                                                <p style="color:black;">{{ __('Vendedor') }}</p>
+                                                            </a>
+                                                        </li>
+                                                    </ul> 
+                                                </div> 
+                                                <div  class="collapse show" id="configuracaocargo" aria-expanded="false" >
+                                                    <ul>
+                                                        <li @if ($pageSlug == 'profile') class="active " @endif>
+                                                            <a  href="{{ route('profile.edit') }}">
+                                                                <p style="color:black;">{{ __('Diretor') }}</p>
+                                                            </a>
+                                                        </li>
+                                                    </ul> 
+                                                </div>
+
+                                                <div  class="collapse show" id="configuracaocargo" aria-expanded="false" >
+                                                    <ul>
+                                                        <li @if ($pageSlug == 'profile') class="active " @endif>
+                                                            <a  href="{{ route('profile.edit') }}">
+                                                                <p style="color:black;">{{ __('Comprador') }}</p>
+                                                            </a>
+                                                        </li>
+                                                    </ul> 
+                                                </div>
+
+                                                <div  class="collapse show" id="configuracaocargo" aria-expanded="false" >
+                                                    <ul>
+                                                        <li @if ($pageSlug == 'profile') class="active " @endif>
+                                                            <a  href="{{ route('profile.edit') }}">
+                                                                <p style="color:black;">{{ __('Marketing') }}</p>
+                                                            </a>
+                                                        </li>
+                                                    </ul> 
+                                                </div>
+
+                                                <div  class="collapse show" id="configuracaocargo" aria-expanded="false" >
+                                                    <ul>
+                                                        <li @if ($pageSlug == 'profile') class="active " @endif>
+                                                            <a  href="{{ route('profile.edit') }}">
+                                                                <p style="color:black;">{{ __('Secretaria') }}</p>
+                                                            </a>
+                                                        </li>
+                                                    </ul> 
+                                                </div>
+
+                                                <div  class="collapse show" id="configuracaocargo" aria-expanded="false" >
+                                                    <ul>
+                                                        <li @if ($pageSlug == 'profile') class="active " @endif>
+                                                            <a  href="{{ route('profile.edit') }}">
+                                                                <p style="color:black;">{{ __('Compras') }}</p>
+                                                            </a>
+                                                        </li>
+                                                    </ul> 
+                                                </div>
+
+                                                <div  class="collapse show" id="configuracaocargo" aria-expanded="false" >
+                                                    <ul>
+                                                        <li @if ($pageSlug == 'profile') class="active " @endif>
+                                                            <a  href="{{ route('profile.edit') }}">
+                                                                <p style="color:black;">{{ __('Sócio') }}</p>
+                                                            </a>
+                                                        </li>
+                                                    </ul> 
+                                                </div>
+
+                                                <div  class="collapse show" id="configuracaocargo" aria-expanded="false" >
+                                                    <ul>
+                                                        <li @if ($pageSlug == 'profile') class="active " @endif>
+                                                            <a  href="{{ route('profile.edit') }}">
+                                                                <p style="color:black;">{{ __('Financeiro') }}</p>
+                                                            </a>
+                                                        </li>
+                                                    </ul> 
+                                                </div>
+
+                                                <div  class="collapse show" id="configuracaocargo" aria-expanded="false" >
+                                                    <ul>
+                                                        <li @if ($pageSlug == 'profile') class="active " @endif>
+                                                            <a  href="{{ route('profile.edit') }}">
+                                                                <p style="color:black;">{{ __('Gerente') }}</p>
+                                                            </a>
+                                                        </li>
+                                                    </ul> 
+                                                </div>
+
+                                                <div  class="collapse show" id="configuracaocargo" aria-expanded="false" >
+                                                    <ul>
+                                                        <li @if ($pageSlug == 'profile') class="active " @endif>
+                                                            <a  href="{{ route('profile.edit') }}">
+                                                                <p style="color:black;">{{ __('Proprietário') }}</p>
+                                                            </a>
+                                                        </li>
+                                                    </ul> 
+                                                </div>
+
+                                                <div  class="collapse show" id="configuracaocargo" aria-expanded="false" >
+                                                    <ul>
+                                                        <li @if ($pageSlug == 'profile') class="active " @endif>
+                                                            <a  href="{{ route('profile.edit') }}">
+                                                                <p style="color:black;">{{ __('Outros') }}</p>
+                                                            </a>
+                                                        </li>
+                                                    </ul> 
+                                                </div>
+
+
+                                            <!--fim de cargo-->
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div  class="collapse show" id="configuracaoadministradores" aria-expanded="false" >
+                                    <ul class="nav pl-4">
+                                        <li @if ($pageSlug == 'profile') class="active " @endif>
+                                            <a  href="{{ route('profile.edit') }}">
+                                                 <a data-toggle="collapse" href="#configuracaoestado" aria-expanded="true">                
+                                                <p style="color:black;">{{ __('Estado') }}</p>
+                                            <b class="caret mt-1"></b>
+
+                                            </a>
+                                            <div class="collapse show" id="configuracaoestado" aria-expanded="false">
+                                                <ul class="nav pl-4">
+                                                    <li @if ($pageSlug == 'profile') class="active " @endif>
+                                                        <a data-toggle="collapse" href="#configuracaocentrooeste" aria-expanded="false">
+                                                            <p style="color:black;">{{ __('Centro-Oeste') }}</p>
+                                                            <b class="caret mt-1"></b>
+                                                        </a>
+                                                        <!--inicio -->
+                                                        <div class="collapse show" id="configuracaocentrooeste" aria-expanded="false">
+                                                            <ul class="nav pl-4">
+                                                                <li @if ($pageSlug == 'profile') class="active " @endif>
+                                                                    <a href="{{ route('profile.edit') }}">
+                                                                        <p style="color:black;">{{ __('DF - Distrito Federal') }}</p>
+                                                                    </a>
+                                                                </li>
+
+                                                            </ul>
+                                                        </div>
+
+                                                        <div class="collapse show" id="configuracaocentrooeste" aria-expanded="false">
+                                                            <ul class="nav pl-4">
+                                                                <li @if ($pageSlug == 'profile') class="active " @endif>
+                                                                    <a href="{{ route('profile.edit') }}">
+                                                                        <p style="color:black;">{{ __('GO - Goiás') }}</p>
+                                                                    </a>
+                                                                </li>
+
+                                                            </ul>
+                                                        </div>
+
+                                                        <div class="collapse show" id="configuracaocentrooeste" aria-expanded="false">
+                                                            <ul class="nav pl-4">
+                                                                <li @if ($pageSlug == 'profile') class="active " @endif>
+                                                                    <a href="{{ route('profile.edit') }}">
+                                                                        <p style="color:black;">{{ __('MT - Mato Grosso') }}</p>
+                                                                    </a>
+                                                                </li>
+
+                                                            </ul>
+                                                        </div>
+
+                                                        <div class="collapse show" id="configuracaocentrooeste" aria-expanded="false">
+                                                            <ul class="nav pl-4">
+                                                                <li @if ($pageSlug == 'profile') class="active " @endif>
+                                                                    <a href="{{ route('profile.edit') }}">
+                                                                        <p style="color:black;">
+                                                                            {{ __('MS - Mato Grosso
+                                                                                                                                        do Sul') }}
+                                                                        </p>
+                                                                    </a>
+                                                                </li>
+
+                                                            </ul>
+                                                        </div>
+
+
+                                                        <!--fim-->
+                                                        <!-- inicio nordeste-->
+                                                           <div class="collapse show" id="estado" aria-expanded="false">
+                                                                <ul class="nav pl-4">
+                                                                    <li @if ($pageSlug == 'profile') class="active " @endif>
+                                                                        <a data-toggle="collapse" href="#configuracaonordeste" aria-expanded="false">
+                                                                            <p style="color:black;">{{ __('Nordeste') }}</p>
+                                                                            <b class="caret mt-1"></b>
+                                                                        </a>
+
+                                                                        <div class="collapse show" id="configuracaonordeste" aria-expanded="false">
+                                                                            <ul class="nav pl-4">
+                                                                                <li @if ($pageSlug == 'profile') class="active " @endif>
+                                                                                    <a href="{{ route('profile.edit') }}">
+
+                                                                                        <p style="color:black;">{{ __('AL - Alagoas') }}</p>
+                                                                                    </a>
+                                                                                </li>
+
+                                                                            </ul>
+                                                                        </div>
+
+                                                                        <div class="collapse show" id="configuracaonordeste" aria-expanded="false">
+                                                                            <ul class="nav pl-4">
+                                                                                <li @if ($pageSlug == 'profile') class="active " @endif>
+                                                                                    <a href="{{ route('profile.edit') }}">
+
+                                                                                        <p style="color:black;">{{ __('BA - Bahia') }}</p>
+                                                                                    </a>
+                                                                                </li>
+
+                                                                            </ul>
+                                                                        </div>
+
+                                                                        <div class="collapse show" id="configuracaonordeste" aria-expanded="false">
+                                                                            <ul class="nav pl-4">
+                                                                                <li @if ($pageSlug == 'profile') class="active " @endif>
+                                                                                    <a href="{{ route('profile.edit') }}">
+
+                                                                                        <p style="color:black;">{{ __('MA - Maranhão') }}</p>
+                                                                                    </a>
+                                                                                </li>
+
+                                                                            </ul>
+                                                                        </div>
+
+                                                                        <div class="collapse show" id="configuracaonordeste" aria-expanded="false">
+                                                                            <ul class="nav pl-4">
+                                                                                <li @if ($pageSlug == 'profile') class="active " @endif>
+                                                                                    <a href="{{ route('profile.edit') }}">
+
+                                                                                        <p style="color:black;">{{ __('PB - Paraiba') }}</p>
+                                                                                    </a>
+                                                                                </li>
+
+                                                                            </ul>
+                                                                        </div>
+
+                                                                        <div class="collapse show" id="configuracaonordeste" aria-expanded="false">
+                                                                            <ul class="nav pl-4">
+                                                                                <li @if ($pageSlug == 'profile') class="active " @endif>
+                                                                                    <a href="{{ route('profile.edit') }}">
+
+                                                                                        <p style="color:black;">{{ __('PE - Pernambuco') }}</p>
+                                                                                    </a>
+                                                                                </li>
+
+                                                                            </ul>
+                                                                        </div>
+
+                                                                        <div class="collapse show" id="configuracaonordeste" aria-expanded="false">
+                                                                            <ul class="nav pl-4">
+                                                                                <li @if ($pageSlug == 'profile') class="active " @endif>
+                                                                                    <a href="{{ route('profile.edit') }}">
+
+                                                                                        <p style="color:black;">{{ __('PI - PIAUI') }}</p>
+                                                                                    </a>
+                                                                                </li>
+
+                                                                            </ul>
+                                                                        </div>
+
+                                                                        <div class="collapse show" id="configuracaonordeste" aria-expanded="false">
+                                                                            <ul class="nav pl-4">
+                                                                                <li @if ($pageSlug == 'profile') class="active " @endif>
+                                                                                    <a href="{{ route('profile.edit') }}">
+
+                                                                                        <p style="color:black;">{{ __('RN - Rio Grande do Norte') }}</p>
+                                                                                    </a>
+                                                                                </li>
+
+                                                                            </ul>
+                                                                        </div>
+
+                                                                        <div class="collapse show" id="configuracaonordeste" aria-expanded="false">
+                                                                            <ul class="nav pl-4">
+                                                                                <li @if ($pageSlug == 'profile') class="active " @endif>
+                                                                                    <a href="{{ route('profile.edit') }}">
+
+                                                                                        <p style="color:black;">{{ __('SE - Sergipe') }}</p>
+                                                                                    </a>
+                                                                                </li>
+
+                                                                            </ul>
+                                                                        </div>
+
+
+                                                                    </li>
+
+                                                                </ul>
+                                                            </div>
+                                                        <!-- fim nordeste-->
+                                                        <!--inicio do norte-->
+                                                            <div class="collapse show" id="estado" aria-expanded="false">
+                                                                <ul class="nav pl-4">
+                                                                    <li @if ($pageSlug == 'profile') class="active " @endif>
+                                                                        <a data-toggle="collapse" href="#confignorte" aria-expanded="false">
+
+                                                                            <p style="color:black;">{{ __('Norte') }}</p>
+
+                                                                            <b class="caret mt-1"></b>
+                                                                        </a>
+
+                                                                        <div class="collapse show" id="confignorte" aria-expanded="false">
+                                                                            <ul class="nav pl-4">
+                                                                                <li @if ($pageSlug == 'profile') class="active " @endif>
+                                                                                    <a href="{{ route('profile.edit') }}">
+
+                                                                                        <p style="color:black;">{{ __('AC - Acre') }}</p>
+                                                                                    </a>
+                                                                                </li>
+
+                                                                            </ul>
+                                                                        </div>
+
+                                                                        <div class="collapse show" id="confignorte" aria-expanded="false">
+                                                                            <ul class="nav pl-4">
+                                                                                <li @if ($pageSlug == 'profile') class="active " @endif>
+                                                                                    <a href="{{ route('profile.edit') }}">
+
+                                                                                        <p style="color:black;">{{ __('AP - Amapá') }}</p>
+                                                                                    </a>
+                                                                                </li>
+
+                                                                            </ul>
+                                                                        </div>
+
+                                                                        <div class="collapse show" id="confignorte" aria-expanded="false">
+                                                                            <ul class="nav pl-4">
+                                                                                <li @if ($pageSlug == 'profile') class="active " @endif>
+                                                                                    <a href="{{ route('profile.edit') }}">
+
+                                                                                        <p style="color:black;">{{ __('AM - Amazonas') }}</p>
+                                                                                    </a>
+                                                                                </li>
+
+                                                                            </ul>
+                                                                        </div>
+
+                                                                        <div class="collapse show" id="confignorte" aria-expanded="false">
+                                                                            <ul class="nav pl-4">
+                                                                                <li @if ($pageSlug == 'profile') class="active " @endif>
+                                                                                    <a href="{{ route('profile.edit') }}">
+
+                                                                                        <p style="color:black;">{{ __('PA - Pará') }}</p>
+                                                                                    </a>
+                                                                                </li>
+
+                                                                            </ul>
+                                                                        </div>
+
+                                                                        <div class="collapse show" id="confignorte" aria-expanded="false">
+                                                                            <ul class="nav pl-4">
+                                                                                <li @if ($pageSlug == 'profile') class="active " @endif>
+                                                                                    <a href="{{ route('profile.edit') }}">
+
+                                                                                        <p style="color:black;">{{ __('RO - Rondônia') }}</p>
+                                                                                    </a>
+                                                                                </li>
+
+                                                                            </ul>
+                                                                        </div>
+
+                                                                        <div class="collapse show" id="confignorte" aria-expanded="false">
+                                                                            <ul class="nav pl-4">
+                                                                                <li @if ($pageSlug == 'profile') class="active " @endif>
+                                                                                    <a href="{{ route('profile.edit') }}">
+
+                                                                                        <p style="color:black;">{{ __('RR - Roraima') }}</p>
+                                                                                    </a>
+                                                                                </li>
+
+                                                                            </ul>
+                                                                        </div>
+
+                                                                        <div class="collapse show" id="confignorte" aria-expanded="false">
+                                                                            <ul class="nav pl-4">
+                                                                                <li @if ($pageSlug == 'profile') class="active " @endif>
+                                                                                    <a href="{{ route('profile.edit') }}">
+
+                                                                                        <p style="color:black;">{{ __('TO - Tocantins') }}</p>
+                                                                                    </a>
+                                                                                </li>
+
+                                                                            </ul>
+                                                                        </div>
+
+                                                                    </li>
+
+                                                                </ul>
+                                                            </div>
+
+                                                        <!--fim do norte-->
+
+                                                        <!--inicio do sudeste-->
+                                                        <div class="collapse show" id="estado" aria-expanded="false">
+                                                            <ul class="nav pl-4">
+                                                                <li @if ($pageSlug == 'profile') class="active " @endif>
+                                                                    <a data-toggle="collapse" href="#sudeste" aria-expanded="false">
+
+                                                                        <p style="color:black;">{{ __('Sudeste') }}</p>
+
+                                                                        <b class="caret mt-1"></b>
+                                                                    </a>
+
+                                                                    <div class="collapse show" id="sudeste" aria-expanded="false">
+                                                                        <ul class="nav pl-4">
+                                                                            <li @if ($pageSlug == 'profile') class="active " @endif>
+                                                                                <a href="{{ route('profile.edit') }}">
+
+                                                                                    <p style="color:black;">{{ __('ES - Espírito Santo') }}</p>
+                                                                                </a>
+                                                                            </li>
+
+                                                                        </ul>
+                                                                    </div>
+
+                                                                    <div class="collapse show" id="sudeste" aria-expanded="false">
+                                                                        <ul class="nav pl-4">
+                                                                            <li @if ($pageSlug == 'profile') class="active " @endif>
+                                                                                <a href="{{ route('profile.edit') }}">
+
+                                                                                    <p style="color:black;">{{ __('MG - Minas Gerais') }}</p>
+                                                                                </a>
+                                                                            </li>
+
+                                                                        </ul>
+                                                                    </div>
+
+                                                                    <div class="collapse show" id="sudeste" aria-expanded="false">
+                                                                        <ul class="nav pl-4">
+                                                                            <li @if ($pageSlug == 'profile') class="active " @endif>
+                                                                                <a href="{{ route('profile.edit') }}">
+
+                                                                                    <p style="color:black;">{{ __('RJ - Rio de Janeiro') }}</p>
+                                                                                </a>
+                                                                            </li>
+
+                                                                        </ul>
+                                                                    </div>
+
+                                                                    <div class="collapse show" id="sudeste" aria-expanded="false">
+                                                                        <ul class="nav pl-4">
+                                                                            <li @if ($pageSlug == 'profile') class="active " @endif>
+                                                                                <a href="{{ route('profile.edit') }}">
+
+                                                                                    <p style="color:black;">{{ __('SP - São Paulo') }}</p>
+                                                                                </a>
+                                                                            </li>
+
+                                                                        </ul>
+                                                                    </div>
+                                                                </li>
+
+                                                            </ul>
+                                                        </div>
+                                                        <!--fim do sudeste-->
+                                                        <!--inicio do sul-->
+
+                                                            <div class="collapse show" id="estado" aria-expanded="false">
+                                                                <ul class="nav pl-4">
+                                                                    <li @if ($pageSlug == 'profile') class="active " @endif>
+                                                                        <a data-toggle="collapse" href="#sul" aria-expanded="false">
+                                                                            <p style="color:black;">{{ __('Sul') }}</p>
+                                                                            <b class="caret mt-1"></b>
+                                                                        </a>
+
+                                                                        <div class="collapse show" id="sul" aria-expanded="false">
+                                                                            <ul class="nav pl-4">
+                                                                                <li @if ($pageSlug == 'profile') class="active " @endif>
+                                                                                    <a href="{{ route('profile.edit') }}">
+
+                                                                                        <p style="color:black;">{{ __('PR - Paraná') }}</p>
+                                                                                    </a>
+                                                                                </li>
+
+                                                                            </ul>
+                                                                        </div>
+
+                                                                        <div class="collapse show" id="sul" aria-expanded="false">
+                                                                            <ul class="nav pl-4">
+                                                                                <li @if ($pageSlug == 'profile') class="active " @endif>
+                                                                                    <a href="{{ route('profile.edit') }}">
+
+                                                                                        <p style="color:black;">{{ __('RS - Rio Grande do Sul') }}</p>
+                                                                                    </a>
+                                                                                </li>
+
+                                                                            </ul>
+                                                                        </div>
+
+                                                                        <div class="collapse show" id="sul" aria-expanded="false">
+                                                                            <ul class="nav pl-4">
+                                                                                <li @if ($pageSlug == 'profile') class="active " @endif>
+                                                                                    <a href="{{ route('profile.edit') }}">
+
+                                                                                        <p style="color:black;">{{ __('SC - Santa Catarina') }}</p>
+                                                                                    </a>
+                                                                                </li>
+
+                                                                            </ul>
+                                                                        </div>
+                                                                    </li>
+
+                                                                </ul>
+                                                            </div>
+
+
+                                                        <!--fim do sul-->
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div  class="collapse show" id="configuracaoadministradores" aria-expanded="false" >
+                                    <ul class="nav pl-4">
+                                        <li @if ($pageSlug == 'profile') class="active " @endif>
+                                            <a  href="{{ route('profile.edit') }}">
+                                                 <a data-toggle="collapse" href="#configuracaoadministradoresfiltro" aria-expanded="true">               
+                                                <p style="color:black;">{{ __('Filtros') }}</p>
+
+                                                <b class="caret mt-1"></b>
+                                            </a>
+
+                                            <div  class="collapse show" id="configuracaoadministradoresfiltro" aria-expanded="false" >
+                                                <ul class="nav pl-4">
+                                                    <li @if ($pageSlug == 'profile') class="active " @endif>
+                                                        <a  href="{{ route('profile.edit') }}">
+                                                            <a data-toggle="collapse" href="#configuracaoadministradoresfiltro" aria-expanded="true">               
+                                                            <p style="color:black;">{{ __('Status - Ativado') }}</p>
+
+                                                            <b class="caret mt-1"></b>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+
+                                            <div  class="collapse show" id="configuracaoadministradoresfiltro" aria-expanded="false" >
+                                                <ul class="nav pl-4">
+                                                    <li @if ($pageSlug == 'profile') class="active " @endif>
+                                                        <a  href="{{ route('profile.edit') }}">
+                                                            <a data-toggle="collapse" href="#configuracaoadministradoresfiltro" aria-expanded="true">               
+                                                            <p style="color:black;">{{ __('Status - Desativado') }}</p>
+
+                                                            <b class="caret mt-1"></b>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+
+                                        </li>
+                                    </ul>
+                                </div>
+
+
+                            </div> 
                         </li>
 
                     </ul>
@@ -1314,7 +2465,18 @@
                         <li @if ($pageSlug == 'profile') class="active " @endif>
                             <a  href="{{ route('profile.edit') }}">
                               
-                                <p style="color:black;">{{ __('Campanhas - Informativas') }}</p>
+                                <p style="color:black;">{{ __('Campanhas') }}</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div  class="collapse show" id="configuracao" aria-expanded="false" >
+                    <ul class="nav pl-4">
+                        <li @if ($pageSlug == 'profile') class="active " @endif>
+                            <a  href="{{ route('profile.edit') }}">
+                              
+                                <p style="color:black;">{{ __('Informativos') }}</p>
                             </a>
                         </li>
                     </ul>
@@ -1326,7 +2488,18 @@
                         <li @if ($pageSlug == 'profile') class="active " @endif>
                             <a  href="{{ route('profile.edit') }}">
                              
-                                <p style="color:black;">{{ __('E-mails Configurações') }}</p>
+                                <p style="color:black;">{{ __('E-mails') }}</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div  class="collapse show" id="configuracao" aria-expanded="false" >
+                    <ul class="nav pl-4">
+                        <li @if ($pageSlug == 'profile') class="active " @endif>
+                            <a  href="{{ route('profile.edit') }}">
+                             
+                                <p style="color:black;">{{ __('Configurações') }}</p>
                             </a>
                         </li>
                     </ul>
