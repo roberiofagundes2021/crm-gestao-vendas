@@ -16,20 +16,24 @@
                     <span>{{ __('Inicio') }}</span>
                 </a>
             </li>
-            
-            
+           
              <!-- empresas -->
             <li >
-                <a data-toggle="collapse" href="#empresa" aria-expanded="false">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-shop" viewBox="0 0 16 16">
-                    <path d="M2.97 1.35A1 1 0 0 1 3.73 1h8.54a1 1 0 0 1 .76.35l2.609 3.044A1.5 1.5 0 0 1 16 5.37v.255a2.375 2.375 0 0 1-4.25 1.458A2.371 2.371 0 0 1 9.875 8 2.37 2.37 0 0 1 8 7.083 2.37 2.37 0 0 1 6.125 8a2.37 2.37 0 0 1-1.875-.917A2.375 2.375 0 0 1 0 5.625V5.37a1.5 1.5 0 0 1 .361-.976l2.61-3.045zm1.78 4.275a1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0 1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0 1.375 1.375 0 1 0 2.75 0V5.37a.5.5 0 0 0-.12-.325L12.27 2H3.73L1.12 5.045A.5.5 0 0 0 1 5.37v.255a1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0zM1.5 8.5A.5.5 0 0 1 2 9v6h1v-5a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1v5h6V9a.5.5 0 0 1 1 0v6h.5a.5.5 0 0 1 0 1H.5a.5.5 0 0 1 0-1H1V9a.5.5 0 0 1 .5-.5zM4 15h3v-5H4v5zm5-5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1v-3zm3 0h-2v3h2v-3z"/>
-                    </svg>
-                    <span  class="nav-link-text">{{ __('Empresa') }}</span>
-                    <b class="caret mt-1"></b>
-                </a>
+                     <a href="{{route('Empresa.index')}}" data-bs-toggle="collapse" data-bs-target="#empresa">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-shop" viewBox="0 0 16 16">
+                        <path d="M2.97 1.35A1 1 0 0 1 3.73 1h8.54a1 1 0 0 1 .76.35l2.609 3.044A1.5 1.5 0 0 1 16 5.37v.255a2.375 2.375 0 0 1-4.25 1.458A2.371 2.371 0 0 1 9.875 8 2.37 2.37 0 0 1 8 7.083 2.37 2.37 0 0 1 6.125 8a2.37 2.37 0 0 1-1.875-.917A2.375 2.375 0 0 1 0 5.625V5.37a1.5 1.5 0 0 1 .361-.976l2.61-3.045zm1.78 4.275a1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0 1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0 1.375 1.375 0 1 0 2.75 0V5.37a.5.5 0 0 0-.12-.325L12.27 2H3.73L1.12 5.045A.5.5 0 0 0 1 5.37v.255a1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0zM1.5 8.5A.5.5 0 0 1 2 9v6h1v-5a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1v5h6V9a.5.5 0 0 1 1 0v6h.5a.5.5 0 0 1 0 1H.5a.5.5 0 0 1 0-1H1V9a.5.5 0 0 1 .5-.5zM4 15h3v-5H4v5zm5-5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1v-3zm3 0h-2v3h2v-3z"/>
+                        </svg>
+                       
+                        <span  class="nav-link-text" style="width: 2rem">
+                        {{ __('Empresa') }}
+                          <b class="caret mt-1" ></b>  
+                        </span>
+                    </a>
+                    
                 
-                <div  class="collapse show" id="empresa" aria-expanded="false" >
-                    <ul class="nav pl-4">
+                
+                <div  class="collapse" id="empresa" aria-expanded="false">
+                    <ul class="nav">
                         <li @if ($pageSlug == 'profile') class="active " @endif>
                             <a  href="{{ route('profile.edit') }}">
                                 <p style="color:black;">{{ __('Listar Todas') }}</p>
@@ -38,7 +42,7 @@
                     </ul>
                 </div>
 
-                <div  class="collapse show" id="empresa" aria-expanded="false" >
+                <div  class="collapse" id="empresa" aria-expanded="false" >
                     <ul class="nav pl-4">
                         <li @if ($pageSlug == 'profile') class="active " @endif>
                             <a  href="{{ route('profile.edit') }}">
@@ -49,7 +53,7 @@
                     </ul>
                 </div>
                 <!--inicio de usuario-->
-                <div  class="collapse show" id="empresa" aria-expanded="false" >
+                <div  class="collapse" id="empresa" aria-expanded="false" >
                     <ul class="nav pl-4">
                         <li @if ($pageSlug == 'profile') class="active " @endif>
                             <a data-toggle="collapse" href="#usuario" aria-expanded="false">
@@ -58,7 +62,7 @@
                                     <b class="caret mt-1"></b>
                             </a>
 
-                                <div  class="collapse show" id="usuario" aria-expanded="false" >
+                                <div  class="collapse" id="usuario" aria-expanded="false" >
                                     <ul>
                                         <li @if ($pageSlug == 'profile') class="active " @endif>
                                             <a  href="{{ route('profile.edit') }}">
@@ -68,7 +72,7 @@
                                     </ul> 
                                 </div>  
 
-                                <div  class="collapse show" id="usuario" aria-expanded="false" >
+                                <div  class="collapse" id="usuario" aria-expanded="false" >
                                     <ul>
                                         <li @if ($pageSlug == 'profile') class="active " @endif>
                                             <a  href="{{ route('profile.edit') }}">
@@ -79,7 +83,7 @@
                                 </div>  
 
                                     <!--inicio de cargo-->
-                                <div  class="collapse show" id="usuario" aria-expanded="false" >
+                                <div  class="collapse" id="usuario" aria-expanded="false" >
                                     <ul>
                                         <li @if ($pageSlug == 'profile') class="active " @endif>
                                             <a data-toggle="collapse" href="#cargo" aria-expanded="false">
@@ -87,7 +91,7 @@
                                                 <b class="caret mt-1"></b>
                                             </a>
 
-                                                <div  class="collapse show" id="cargo" aria-expanded="false" >
+                                                <div  class="collapse" id="cargo" aria-expanded="false" >
                                                     <ul>
                                                         <li @if ($pageSlug == 'profile') class="active " @endif>
                                                             <a  href="{{ route('profile.edit') }}">
@@ -96,7 +100,7 @@
                                                         </li>
                                                     </ul> 
                                                 </div> 
-                                                <div  class="collapse show" id="cargo" aria-expanded="false" >
+                                                <div  class="collapse" id="cargo" aria-expanded="false" >
                                                     <ul>
                                                         <li @if ($pageSlug == 'profile') class="active " @endif>
                                                             <a  href="{{ route('profile.edit') }}">
@@ -106,7 +110,7 @@
                                                     </ul> 
                                                 </div>
 
-                                                <div  class="collapse show" id="cargo" aria-expanded="false" >
+                                                <div  class="collapse" id="cargo" aria-expanded="false" >
                                                     <ul>
                                                         <li @if ($pageSlug == 'profile') class="active " @endif>
                                                             <a  href="{{ route('profile.edit') }}">
@@ -116,7 +120,7 @@
                                                     </ul> 
                                                 </div>
 
-                                                <div  class="collapse show" id="cargo" aria-expanded="false" >
+                                                <div  class="collapse" id="cargo" aria-expanded="false" >
                                                     <ul>
                                                         <li @if ($pageSlug == 'profile') class="active " @endif>
                                                             <a  href="{{ route('profile.edit') }}">
@@ -126,7 +130,7 @@
                                                     </ul> 
                                                 </div>
 
-                                                <div  class="collapse show" id="cargo" aria-expanded="false" >
+                                                <div  class="collapse" id="cargo" aria-expanded="false" >
                                                     <ul>
                                                         <li @if ($pageSlug == 'profile') class="active " @endif>
                                                             <a  href="{{ route('profile.edit') }}">
@@ -136,7 +140,7 @@
                                                     </ul> 
                                                 </div>
 
-                                                <div  class="collapse show" id="cargo" aria-expanded="false" >
+                                                <div  class="collapse" id="cargo" aria-expanded="false" >
                                                     <ul>
                                                         <li @if ($pageSlug == 'profile') class="active " @endif>
                                                             <a  href="{{ route('profile.edit') }}">
@@ -146,7 +150,7 @@
                                                     </ul> 
                                                 </div>
 
-                                                <div  class="collapse show" id="cargo" aria-expanded="false" >
+                                                <div  class="collapse" id="cargo" aria-expanded="false" >
                                                     <ul>
                                                         <li @if ($pageSlug == 'profile') class="active " @endif>
                                                             <a  href="{{ route('profile.edit') }}">
@@ -156,7 +160,7 @@
                                                     </ul> 
                                                 </div>
 
-                                                <div  class="collapse show" id="cargo" aria-expanded="false" >
+                                                <div  class="collapse" id="cargo" aria-expanded="false" >
                                                     <ul>
                                                         <li @if ($pageSlug == 'profile') class="active " @endif>
                                                             <a  href="{{ route('profile.edit') }}">
@@ -166,7 +170,7 @@
                                                     </ul> 
                                                 </div>
 
-                                                <div  class="collapse show" id="cargo" aria-expanded="false" >
+                                                <div  class="collapse" id="cargo" aria-expanded="false" >
                                                     <ul>
                                                         <li @if ($pageSlug == 'profile') class="active " @endif>
                                                             <a  href="{{ route('profile.edit') }}">
@@ -176,7 +180,7 @@
                                                     </ul> 
                                                 </div>
 
-                                                <div  class="collapse show" id="cargo" aria-expanded="false" >
+                                                <div  class="collapse" id="cargo" aria-expanded="false" >
                                                     <ul>
                                                         <li @if ($pageSlug == 'profile') class="active " @endif>
                                                             <a  href="{{ route('profile.edit') }}">
@@ -186,7 +190,7 @@
                                                     </ul> 
                                                 </div>
 
-                                                <div  class="collapse show" id="cargo" aria-expanded="false" >
+                                                <div  class="collapse" id="cargo" aria-expanded="false" >
                                                     <ul>
                                                         <li @if ($pageSlug == 'profile') class="active " @endif>
                                                             <a  href="{{ route('profile.edit') }}">
@@ -207,7 +211,7 @@
                  <!--Fim de usuario-->
            
 
-                <div  class="collapse show" id="empresa"  aria-expanded="false" >
+                <div  class="collapse" id="empresa"  aria-expanded="false" >
                     <ul class="nav pl-4">
                         <li @if ($pageSlug == 'profile') class="active " @endif>
                             <a data-toggle="collapse" href="#pessoas" aria-expanded="false">
@@ -215,7 +219,7 @@
                                  <b class="caret mt-1"></b>
                             </a>
 
-                                <div  class="collapse show" id="pessoas" aria-expanded="false" >
+                                <div  class="collapse" id="pessoas" aria-expanded="false" >
                                     <ul class="nav pl-4">
                                         <li @if ($pageSlug == 'profile') class="active " @endif>
                                             <a  href="{{ route('profile.edit') }}">
@@ -226,7 +230,7 @@
                                     </ul>
                                 </div>
 
-                                <div  class="collapse show" id="pessoas" aria-expanded="false" >
+                                <div  class="collapse" id="pessoas" aria-expanded="false" >
                                     <ul class="nav pl-4">
                                         <li @if ($pageSlug == 'profile') class="active " @endif>
                                             <a  href="{{ route('profile.edit') }}">
@@ -238,7 +242,7 @@
                                 </div>
 
                                       <!--inicio de cargo-->
-                                <div  class="collapse show" id="pessoas" aria-expanded="false" >
+                                <div  class="collapse" id="pessoas" aria-expanded="false" >
                                     <ul>
                                         <li @if ($pageSlug == 'profile') class="active " @endif>
                                             <a data-toggle="collapse" href="#pessoacargo" aria-expanded="false">
@@ -246,7 +250,7 @@
                                                 <b class="caret mt-1"></b>
                                             </a>
 
-                                                <div  class="collapse show" id="pessoacargo" aria-expanded="false" >
+                                                <div  class="collapse" id="pessoacargo" aria-expanded="false" >
                                                     <ul>
                                                         <li @if ($pageSlug == 'profile') class="active " @endif>
                                                             <a  href="{{ route('profile.edit') }}">
@@ -255,7 +259,7 @@
                                                         </li>
                                                     </ul> 
                                                 </div> 
-                                                <div  class="collapse show" id="pessoacargo" aria-expanded="false" >
+                                                <div  class="collapse" id="pessoacargo" aria-expanded="false" >
                                                     <ul>
                                                         <li @if ($pageSlug == 'profile') class="active " @endif>
                                                             <a  href="{{ route('profile.edit') }}">
@@ -265,7 +269,7 @@
                                                     </ul> 
                                                 </div>
 
-                                                <div  class="collapse show" id="pessoacargo" aria-expanded="false" >
+                                                <div  class="collapse" id="pessoacargo" aria-expanded="false" >
                                                     <ul>
                                                         <li @if ($pageSlug == 'profile') class="active " @endif>
                                                             <a  href="{{ route('profile.edit') }}">
@@ -275,7 +279,7 @@
                                                     </ul> 
                                                 </div>
 
-                                                <div  class="collapse show" id="pessoacargo" aria-expanded="false" >
+                                                <div  class="collapse" id="pessoacargo" aria-expanded="false" >
                                                     <ul>
                                                         <li @if ($pageSlug == 'profile') class="active " @endif>
                                                             <a  href="{{ route('profile.edit') }}">
@@ -285,7 +289,7 @@
                                                     </ul> 
                                                 </div>
 
-                                                <div  class="collapse show" id="pessoacargo" aria-expanded="false" >
+                                                <div  class="collapse" id="pessoacargo" aria-expanded="false" >
                                                     <ul>
                                                         <li @if ($pageSlug == 'profile') class="active " @endif>
                                                             <a  href="{{ route('profile.edit') }}">
@@ -295,7 +299,7 @@
                                                     </ul> 
                                                 </div>
 
-                                                <div  class="collapse show" id="pessoacargo" aria-expanded="false" >
+                                                <div  class="collapse" id="pessoacargo" aria-expanded="false" >
                                                     <ul>
                                                         <li @if ($pageSlug == 'profile') class="active " @endif>
                                                             <a  href="{{ route('profile.edit') }}">
@@ -305,7 +309,7 @@
                                                     </ul> 
                                                 </div>
 
-                                                <div  class="collapse show" id="pessoacargo" aria-expanded="false" >
+                                                <div  class="collapse" id="pessoacargo" aria-expanded="false" >
                                                     <ul>
                                                         <li @if ($pageSlug == 'profile') class="active " @endif>
                                                             <a  href="{{ route('profile.edit') }}">
@@ -315,7 +319,7 @@
                                                     </ul> 
                                                 </div>
 
-                                                <div  class="collapse show" id="pessoacargo" aria-expanded="false" >
+                                                <div  class="collapse" id="pessoacargo" aria-expanded="false" >
                                                     <ul>
                                                         <li @if ($pageSlug == 'profile') class="active " @endif>
                                                             <a  href="{{ route('profile.edit') }}">
@@ -325,7 +329,7 @@
                                                     </ul> 
                                                 </div>
 
-                                                <div  class="collapse show" id="pessoacargo" aria-expanded="false" >
+                                                <div  class="collapse" id="pessoacargo" aria-expanded="false" >
                                                     <ul>
                                                         <li @if ($pageSlug == 'profile') class="active " @endif>
                                                             <a  href="{{ route('profile.edit') }}">
@@ -335,7 +339,7 @@
                                                     </ul> 
                                                 </div>
 
-                                                <div  class="collapse show" id="pessoacargo" aria-expanded="false" >
+                                                <div  class="collapse" id="pessoacargo" aria-expanded="false" >
                                                     <ul>
                                                         <li @if ($pageSlug == 'profile') class="active " @endif>
                                                             <a  href="{{ route('profile.edit') }}">
@@ -345,7 +349,7 @@
                                                     </ul> 
                                                 </div>
 
-                                                <div  class="collapse show" id="pessoacargo" aria-expanded="false" >
+                                                <div  class="collapse" id="pessoacargo" aria-expanded="false" >
                                                     <ul>
                                                         <li @if ($pageSlug == 'profile') class="active " @endif>
                                                             <a  href="{{ route('profile.edit') }}">
@@ -360,7 +364,7 @@
                                 </div>  
                                  <!--Fim de cargo-->  
 
-                            <div  class="collapse show" id="pessoas" aria-expanded="false" >
+                            <div  class="collapse" id="pessoas" aria-expanded="false" >
                                 <ul class="nav pl-4">
                                     <li @if ($pageSlug == 'profile') class="active " @endif>
                                         <a  href="{{ route('profile.edit') }}">
@@ -376,7 +380,7 @@
                     </ul>
                 </div>
             
-                <div  class="collapse show" id="empresa" aria-expanded="false" >
+                <div  class="collapse" id="empresa" aria-expanded="false" >
                     <ul class="nav pl-4">
                         <li @if ($pageSlug == 'profile') class="active " @endif>
                              <a data-toggle="collapse" href="#Categorias" aria-expanded="false">
@@ -384,7 +388,7 @@
                                 <b class="caret mt-1"></b>
                             </a>
 
-                                <div  class="collapse show" id="categorias" aria-expanded="false" >
+                                <div  class="collapse" id="categorias" aria-expanded="false" >
                                     <ul class="nav pl-4">
                                         <li @if ($pageSlug == 'profile') class="active " @endif>
                                             <a  href="{{ route('profile.edit') }}">
@@ -400,14 +404,14 @@
                     </ul>
                 </div>
 
-                <div  class="collapse show" id="empresa" aria-expanded="false" >
+                <div  class="collapse" id="empresa" aria-expanded="false" >
                     <ul class="nav pl-4">
                         <li @if ($pageSlug == 'profile') class="active " @endif>
                              <a data-toggle="collapse" href="#segmentos" aria-expanded="false">
                                 <p style="color:black;">{{ __('Segmentos') }}</p>
                                 <b class="caret mt-1"></b>
                             </a>
-                                <div  class="collapse show" id="segmentos" aria-expanded="false" >
+                                <div  class="collapse" id="segmentos" aria-expanded="false" >
                                     <ul class="nav pl-4">
                                         <li @if ($pageSlug == 'profile') class="active " @endif>
                                             <a  href="#">
@@ -422,14 +426,14 @@
                     </ul>
                 </div>
 
-                <div  class="collapse show" id="empresa" aria-expanded="false" >
+                <div  class="collapse" id="empresa" aria-expanded="false" >
                     <ul class="nav pl-4">
                         <li @if ($pageSlug == 'profile') class="active " @endif>
                             <a data-toggle="collapse" href="#responsavel" aria-expanded="false">
                                 <p style="color:black;">{{ __('Responsável') }}</p>
                                 <b class="caret mt-1"></b>
                             </a>
-                            <div  class="collapse show" id="responsavel" aria-expanded="false" >
+                            <div  class="collapse" id="responsavel" aria-expanded="false" >
                                 <ul class="nav pl-4 ">
                                     <li @if ($pageSlug == 'profile') class="active " @endif>
                                         <a  href="#">
@@ -449,14 +453,14 @@
                     </ul>
                 </div>
 
-                <div  class="collapse show" id="empresa" aria-expanded="false" >
+                <div  class="collapse" id="empresa" aria-expanded="false" >
                     <ul class="nav pl-4 ">
                         <li @if ($pageSlug == 'profile') class="active " @endif>
                             <a data-toggle="collapse" href="#grupoadministradores" aria-expanded="false">
                                 <p style="color:black;">{{ __('Grupo de Administradores') }}</p>
                                 <b class="caret mt-1"></b>
                             </a>
-                            <div  class="collapse show" id="grupoadministradores" aria-expanded="false" >
+                            <div  class="collapse" id="grupoadministradores" aria-expanded="false" >
                                 <ul class="nav pl-4">
                                     <li @if ($pageSlug == 'profile') class="active " @endif>
                                         <a  href="{{ route('profile.edit') }}">
@@ -475,7 +479,7 @@
                     </ul>
                 </div>
 
-                <div  class="collapse show" id="empresa" aria-expanded="false" >
+                <div  class="collapse" id="empresa" aria-expanded="false" >
                     <ul class="nav pl-4">
                         <li @if ($pageSlug == 'profile') class="active " @endif>
                             <a data-toggle="collapse" href="#estado" aria-expanded="false">
@@ -483,7 +487,7 @@
                             <b class="caret mt-1"></b>
                             </a>
 
-                                <div  class="collapse show" id="estado" aria-expanded="false" >
+                                <div  class="collapse" id="estado" aria-expanded="false" >
                                     <ul class="nav pl-4">
                                         <li @if ($pageSlug == 'profile') class="active " @endif>
                                             <a data-toggle="collapse" href="#centrooeste" aria-expanded="false">
@@ -491,7 +495,7 @@
                                                 <b class="caret mt-1"></b>
                                             </a>
 
-                                            <div  class="collapse show" id="centrooeste" aria-expanded="false" >
+                                            <div  class="collapse" id="centrooeste" aria-expanded="false" >
                                                 <ul class="nav pl-4">
                                                     <li @if ($pageSlug == 'profile') class="active " @endif>
                                                         <a  href="{{ route('profile.edit') }}">
@@ -502,7 +506,7 @@
                                                 </ul>
                                             </div>
 
-                                            <div  class="collapse show" id="centrooeste" aria-expanded="false" >
+                                            <div  class="collapse" id="centrooeste" aria-expanded="false" >
                                                 <ul class="nav pl-4">
                                                     <li @if ($pageSlug == 'profile') class="active " @endif>
                                                         <a  href="{{ route('profile.edit') }}">
@@ -513,7 +517,7 @@
                                                 </ul>
                                             </div>
 
-                                            <div  class="collapse show" id="centrooeste" aria-expanded="false" >
+                                            <div  class="collapse" id="centrooeste" aria-expanded="false" >
                                                 <ul class="nav pl-4">
                                                     <li @if ($pageSlug == 'profile') class="active " @endif>
                                                         <a  href="{{ route('profile.edit') }}">
@@ -524,7 +528,7 @@
                                                 </ul>
                                             </div>
 
-                                            <div  class="collapse show" id="centrooeste" aria-expanded="false" >
+                                            <div  class="collapse" id="centrooeste" aria-expanded="false" >
                                                 <ul class="nav pl-4">
                                                     <li @if ($pageSlug == 'profile') class="active " @endif>
                                                         <a  href="{{ route('profile.edit') }}">
@@ -541,7 +545,7 @@
                                     </ul>
                                 </div>
 
-                                <div  class="collapse show" id="estado" aria-expanded="false" >
+                                <div  class="collapse" id="estado" aria-expanded="false" >
                                     <ul class="nav pl-4">
                                         <li @if ($pageSlug == 'profile') class="active " @endif>
                                                 <a data-toggle="collapse" href="#nordeste" aria-expanded="false">
@@ -549,7 +553,7 @@
                                                     <b class="caret mt-1"></b>
                                                 </a>
 
-                                                <div  class="collapse show" id="nordeste" aria-expanded="false" >
+                                                <div  class="collapse" id="nordeste" aria-expanded="false" >
                                                     <ul class="nav pl-4">
                                                         <li @if ($pageSlug == 'profile') class="active " @endif>
                                                             <a  href="{{ route('profile.edit') }}">
@@ -561,7 +565,7 @@
                                                     </ul>
                                                 </div>
 
-                                                 <div  class="collapse show" id="nordeste" aria-expanded="false" >
+                                                 <div  class="collapse" id="nordeste" aria-expanded="false" >
                                                     <ul class="nav pl-4">
                                                         <li @if ($pageSlug == 'profile') class="active " @endif>
                                                             <a  href="{{ route('profile.edit') }}">
@@ -573,7 +577,7 @@
                                                     </ul>
                                                 </div>
 
-                                                 <div  class="collapse show" id="nordeste" aria-expanded="false" >
+                                                 <div  class="collapse" id="nordeste" aria-expanded="false" >
                                                     <ul class="nav pl-4">
                                                         <li @if ($pageSlug == 'profile') class="active " @endif>
                                                             <a  href="{{ route('profile.edit') }}">
@@ -585,7 +589,7 @@
                                                     </ul>
                                                 </div>
 
-                                                 <div  class="collapse show" id="nordeste" aria-expanded="false" >
+                                                 <div  class="collapse" id="nordeste" aria-expanded="false" >
                                                     <ul class="nav pl-4">
                                                         <li @if ($pageSlug == 'profile') class="active " @endif>
                                                             <a  href="{{ route('profile.edit') }}">
@@ -597,7 +601,7 @@
                                                     </ul>
                                                 </div>
 
-                                                 <div  class="collapse show" id="nordeste" aria-expanded="false" >
+                                                 <div  class="collapse" id="nordeste" aria-expanded="false" >
                                                     <ul class="nav pl-4">
                                                         <li @if ($pageSlug == 'profile') class="active " @endif>
                                                             <a  href="{{ route('profile.edit') }}">
@@ -609,7 +613,7 @@
                                                     </ul>
                                                 </div>
 
-                                                 <div  class="collapse show" id="nordeste" aria-expanded="false" >
+                                                 <div  class="collapse" id="nordeste" aria-expanded="false" >
                                                     <ul class="nav pl-4">
                                                         <li @if ($pageSlug == 'profile') class="active " @endif>
                                                             <a  href="{{ route('profile.edit') }}">
@@ -621,7 +625,7 @@
                                                     </ul>
                                                 </div>
 
-                                                 <div  class="collapse show" id="nordeste" aria-expanded="false" >
+                                                 <div  class="collapse" id="nordeste" aria-expanded="false" >
                                                     <ul class="nav pl-4">
                                                         <li @if ($pageSlug == 'profile') class="active " @endif>
                                                             <a  href="{{ route('profile.edit') }}">
@@ -633,7 +637,7 @@
                                                     </ul>
                                                 </div>
 
-                                                 <div  class="collapse show" id="nordeste" aria-expanded="false" >
+                                                 <div  class="collapse" id="nordeste" aria-expanded="false" >
                                                     <ul class="nav pl-4">
                                                         <li @if ($pageSlug == 'profile') class="active " @endif>
                                                             <a  href="{{ route('profile.edit') }}">
@@ -650,7 +654,7 @@
 
                                     </ul>
                                 </div>
-                            <div  class="collapse show" id="estado" aria-expanded="false" >
+                            <div  class="collapse" id="estado" aria-expanded="false" >
                                 <ul class="nav pl-4">
                                     <li @if ($pageSlug == 'profile') class="active " @endif>
                                         <a data-toggle="collapse" href="#norte" aria-expanded="false">
@@ -660,7 +664,7 @@
                                             <b class="caret mt-1"></b>
                                         </a>
 
-                                        <div  class="collapse show" id="norte" aria-expanded="false" >
+                                        <div  class="collapse" id="norte" aria-expanded="false" >
                                             <ul class="nav pl-4">
                                                 <li @if ($pageSlug == 'profile') class="active " @endif>
                                                     <a  href="{{ route('profile.edit') }}">
@@ -672,7 +676,7 @@
                                             </ul>
                                         </div>
 
-                                        <div  class="collapse show" id="norte" aria-expanded="false" >
+                                        <div  class="collapse" id="norte" aria-expanded="false" >
                                             <ul class="nav pl-4">
                                                 <li @if ($pageSlug == 'profile') class="active " @endif>
                                                     <a  href="{{ route('profile.edit') }}">
@@ -684,7 +688,7 @@
                                             </ul>
                                         </div>
 
-                                         <div  class="collapse show" id="norte" aria-expanded="false" >
+                                         <div  class="collapse" id="norte" aria-expanded="false" >
                                             <ul class="nav pl-4">
                                                 <li @if ($pageSlug == 'profile') class="active " @endif>
                                                     <a  href="{{ route('profile.edit') }}">
@@ -696,7 +700,7 @@
                                             </ul>
                                         </div>
 
-                                         <div  class="collapse show" id="norte" aria-expanded="false" >
+                                         <div  class="collapse" id="norte" aria-expanded="false" >
                                             <ul class="nav pl-4">
                                                 <li @if ($pageSlug == 'profile') class="active " @endif>
                                                     <a  href="{{ route('profile.edit') }}">
@@ -708,7 +712,7 @@
                                             </ul>
                                         </div>
 
-                                        <div  class="collapse show" id="norte" aria-expanded="false" >
+                                        <div  class="collapse" id="norte" aria-expanded="false" >
                                             <ul class="nav pl-4">
                                                 <li @if ($pageSlug == 'profile') class="active " @endif>
                                                     <a  href="{{ route('profile.edit') }}">
@@ -720,7 +724,7 @@
                                             </ul>
                                         </div>
 
-                                        <div  class="collapse show" id="norte" aria-expanded="false" >
+                                        <div  class="collapse" id="norte" aria-expanded="false" >
                                             <ul class="nav pl-4">
                                                 <li @if ($pageSlug == 'profile') class="active " @endif>
                                                     <a  href="{{ route('profile.edit') }}">
@@ -732,7 +736,7 @@
                                             </ul>
                                         </div>
 
-                                        <div  class="collapse show" id="norte" aria-expanded="false" >
+                                        <div  class="collapse" id="norte" aria-expanded="false" >
                                             <ul class="nav pl-4">
                                                 <li @if ($pageSlug == 'profile') class="active " @endif>
                                                     <a  href="{{ route('profile.edit') }}">
@@ -749,7 +753,7 @@
                                 </ul>
                             </div>
 
-                            <div  class="collapse show" id="estado" aria-expanded="false" >
+                            <div  class="collapse" id="estado" aria-expanded="false" >
                                 <ul class="nav pl-4">
                                     <li @if ($pageSlug == 'profile') class="active " @endif>
                                         <a data-toggle="collapse" href="#sudeste" aria-expanded="false">
@@ -759,7 +763,7 @@
                                             <b class="caret mt-1"></b>
                                         </a>
 
-                                        <div  class="collapse show" id="sudeste" aria-expanded="false" >
+                                        <div  class="collapse" id="sudeste" aria-expanded="false" >
                                             <ul class="nav pl-4">
                                                 <li @if ($pageSlug == 'profile') class="active " @endif>
                                                     <a  href="{{ route('profile.edit') }}">
@@ -771,7 +775,7 @@
                                             </ul>
                                         </div>
 
-                                        <div  class="collapse show" id="sudeste" aria-expanded="false" >
+                                        <div  class="collapse" id="sudeste" aria-expanded="false" >
                                             <ul class="nav pl-4">
                                                 <li @if ($pageSlug == 'profile') class="active " @endif>
                                                     <a  href="{{ route('profile.edit') }}">
@@ -783,7 +787,7 @@
                                             </ul>
                                         </div>
 
-                                        <div  class="collapse show" id="sudeste" aria-expanded="false" >
+                                        <div  class="collapse" id="sudeste" aria-expanded="false" >
                                             <ul class="nav pl-4">
                                                 <li @if ($pageSlug == 'profile') class="active " @endif>
                                                     <a  href="{{ route('profile.edit') }}">
@@ -795,7 +799,7 @@
                                             </ul>
                                         </div>
 
-                                        <div  class="collapse show" id="sudeste" aria-expanded="false" >
+                                        <div  class="collapse" id="sudeste" aria-expanded="false" >
                                             <ul class="nav pl-4">
                                                 <li @if ($pageSlug == 'profile') class="active " @endif>
                                                     <a  href="{{ route('profile.edit') }}">
@@ -811,7 +815,7 @@
                                 </ul>
                             </div>
 
-                             <div  class="collapse show" id="estado" aria-expanded="false" >
+                             <div  class="collapse" id="estado" aria-expanded="false" >
                                 <ul class="nav pl-4">
                                     <li @if ($pageSlug == 'profile') class="active " @endif>
                                         <a data-toggle="collapse" href="#sul" aria-expanded="false">
@@ -819,7 +823,7 @@
                                             <b class="caret mt-1"></b>
                                         </a>
 
-                                        <div  class="collapse show" id="sul" aria-expanded="false" >
+                                        <div  class="collapse" id="sul" aria-expanded="false" >
                                             <ul class="nav pl-4">
                                                 <li @if ($pageSlug == 'profile') class="active " @endif>
                                                     <a  href="{{ route('profile.edit') }}">
@@ -831,7 +835,7 @@
                                             </ul>
                                         </div>
 
-                                        <div  class="collapse show" id="sul" aria-expanded="false" >
+                                        <div  class="collapse" id="sul" aria-expanded="false" >
                                             <ul class="nav pl-4">
                                                 <li @if ($pageSlug == 'profile') class="active " @endif>
                                                     <a  href="{{ route('profile.edit') }}">
@@ -843,7 +847,7 @@
                                             </ul>
                                         </div>
 
-                                        <div  class="collapse show" id="sul" aria-expanded="false" >
+                                        <div  class="collapse" id="sul" aria-expanded="false" >
                                             <ul class="nav pl-4">
                                                 <li @if ($pageSlug == 'profile') class="active " @endif>
                                                     <a  href="{{ route('profile.edit') }}">
@@ -864,7 +868,7 @@
                     </ul>
                 </div>
 
-                <div  class="collapse show" id="empresa" aria-expanded="false" >
+                <div  class="collapse" id="empresa" aria-expanded="false" >
                     <ul class="nav pl-4">
                         <li @if ($pageSlug == 'profile') class="active " @endif>
                             <a data-toggle="collapse" href="#filtros" aria-expanded="false">
@@ -873,7 +877,7 @@
                                 <b class="caret mt-1"></b>
                             </a>
 
-                            <div  class="collapse show" id="filtros" aria-expanded="false" >
+                            <div  class="collapse" id="filtros" aria-expanded="false" >
                                 <ul class="nav pl-4">
                                     <li @if ($pageSlug == 'profile') class="active " @endif>
                                         <a  href="#">
@@ -885,7 +889,7 @@
                                 </ul>
                             </div>
 
-                            <div  class="collapse show" id="filtros" aria-expanded="false" >
+                            <div  class="collapse" id="filtros" aria-expanded="false" >
                                 <ul class="nav pl-4">
                                     <li @if ($pageSlug == 'profile') class="active " @endif>
                                         <a  href="#">
@@ -901,7 +905,7 @@
                     </ul>
                 </div>
 
-                <div  class="collapse show" id="empresa" aria-expanded="false" >
+                <div  class="collapse" id="empresa" aria-expanded="false" >
                     <ul class="nav pl-4">
                         <li @if ($pageSlug == 'profile') class="active " @endif>
                             <a data-toggle="collapse" href="#modulos" aria-expanded="false">
@@ -910,7 +914,7 @@
                                 <b class="caret mt-1"></b>
                             </a>
 
-                            <div  class="collapse show" id="modulos" aria-expanded="false" >
+                            <div  class="collapse" id="modulos" aria-expanded="false" >
                                 <ul class="nav pl-4">
                                     <li @if ($pageSlug == 'profile') class="active " @endif>
                                         <a  href="#">
@@ -923,7 +927,7 @@
                             </div>
 
                             
-                            <div  class="collapse show" id="modulos" aria-expanded="false" >
+                            <div  class="collapse" id="modulos" aria-expanded="false" >
                                 <ul class="nav pl-4">
                                     <li @if ($pageSlug == 'profile') class="active " @endif>
                                         <a  href="#">
@@ -944,14 +948,23 @@
 
             <!--Inicio de Negocio-->
             <li >
-                <a data-toggle="collapse" href="#negocio" aria-expanded="false">
+                <a data-toggle="collapse text-dark" href="#negocio" aria-expanded="false">
+                    <a href="{{route('Negocio.index')}}">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-currency-dollar" viewBox="0 0 16 16">
                             <path d="M4 10.781c.148 1.667 1.513 2.85 3.591 3.003V15h1.043v-1.216c2.27-.179 3.678-1.438 3.678-3.3 0-1.59-.947-2.51-2.956-3.028l-.722-.187V3.467c1.122.11 1.879.714 2.07 1.616h1.47c-.166-1.6-1.54-2.748-3.54-2.875V1H7.591v1.233c-1.939.23-3.27 1.472-3.27 3.156 0 1.454.966 2.483 2.661 2.917l.61.162v4.031c-1.149-.17-1.94-.8-2.131-1.718H4zm3.391-3.836c-1.043-.263-1.6-.825-1.6-1.616 0-.944.704-1.641 1.8-1.828v3.495l-.2-.05zm1.591 1.872c1.287.323 1.852.859 1.852 1.769 0 1.097-.826 1.828-2.2 1.939V8.73l.348.086z"/>
                         </svg>
-                    <span  class="nav-link-text">{{ __('Negocio') }}</span>
-                    <b class="caret mt-1"></b>
+                        
+                    <span  class="nav-link-text">
+                    {{ __('Negocio') }}
+                    </span>
+                    <b class="caret mt-1">
+                       
+                    </b>  
+                    </a>
                 </a>
-                <div  class="collapse show" id="negocio" aria-expanded="false" >
+                
+               
+                <div  class="collapse" id="negocio" aria-expanded="false" >
                     <ul class="nav pl-4">
                         <li @if ($pageSlug == 'profile') class="active " @endif>
                             <a  href="{{ route('profile.edit') }}">
@@ -963,7 +976,7 @@
                     </ul>
                 </div>
 
-                <div  class="collapse show" id="negocio" aria-expanded="false" >
+                <div  class="collapse" id="negocio" aria-expanded="false" >
                     <ul class="nav pl-4">
                         <li @if ($pageSlug == 'profile') class="active " @endif>
                             <a  href="{{ route('profile.edit') }}">
@@ -974,7 +987,7 @@
                     </ul>
                 </div>
 
-                <div  class="collapse show" id="negocio" aria-expanded="false" >
+                <div  class="collapse" id="negocio" aria-expanded="false" >
                     <ul class="nav pl-4">
                         <li @if ($pageSlug == 'profile') class="active " @endif>
                             <a  href="{{ route('profile.edit') }}">
@@ -986,7 +999,7 @@
                     </ul>
                 </div>
 
-                <div  class="collapse show" id="negocio" aria-expanded="false" >
+                <div  class="collapse" id="negocio" aria-expanded="false" >
                     <ul class="nav pl-4">
                         <li @if ($pageSlug == 'profile') class="active " @endif>
                             <a  href="{{ route('profile.edit') }}">
@@ -998,7 +1011,7 @@
                     </ul>
                 </div>
 
-                <div  class="collapse show" id="negocio" aria-expanded="false" >
+                <div  class="collapse" id="negocio" aria-expanded="false" >
                     <ul class="nav pl-4">
                         <li @if ($pageSlug == 'profile') class="active " @endif>
                              <a data-toggle="collapse" href="#responsavel" aria-expanded="true">
@@ -1007,7 +1020,7 @@
                                
                             </a>
 
-                            <div  class="collapse show" id="responsavel" aria-expanded="false" >
+                            <div  class="collapse" id="responsavel" aria-expanded="false" >
                                 <ul class="nav pl-4 ">
                                     <li @if ($pageSlug == 'profile') class="active " @endif>
                                         <a  href="#">
@@ -1027,7 +1040,7 @@
                     </ul>
                 </div>
 
-                <div  class="collapse show" id="negocio" aria-expanded="false" >
+                <div  class="collapse" id="negocio" aria-expanded="false" >
                     <ul class="nav pl-4">
                         <li @if ($pageSlug == 'profile') class="active " @endif>
                            <a data-toggle="collapse" href="#etapa" aria-expanded="true">
@@ -1036,7 +1049,7 @@
                                 <b class="caret mt-1"></b>
                             </a>
 
-                            <div  class="collapse show" id="etapa" aria-expanded="false" >
+                            <div  class="collapse" id="etapa" aria-expanded="false" >
                                 <ul class="nav pl-4 ">
                                     <li @if ($pageSlug == 'profile') class="active " @endif>
                                         <a  href="#">
@@ -1055,7 +1068,7 @@
                     </ul>
                 </div>
 
-                <div  class="collapse show" id="negocio" aria-expanded="false" >
+                <div  class="collapse" id="negocio" aria-expanded="false" >
                     <ul class="nav pl-4">
                         <li @if ($pageSlug == 'profile') class="active " @endif>
                             <a  href="{{ route('profile.edit') }}">
@@ -1065,7 +1078,7 @@
                                 <b class="caret mt-1"></b>
                             </a>
                             
-                            <div  class="collapse show" id="status" aria-expanded="false" >
+                            <div  class="collapse" id="status" aria-expanded="false" >
                                 <ul class="nav pl-4">
                                     <li @if ($pageSlug == 'profile') class="active " @endif>
                                         <a  href="#">
@@ -1087,7 +1100,7 @@
                     </ul>
                 </div>
 
-                <div  class="collapse show" id="negocio" aria-expanded="false" >
+                <div  class="collapse" id="negocio" aria-expanded="false" >
                     <ul class="nav pl-4">
                         <li @if ($pageSlug == 'profile') class="active " @endif>
                             <a  href="{{ route('profile.edit') }}">
@@ -1096,7 +1109,7 @@
                                 <b class="caret mt-1"></b>
                             </a>
                            
-                            <div  class="collapse show" id="status2" aria-expanded="false" >
+                            <div  class="collapse" id="status2" aria-expanded="false" >
                                 <ul class="nav pl-4">
                                     <li @if ($pageSlug == 'profile') class="active " @endif>
                                         <a  href="{{ route('profile.edit') }}">
@@ -1118,7 +1131,7 @@
                     </ul>
                 </div>
 
-                <div  class="collapse show" id="negocio" aria-expanded="false" >
+                <div  class="collapse" id="negocio" aria-expanded="false" >
                     <ul class="nav pl-4">
                         <li @if ($pageSlug == 'profile') class="active " @endif>
                             <a  href="{{ route('profile.edit') }}">
@@ -1127,7 +1140,7 @@
                                 <b class="caret mt-1"></b>
                             </a>
 
-                            <div  class="collapse show" id="filtro" aria-expanded="false" >
+                            <div  class="collapse" id="filtro" aria-expanded="false" >
                                 <ul class="nav pl-4">
                                     <li @if ($pageSlug == 'profile') class="active " @endif>
                                         <a  href="{{ route('profile.edit') }}">
@@ -1141,7 +1154,7 @@
                                 </ul>
                             </div>
 
-                             <div  class="collapse show" id="filtro" aria-expanded="false" >
+                             <div  class="collapse" id="filtro" aria-expanded="false" >
                                 <ul class="nav pl-4">
                                     <li @if ($pageSlug == 'profile') class="active " @endif>
                                         <a  href="{{ route('profile.edit') }}">
@@ -1155,7 +1168,7 @@
                                 </ul>
                             </div>
 
-                             <div  class="collapse show" id="filtro" aria-expanded="false" >
+                             <div  class="collapse" id="filtro" aria-expanded="false" >
                                 <ul class="nav pl-4">
                                     <li @if ($pageSlug == 'profile') class="active " @endif>
                                         <a  href="{{ route('profile.edit') }}">
@@ -1169,7 +1182,7 @@
                                 </ul>
                             </div>
 
-                             <div  class="collapse show" id="filtro" aria-expanded="false" >
+                             <div  class="collapse" id="filtro" aria-expanded="false" >
                                 <ul class="nav pl-4">
                                     <li @if ($pageSlug == 'profile') class="active " @endif>
                                         <a  href="{{ route('profile.edit') }}">
@@ -1183,7 +1196,7 @@
                                 </ul>
                             </div>
 
-                             <div  class="collapse show" id="filtro" aria-expanded="false" >
+                             <div  class="collapse" id="filtro" aria-expanded="false" >
                                 <ul class="nav pl-4">
                                     <li @if ($pageSlug == 'profile') class="active " @endif>
                                         <a  href="{{ route('profile.edit') }}">
@@ -1197,7 +1210,7 @@
                                 </ul>
                             </div>
 
-                             <div  class="collapse show" id="filtro" aria-expanded="false" >
+                             <div  class="collapse" id="filtro" aria-expanded="false" >
                                 <ul class="nav pl-4">
                                     <li @if ($pageSlug == 'profile') class="active " @endif>
                                         <a  href="{{ route('profile.edit') }}">
@@ -1215,7 +1228,7 @@
                     </ul>
                 </div>
 
-                <div  class="collapse show" id="negocio" aria-expanded="false" >
+                <div  class="collapse" id="negocio" aria-expanded="false" >
                     <ul class="nav pl-4">
                         <li @if ($pageSlug == 'profile') class="active " @endif>
                             <a  href="{{ route('profile.edit') }}">
@@ -1224,7 +1237,7 @@
                                 <b class="caret mt-1"></b>
                             </a>
 
-                            <div  class="collapse show" id="negociocategoria" aria-expanded="false" >
+                            <div  class="collapse" id="negociocategoria" aria-expanded="false" >
                                 <ul class="nav pl-4">
                                     <li @if ($pageSlug == 'profile') class="active " @endif>
                                         <a  href="#">
@@ -1246,7 +1259,7 @@
                     </ul>
                 </div>
 
-                <div  class="collapse show" id="negocio" aria-expanded="false" >
+                <div  class="collapse" id="negocio" aria-expanded="false" >
                     <ul class="nav pl-4">
                         <li @if ($pageSlug == 'profile') class="active " @endif>
                             <a  href="{{ route('profile.edit') }}">
@@ -1256,7 +1269,7 @@
                                 <b class="caret mt-1"></b>
                             </a>
 
-                            <div  class="collapse show" id="negocioacao" aria-expanded="false" >
+                            <div  class="collapse" id="negocioacao" aria-expanded="false" >
                                 <ul class="nav pl-4">
                                     <li @if ($pageSlug == 'profile') class="active " @endif>
                                         <a  href="#">
@@ -1278,7 +1291,7 @@
                     </ul>
                 </div>
 
-                <div  class="collapse show" id="negocio" aria-expanded="false" >
+                <div  class="collapse" id="negocio" aria-expanded="false" >
                     <ul class="nav pl-4">
                         <li @if ($pageSlug == 'profile') class="active " @endif>
                             <a  href="{{ route('profile.edit') }}">
@@ -1286,7 +1299,7 @@
                                 <p style="color:black;">{{ __('Grupo de Administradores') }}</p>
                             <b class="caret mt-1"></b>
                             </a>
-                             <div  class="collapse show" id="negociogrupoadm" aria-expanded="false" >
+                             <div  class="collapse" id="negociogrupoadm" aria-expanded="false" >
                                 <ul class="nav pl-4">
                                     <li @if ($pageSlug == 'profile') class="active " @endif>
                                         <a  href="{{ route('profile.edit') }}">
@@ -1310,7 +1323,7 @@
                     </ul>
                 </div>
 
-                <div  class="collapse show" id="negocio" aria-expanded="false" >
+                <div  class="collapse" id="negocio" aria-expanded="false" >
                     <ul class="nav pl-4">
                         <li @if ($pageSlug == 'profile') class="active " @endif>
                             <a  href="{{ route('profile.edit') }}">
@@ -1322,7 +1335,7 @@
                             </a>
                           
 
-                            <div  class="collapse show" id="negociomotivo" aria-expanded="false" >
+                            <div  class="collapse" id="negociomotivo" aria-expanded="false" >
                                 <ul class="nav pl-4">
                                     <li @if ($pageSlug == 'profile') class="active " @endif>
                                         <a  href="{{ route('profile.edit') }}">
@@ -1344,7 +1357,7 @@
                     </ul>
                 </div>
 
-                <div  class="collapse show" id="negocio" aria-expanded="false" >
+                <div  class="collapse" id="negocio" aria-expanded="false" >
                     <ul class="nav pl-4">
                         <li @if ($pageSlug == 'profile') class="active " @endif>
 
@@ -1356,7 +1369,7 @@
                             </a>
                             <!--inicio-->
                 
-                            <div  class="collapse show" id="negociomodulo" aria-expanded="false" >
+                            <div  class="collapse" id="negociomodulo" aria-expanded="false" >
                                 <ul class="nav pl-4">
                                     <li @if ($pageSlug == 'profile') class="active " @endif>
                                         <a  href="{{ route('profile.edit') }}">
@@ -1370,7 +1383,7 @@
                             </div>
 
                             
-                            <div  class="collapse show" id="negociomodulo" aria-expanded="false" >
+                            <div  class="collapse" id="negociomodulo" aria-expanded="false" >
                                 <ul class="nav pl-4">
                                     <li @if ($pageSlug == 'profile') class="active " @endif>
                                         <a  href="{{ route('profile.edit') }}">
@@ -1384,7 +1397,7 @@
                             </div>
 
                             
-                            <div  class="collapse show" id="negociomodulo" aria-expanded="false" >
+                            <div  class="collapse" id="negociomodulo" aria-expanded="false" >
                                 <ul class="nav pl-4">
                                     <li @if ($pageSlug == 'profile') class="active " @endif>
                                         <a  href="{{ route('profile.edit') }}">
@@ -1397,7 +1410,7 @@
                             </div>
 
                             
-                            <div  class="collapse show" id="negociomodulo" aria-expanded="false" >
+                            <div  class="collapse" id="negociomodulo" aria-expanded="false" >
                                 <ul class="nav pl-4">
                                     <li @if ($pageSlug == 'profile') class="active " @endif>
                                         <a  href="{{ route('profile.edit') }}">
@@ -1410,7 +1423,7 @@
                             </div>
 
                             
-                            <div  class="collapse show" id="negociomodulo" aria-expanded="false" >
+                            <div  class="collapse" id="negociomodulo" aria-expanded="false" >
                                 <ul class="nav pl-4">
                                     <li @if ($pageSlug == 'profile') class="active " @endif>
                                         <a  href="{{ route('profile.edit') }}">
@@ -1434,15 +1447,20 @@
             <!--Inicio de Tarefas-->
             <li >
                 <a data-toggle="collapse" href="#tarefa" aria-expanded="false">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-card-checklist" viewBox="0 0 16 16">
+                
+                </a>
+                <a href="{{route('Empresa.index')}}">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-card-checklist" viewBox="0 0 16 16">
                     <path d="M14.5 3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h13zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-13z"/>
                     <path d="M7 5.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm-1.496-.854a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 1 1 .708-.708l.146.147 1.146-1.147a.5.5 0 0 1 .708 0zM7 9.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm-1.496-.854a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 0 1 .708-.708l.146.147 1.146-1.147a.5.5 0 0 1 .708 0z"/>
                 </svg>
                     <span  class="nav-link-text">{{ __('Tarefas') }}</span>
                     <b class="caret mt-1"></b>
-                </a>
 
-                 <div  class="collapse show" id="tarefa" aria-expanded="false" >
+                </a>
+                
+
+                 <div  class="collapse" id="tarefa" aria-expanded="false" >
                     <ul class="nav pl-4">
                         <li @if ($pageSlug == 'profile') class="active " @endif>
                             <a  href="{{ route('profile.edit') }}">
@@ -1455,7 +1473,7 @@
                 </div>
 
                 
-                 <div  class="collapse show" id="tarefa" aria-expanded="false" >
+                 <div  class="collapse" id="tarefa" aria-expanded="false" >
                     <ul class="nav pl-4">
                         <li @if ($pageSlug == 'profile') class="active " @endif>
                             <a  href="{{ route('profile.edit') }}">
@@ -1467,7 +1485,7 @@
                 </div>
 
                 
-                 <div  class="collapse show" id="tarefa" aria-expanded="false" >
+                 <div  class="collapse" id="tarefa" aria-expanded="false" >
                     <ul class="nav pl-4">
                         <li @if ($pageSlug == 'profile') class="active " @endif>
                             <a  href="{{ route('profile.edit') }}">
@@ -1479,7 +1497,7 @@
                 </div>
 
                 
-                 <div  class="collapse show" id="tarefa" aria-expanded="false" >
+                 <div  class="collapse" id="tarefa" aria-expanded="false" >
                     <ul class="nav pl-4">
                         <li @if ($pageSlug == 'profile') class="active " @endif>
                             <a  href="{{ route('profile.edit') }}">
@@ -1491,7 +1509,7 @@
                 </div>
 
                 
-                <div  class="collapse show" id="tarefa" aria-expanded="false" >
+                <div  class="collapse" id="tarefa" aria-expanded="false" >
                     <ul class="nav pl-4">
                         <li @if ($pageSlug == 'profile') class="active " @endif>
                             <a  href="{{ route('profile.edit') }}">
@@ -1502,7 +1520,7 @@
                                 <b class="caret mt-1"></b>
 
                             </a>
-                            <div  class="collapse show" id="aquemsedestina" aria-expanded="false" >
+                            <div  class="collapse" id="aquemsedestina" aria-expanded="false" >
                                 <ul class="nav pl-4">
                                     <li @if ($pageSlug == 'profile') class="active " @endif>
                                         <a  href="{{ route('profile.edit') }}">
@@ -1522,7 +1540,7 @@
                 </div>
 
                 
-                 <div  class="collapse show" id="tarefa" aria-expanded="false" >
+                 <div  class="collapse" id="tarefa" aria-expanded="false" >
                     <ul class="nav pl-4">
                         <li @if ($pageSlug == 'profile') class="active " @endif>
                             
@@ -1532,7 +1550,7 @@
                                 <b class="caret mt-1"></b>
                             </a>
 
-                             <div  class="collapse show" id="tarefafiltro" aria-expanded="false" >
+                             <div  class="collapse" id="tarefafiltro" aria-expanded="false" >
                                 <ul class="nav pl-4">
                                     <li @if ($pageSlug == 'profile') class="active " @endif>
                                         <a  href="{{ route('profile.edit') }}">
@@ -1544,7 +1562,7 @@
                                 </ul>
                             </div>
 
-                             <div  class="collapse show" id="tarefafiltro" aria-expanded="false" >
+                             <div  class="collapse" id="tarefafiltro" aria-expanded="false" >
                                 <ul class="nav pl-4">
                                     <li @if ($pageSlug == 'profile') class="active " @endif>
                                         <a  href="{{ route('profile.edit') }}">
@@ -1556,7 +1574,7 @@
                                 </ul>
                             </div>
 
-                             <div  class="collapse show" id="tarefafiltro" aria-expanded="false" >
+                             <div  class="collapse" id="tarefafiltro" aria-expanded="false" >
                                 <ul class="nav pl-4">
                                     <li @if ($pageSlug == 'profile') class="active " @endif>
                                         <a  href="{{ route('profile.edit') }}">
@@ -1568,7 +1586,7 @@
                                 </ul>
                             </div>
 
-                             <div  class="collapse show" id="tarefafiltro" aria-expanded="false" >
+                             <div  class="collapse" id="tarefafiltro" aria-expanded="false" >
                                 <ul class="nav pl-4">
                                     <li @if ($pageSlug == 'profile') class="active " @endif>
                                         <a  href="{{ route('profile.edit') }}">
@@ -1580,7 +1598,7 @@
                                 </ul>
                             </div>
 
-                             <div  class="collapse show" id="tarefafiltro" aria-expanded="false" >
+                             <div  class="collapse" id="tarefafiltro" aria-expanded="false" >
                                 <ul class="nav pl-4">
                                     <li @if ($pageSlug == 'profile') class="active " @endif>
                                         <a  href="{{ route('profile.edit') }}">
@@ -1592,7 +1610,7 @@
                                 </ul>
                             </div>
 
-                             <div  class="collapse show" id="tarefafiltro" aria-expanded="false" >
+                             <div  class="collapse" id="tarefafiltro" aria-expanded="false" >
                                 <ul class="nav pl-4">
                                     <li @if ($pageSlug == 'profile') class="active " @endif>
                                         <a  href="{{ route('profile.edit') }}">
@@ -1610,7 +1628,7 @@
                 </div>
 
                 
-                 <div  class="collapse show" id="tarefa" aria-expanded="false" >
+                 <div  class="collapse" id="tarefa" aria-expanded="false" >
                     <ul class="nav pl-4">
                         <li @if ($pageSlug == 'profile') class="active " @endif>
                             <a  href="{{ route('profile.edit') }}">
@@ -1623,7 +1641,7 @@
                 </div>
 
                 
-                 <div  class="collapse show" id="tarefa" aria-expanded="false" >
+                 <div  class="collapse" id="tarefa" aria-expanded="false" >
                     <ul class="nav pl-4">
                         <li @if ($pageSlug == 'profile') class="active " @endif>
                             <a  href="{{ route('profile.edit') }}">
@@ -1636,7 +1654,7 @@
                 </div>
 
                 
-                 <div  class="collapse show" id="tarefa" aria-expanded="false" >
+                 <div  class="collapse" id="tarefa" aria-expanded="false" >
                     <ul class="nav pl-4">
                         <li @if ($pageSlug == 'profile') class="active " @endif>
                             
@@ -1645,7 +1663,7 @@
                                 <p style="color:black;">{{ __('Grupo de Administradores') }}</p>
                                 <b class="caret mt-1"></b>
                             </a>
-                             <div  class="collapse show" id="tarefagrupoadm" aria-expanded="false" >
+                             <div  class="collapse" id="tarefagrupoadm" aria-expanded="false" >
                                     <ul class="nav pl-4">
                                         <li @if ($pageSlug == 'profile') class="active " @endif>
                                             <a  href="{{ route('profile.edit') }}">
@@ -1670,7 +1688,7 @@
                 </div>
 
                 
-                 <div  class="collapse show" id="tarefa" aria-expanded="false" >
+                 <div  class="collapse" id="tarefa" aria-expanded="false" >
                     <ul class="nav pl-4">
                         <li @if ($pageSlug == 'profile') class="active " @endif>
                             <a  href="{{ route('profile.edit') }}">
@@ -1682,7 +1700,7 @@
                 </div>
 
                 
-                 <div  class="collapse show" id="tarefa" aria-expanded="false" >
+                 <div  class="collapse" id="tarefa" aria-expanded="false" >
                     <ul class="nav pl-4">
                         <li @if ($pageSlug == 'profile') class="active " @endif>
                             <a  href="{{ route('profile.edit') }}">
@@ -1695,7 +1713,7 @@
                 </div>
 
                 
-                 <div  class="collapse show" id="tarefa" aria-expanded="false" >
+                 <div  class="collapse" id="tarefa" aria-expanded="false" >
                     <ul class="nav pl-4">
                         <li @if ($pageSlug == 'profile') class="active " @endif>
                              <a data-toggle="collapse" href="#tarefamodulo" aria-expanded="true">
@@ -1706,7 +1724,7 @@
 
                             </a>
 
-                             <div  class="collapse show" id="tarefamodulo" aria-expanded="false" >
+                             <div  class="collapse" id="tarefamodulo" aria-expanded="false" >
                                 <ul class="nav pl-4">
                                     <li @if ($pageSlug == 'profile') class="active " @endif>
                                         <a  href="{{ route('profile.edit') }}">
@@ -1718,7 +1736,7 @@
                                 </ul>
                             </div>
 
-                            <div  class="collapse show" id="tarefamodulo" aria-expanded="false" >
+                            <div  class="collapse" id="tarefamodulo" aria-expanded="false" >
                                 <ul class="nav pl-4">
                                     <li @if ($pageSlug == 'profile') class="active " @endif>
                                         <a  href="{{ route('profile.edit') }}">
@@ -1730,7 +1748,7 @@
                                 </ul>
                             </div>
 
-                            <div  class="collapse show" id="tarefamodulo" aria-expanded="false" >
+                            <div  class="collapse" id="tarefamodulo" aria-expanded="false" >
                                 <ul class="nav pl-4">
                                     <li @if ($pageSlug == 'profile') class="active " @endif>
                                         <a  href="{{ route('profile.edit') }}">
@@ -1759,7 +1777,7 @@
                 </a>
                 
 
-                   <div  class="collapse show" id="configuracao" aria-expanded="false" >
+                   <div  class="collapse" id="configuracao" aria-expanded="false" >
                     <ul class="nav pl-4">
                         <li @if ($pageSlug == 'profile') class="active " @endif>
                             
@@ -1769,7 +1787,7 @@
                                  <b class="caret mt-1"></b>
                             </a>
 
-                            <div  class="collapse show" id="configuracaoadministradores" aria-expanded="false" >
+                            <div  class="collapse" id="configuracaoadministradores" aria-expanded="false" >
                                 <ul class="nav pl-4">
                                     <li @if ($pageSlug == 'profile') class="active " @endif>
                                         <a  href="{{ route('profile.edit') }}">
@@ -1780,7 +1798,7 @@
                                 </ul>
                             </div>
                             
-                            <div  class="collapse show" id="configuracaoadministradores" aria-expanded="false" >
+                            <div  class="collapse" id="configuracaoadministradores" aria-expanded="false" >
                                 <ul class="nav pl-4">
                                     <li @if ($pageSlug == 'profile') class="active " @endif>
                                         <a  href="{{ route('profile.edit') }}">
@@ -1791,7 +1809,7 @@
                                 </ul>
                             </div>
 
-                             <div  class="collapse show" id="configuracaoadministradores" aria-expanded="false" >
+                             <div  class="collapse" id="configuracaoadministradores" aria-expanded="false" >
                                 <ul class="nav pl-4">
                                     <li @if ($pageSlug == 'profile') class="active " @endif>
                                         <a data-toggle="collapse" href="#configuracaoadministradoresgrupo" aria-expanded="true">
@@ -1802,7 +1820,7 @@
                                             <b class="caret mt-1"></b>
                                         </a>
 
-                                         <div  class="collapse show" id="configuracaoadministradoresgrupo" aria-expanded="false" >
+                                         <div  class="collapse" id="configuracaoadministradoresgrupo" aria-expanded="false" >
                                             <ul class="nav pl-4">
                                                 <li @if ($pageSlug == 'profile') class="active " @endif>
                                                     <a  href="{{ route('profile.edit') }}">
@@ -1813,7 +1831,7 @@
                                             </ul>
                                         </div>  
 
-                                        <div  class="collapse show" id="configuracaoadministradoresgrupo" aria-expanded="false" >
+                                        <div  class="collapse" id="configuracaoadministradoresgrupo" aria-expanded="false" >
                                             <ul class="nav pl-4">
                                                 <li @if ($pageSlug == 'profile') class="active " @endif>
                                                     <a  href="{{ route('profile.edit') }}">
@@ -1824,7 +1842,7 @@
                                             </ul>
                                         </div> 
 
-                                        <div  class="collapse show" id="configuracaoadministradoresgrupo" aria-expanded="false" >
+                                        <div  class="collapse" id="configuracaoadministradoresgrupo" aria-expanded="false" >
                                             <ul class="nav pl-4">
                                                 <li @if ($pageSlug == 'profile') class="active " @endif>
                                                     <a  href="{{ route('profile.edit') }}">
@@ -1838,7 +1856,7 @@
                                 </ul>
                             </div>
 
-                            <div  class="collapse show" id="configuracaoadministradores" aria-expanded="false" >
+                            <div  class="collapse" id="configuracaoadministradores" aria-expanded="false" >
                                 <ul class="nav pl-4">
                                     <li @if ($pageSlug == 'profile') class="active " @endif>
                                         <a  href="{{ route('profile.edit') }}">
@@ -1850,7 +1868,7 @@
 
                                         </a>
 
-                                         <div  class="collapse show" id="configuracaoadministradoresdepartamento" aria-expanded="false" >
+                                         <div  class="collapse" id="configuracaoadministradoresdepartamento" aria-expanded="false" >
                                             <ul class="nav pl-4">
                                                 <li @if ($pageSlug == 'profile') class="active " @endif>
                                                     <a  href="{{ route('profile.edit') }}">
@@ -1861,7 +1879,7 @@
                                             </ul>
                                         </div> 
 
-                                         <div  class="collapse show" id="configuracaoadministradoresdepartamento" aria-expanded="false" >
+                                         <div  class="collapse" id="configuracaoadministradoresdepartamento" aria-expanded="false" >
                                             <ul class="nav pl-4">
                                                 <li @if ($pageSlug == 'profile') class="active " @endif>
                                                     <a  href="{{ route('profile.edit') }}">
@@ -1872,7 +1890,7 @@
                                             </ul>
                                         </div> 
 
-                                         <div  class="collapse show" id="configuracaoadministradoresdepartamento" aria-expanded="false" >
+                                         <div  class="collapse" id="configuracaoadministradoresdepartamento" aria-expanded="false" >
                                             <ul class="nav pl-4">
                                                 <li @if ($pageSlug == 'profile') class="active " @endif>
                                                     <a  href="{{ route('profile.edit') }}">
@@ -1887,7 +1905,7 @@
 
                                 </ul>
 
-                                <div  class="collapse show" id="configuracaoadministradores" aria-expanded="false" >
+                                <div  class="collapse" id="configuracaoadministradores" aria-expanded="false" >
                                     <ul class="nav pl-4">
                                         <li @if ($pageSlug == 'profile') class="active " @endif>
                                             <a  href="{{ route('profile.edit') }}">
@@ -1898,7 +1916,7 @@
 
                                             </a>
                                             <!--inicio de cargo-->
-                                            <div  class="collapse show" id="configuracaocargo" aria-expanded="false" >
+                                            <div  class="collapse" id="configuracaocargo" aria-expanded="false" >
                                                     <ul>
                                                         <li @if ($pageSlug == 'profile') class="active " @endif>
                                                             <a  href="{{ route('profile.edit') }}">
@@ -1907,7 +1925,7 @@
                                                         </li>
                                                     </ul> 
                                                 </div> 
-                                                <div  class="collapse show" id="configuracaocargo" aria-expanded="false" >
+                                                <div  class="collapse" id="configuracaocargo" aria-expanded="false" >
                                                     <ul>
                                                         <li @if ($pageSlug == 'profile') class="active " @endif>
                                                             <a  href="{{ route('profile.edit') }}">
@@ -1917,7 +1935,7 @@
                                                     </ul> 
                                                 </div>
 
-                                                <div  class="collapse show" id="configuracaocargo" aria-expanded="false" >
+                                                <div  class="collapse" id="configuracaocargo" aria-expanded="false" >
                                                     <ul>
                                                         <li @if ($pageSlug == 'profile') class="active " @endif>
                                                             <a  href="{{ route('profile.edit') }}">
@@ -1927,7 +1945,7 @@
                                                     </ul> 
                                                 </div>
 
-                                                <div  class="collapse show" id="configuracaocargo" aria-expanded="false" >
+                                                <div  class="collapse" id="configuracaocargo" aria-expanded="false" >
                                                     <ul>
                                                         <li @if ($pageSlug == 'profile') class="active " @endif>
                                                             <a  href="{{ route('profile.edit') }}">
@@ -1937,7 +1955,7 @@
                                                     </ul> 
                                                 </div>
 
-                                                <div  class="collapse show" id="configuracaocargo" aria-expanded="false" >
+                                                <div  class="collapse" id="configuracaocargo" aria-expanded="false" >
                                                     <ul>
                                                         <li @if ($pageSlug == 'profile') class="active " @endif>
                                                             <a  href="{{ route('profile.edit') }}">
@@ -1947,7 +1965,7 @@
                                                     </ul> 
                                                 </div>
 
-                                                <div  class="collapse show" id="configuracaocargo" aria-expanded="false" >
+                                                <div  class="collapse" id="configuracaocargo" aria-expanded="false" >
                                                     <ul>
                                                         <li @if ($pageSlug == 'profile') class="active " @endif>
                                                             <a  href="{{ route('profile.edit') }}">
@@ -1957,7 +1975,7 @@
                                                     </ul> 
                                                 </div>
 
-                                                <div  class="collapse show" id="configuracaocargo" aria-expanded="false" >
+                                                <div  class="collapse" id="configuracaocargo" aria-expanded="false" >
                                                     <ul>
                                                         <li @if ($pageSlug == 'profile') class="active " @endif>
                                                             <a  href="{{ route('profile.edit') }}">
@@ -1967,7 +1985,7 @@
                                                     </ul> 
                                                 </div>
 
-                                                <div  class="collapse show" id="configuracaocargo" aria-expanded="false" >
+                                                <div  class="collapse" id="configuracaocargo" aria-expanded="false" >
                                                     <ul>
                                                         <li @if ($pageSlug == 'profile') class="active " @endif>
                                                             <a  href="{{ route('profile.edit') }}">
@@ -1977,7 +1995,7 @@
                                                     </ul> 
                                                 </div>
 
-                                                <div  class="collapse show" id="configuracaocargo" aria-expanded="false" >
+                                                <div  class="collapse" id="configuracaocargo" aria-expanded="false" >
                                                     <ul>
                                                         <li @if ($pageSlug == 'profile') class="active " @endif>
                                                             <a  href="{{ route('profile.edit') }}">
@@ -1987,7 +2005,7 @@
                                                     </ul> 
                                                 </div>
 
-                                                <div  class="collapse show" id="configuracaocargo" aria-expanded="false" >
+                                                <div  class="collapse" id="configuracaocargo" aria-expanded="false" >
                                                     <ul>
                                                         <li @if ($pageSlug == 'profile') class="active " @endif>
                                                             <a  href="{{ route('profile.edit') }}">
@@ -1997,7 +2015,7 @@
                                                     </ul> 
                                                 </div>
 
-                                                <div  class="collapse show" id="configuracaocargo" aria-expanded="false" >
+                                                <div  class="collapse" id="configuracaocargo" aria-expanded="false" >
                                                     <ul>
                                                         <li @if ($pageSlug == 'profile') class="active " @endif>
                                                             <a  href="{{ route('profile.edit') }}">
@@ -2013,16 +2031,16 @@
                                     </ul>
                                 </div>
 
-                                <div  class="collapse show" id="configuracaoadministradores" aria-expanded="false" >
-                                    <ul class="nav pl-4">
+                                <div  class="collapse" id="configuracaoadministradores" aria-expanded="false" >
+                                    <ul class="nav pl-4" >
                                         <li @if ($pageSlug == 'profile') class="active " @endif>
-                                            <a  href="{{ route('profile.edit') }}">
+                                            <a  href="{{ route('profile.edit') }}" style="display: none">
                                                  <a data-toggle="collapse" href="#configuracaoestado" aria-expanded="true">                
                                                 <p style="color:black;">{{ __('Estado') }}</p>
                                             <b class="caret mt-1"></b>
 
                                             </a>
-                                            <div class="collapse show" id="configuracaoestado" aria-expanded="false">
+                                            <div class="collapse" id="configuracaoestado" aria-expanded="false">
                                                 <ul class="nav pl-4">
                                                     <li @if ($pageSlug == 'profile') class="active " @endif>
                                                         <a data-toggle="collapse" href="#configuracaocentrooeste" aria-expanded="false">
@@ -2030,7 +2048,7 @@
                                                             <b class="caret mt-1"></b>
                                                         </a>
                                                         <!--inicio -->
-                                                        <div class="collapse show" id="configuracaocentrooeste" aria-expanded="false">
+                                                        <div class="collapse" id="configuracaocentrooeste" aria-expanded="false">
                                                             <ul class="nav pl-4">
                                                                 <li @if ($pageSlug == 'profile') class="active " @endif>
                                                                     <a href="{{ route('profile.edit') }}">
@@ -2041,7 +2059,7 @@
                                                             </ul>
                                                         </div>
 
-                                                        <div class="collapse show" id="configuracaocentrooeste" aria-expanded="false">
+                                                        <div class="collapse" id="configuracaocentrooeste" aria-expanded="false">
                                                             <ul class="nav pl-4">
                                                                 <li @if ($pageSlug == 'profile') class="active " @endif>
                                                                     <a href="{{ route('profile.edit') }}">
@@ -2052,7 +2070,7 @@
                                                             </ul>
                                                         </div>
 
-                                                        <div class="collapse show" id="configuracaocentrooeste" aria-expanded="false">
+                                                        <div class="collapse" id="configuracaocentrooeste" aria-expanded="false">
                                                             <ul class="nav pl-4">
                                                                 <li @if ($pageSlug == 'profile') class="active " @endif>
                                                                     <a href="{{ route('profile.edit') }}">
@@ -2063,7 +2081,7 @@
                                                             </ul>
                                                         </div>
 
-                                                        <div class="collapse show" id="configuracaocentrooeste" aria-expanded="false">
+                                                        <div class="collapse" id="configuracaocentrooeste" aria-expanded="false">
                                                             <ul class="nav pl-4">
                                                                 <li @if ($pageSlug == 'profile') class="active " @endif>
                                                                     <a href="{{ route('profile.edit') }}">
@@ -2080,7 +2098,7 @@
 
                                                         <!--fim-->
                                                         <!-- inicio nordeste-->
-                                                           <div class="collapse show" id="estado" aria-expanded="false">
+                                                           <div class="collapse" id="estado" aria-expanded="false">
                                                                 <ul class="nav pl-4">
                                                                     <li @if ($pageSlug == 'profile') class="active " @endif>
                                                                         <a data-toggle="collapse" href="#configuracaonordeste" aria-expanded="false">
@@ -2088,7 +2106,7 @@
                                                                             <b class="caret mt-1"></b>
                                                                         </a>
 
-                                                                        <div class="collapse show" id="configuracaonordeste" aria-expanded="false">
+                                                                        <div class="collapse" id="configuracaonordeste" aria-expanded="false">
                                                                             <ul class="nav pl-4">
                                                                                 <li @if ($pageSlug == 'profile') class="active " @endif>
                                                                                     <a href="{{ route('profile.edit') }}">
@@ -2100,7 +2118,7 @@
                                                                             </ul>
                                                                         </div>
 
-                                                                        <div class="collapse show" id="configuracaonordeste" aria-expanded="false">
+                                                                        <div class="collapse" id="configuracaonordeste" aria-expanded="false">
                                                                             <ul class="nav pl-4">
                                                                                 <li @if ($pageSlug == 'profile') class="active " @endif>
                                                                                     <a href="{{ route('profile.edit') }}">
@@ -2112,7 +2130,7 @@
                                                                             </ul>
                                                                         </div>
 
-                                                                        <div class="collapse show" id="configuracaonordeste" aria-expanded="false">
+                                                                        <div class="collapse" id="configuracaonordeste" aria-expanded="false">
                                                                             <ul class="nav pl-4">
                                                                                 <li @if ($pageSlug == 'profile') class="active " @endif>
                                                                                     <a href="{{ route('profile.edit') }}">
@@ -2124,7 +2142,7 @@
                                                                             </ul>
                                                                         </div>
 
-                                                                        <div class="collapse show" id="configuracaonordeste" aria-expanded="false">
+                                                                        <div class="collapse" id="configuracaonordeste" aria-expanded="false">
                                                                             <ul class="nav pl-4">
                                                                                 <li @if ($pageSlug == 'profile') class="active " @endif>
                                                                                     <a href="{{ route('profile.edit') }}">
@@ -2136,7 +2154,7 @@
                                                                             </ul>
                                                                         </div>
 
-                                                                        <div class="collapse show" id="configuracaonordeste" aria-expanded="false">
+                                                                        <div class="collapse" id="configuracaonordeste" aria-expanded="false">
                                                                             <ul class="nav pl-4">
                                                                                 <li @if ($pageSlug == 'profile') class="active " @endif>
                                                                                     <a href="{{ route('profile.edit') }}">
@@ -2148,7 +2166,7 @@
                                                                             </ul>
                                                                         </div>
 
-                                                                        <div class="collapse show" id="configuracaonordeste" aria-expanded="false">
+                                                                        <div class="collapse" id="configuracaonordeste" aria-expanded="false">
                                                                             <ul class="nav pl-4">
                                                                                 <li @if ($pageSlug == 'profile') class="active " @endif>
                                                                                     <a href="{{ route('profile.edit') }}">
@@ -2160,7 +2178,7 @@
                                                                             </ul>
                                                                         </div>
 
-                                                                        <div class="collapse show" id="configuracaonordeste" aria-expanded="false">
+                                                                        <div class="collapse" id="configuracaonordeste" aria-expanded="false">
                                                                             <ul class="nav pl-4">
                                                                                 <li @if ($pageSlug == 'profile') class="active " @endif>
                                                                                     <a href="{{ route('profile.edit') }}">
@@ -2172,7 +2190,7 @@
                                                                             </ul>
                                                                         </div>
 
-                                                                        <div class="collapse show" id="configuracaonordeste" aria-expanded="false">
+                                                                        <div class="collapse" id="configuracaonordeste" aria-expanded="false">
                                                                             <ul class="nav pl-4">
                                                                                 <li @if ($pageSlug == 'profile') class="active " @endif>
                                                                                     <a href="{{ route('profile.edit') }}">
@@ -2191,7 +2209,7 @@
                                                             </div>
                                                         <!-- fim nordeste-->
                                                         <!--inicio do norte-->
-                                                            <div class="collapse show" id="estado" aria-expanded="false">
+                                                            <div class="collapse" id="estado" aria-expanded="false">
                                                                 <ul class="nav pl-4">
                                                                     <li @if ($pageSlug == 'profile') class="active " @endif>
                                                                         <a data-toggle="collapse" href="#confignorte" aria-expanded="false">
@@ -2201,7 +2219,7 @@
                                                                             <b class="caret mt-1"></b>
                                                                         </a>
 
-                                                                        <div class="collapse show" id="confignorte" aria-expanded="false">
+                                                                        <div class="collapse" id="confignorte" aria-expanded="false">
                                                                             <ul class="nav pl-4">
                                                                                 <li @if ($pageSlug == 'profile') class="active " @endif>
                                                                                     <a href="{{ route('profile.edit') }}">
@@ -2213,7 +2231,7 @@
                                                                             </ul>
                                                                         </div>
 
-                                                                        <div class="collapse show" id="confignorte" aria-expanded="false">
+                                                                        <div class="collapse" id="confignorte" aria-expanded="false">
                                                                             <ul class="nav pl-4">
                                                                                 <li @if ($pageSlug == 'profile') class="active " @endif>
                                                                                     <a href="{{ route('profile.edit') }}">
@@ -2225,7 +2243,7 @@
                                                                             </ul>
                                                                         </div>
 
-                                                                        <div class="collapse show" id="confignorte" aria-expanded="false">
+                                                                        <div class="collapse" id="confignorte" aria-expanded="false">
                                                                             <ul class="nav pl-4">
                                                                                 <li @if ($pageSlug == 'profile') class="active " @endif>
                                                                                     <a href="{{ route('profile.edit') }}">
@@ -2237,7 +2255,7 @@
                                                                             </ul>
                                                                         </div>
 
-                                                                        <div class="collapse show" id="confignorte" aria-expanded="false">
+                                                                        <div class="collapse" id="confignorte" aria-expanded="false">
                                                                             <ul class="nav pl-4">
                                                                                 <li @if ($pageSlug == 'profile') class="active " @endif>
                                                                                     <a href="{{ route('profile.edit') }}">
@@ -2249,7 +2267,7 @@
                                                                             </ul>
                                                                         </div>
 
-                                                                        <div class="collapse show" id="confignorte" aria-expanded="false">
+                                                                        <div class="collapse" id="confignorte" aria-expanded="false">
                                                                             <ul class="nav pl-4">
                                                                                 <li @if ($pageSlug == 'profile') class="active " @endif>
                                                                                     <a href="{{ route('profile.edit') }}">
@@ -2261,7 +2279,7 @@
                                                                             </ul>
                                                                         </div>
 
-                                                                        <div class="collapse show" id="confignorte" aria-expanded="false">
+                                                                        <div class="collapse" id="confignorte" aria-expanded="false">
                                                                             <ul class="nav pl-4">
                                                                                 <li @if ($pageSlug == 'profile') class="active " @endif>
                                                                                     <a href="{{ route('profile.edit') }}">
@@ -2273,7 +2291,7 @@
                                                                             </ul>
                                                                         </div>
 
-                                                                        <div class="collapse show" id="confignorte" aria-expanded="false">
+                                                                        <div class="collapse" id="confignorte" aria-expanded="false">
                                                                             <ul class="nav pl-4">
                                                                                 <li @if ($pageSlug == 'profile') class="active " @endif>
                                                                                     <a href="{{ route('profile.edit') }}">
@@ -2293,7 +2311,7 @@
                                                         <!--fim do norte-->
 
                                                         <!--inicio do sudeste-->
-                                                        <div class="collapse show" id="estado" aria-expanded="false">
+                                                        <div class="collapse" id="estado" aria-expanded="false">
                                                             <ul class="nav pl-4">
                                                                 <li @if ($pageSlug == 'profile') class="active " @endif>
                                                                     <a data-toggle="collapse" href="#sudeste" aria-expanded="false">
@@ -2303,7 +2321,7 @@
                                                                         <b class="caret mt-1"></b>
                                                                     </a>
 
-                                                                    <div class="collapse show" id="sudeste" aria-expanded="false">
+                                                                    <div class="collapse" id="sudeste" aria-expanded="false">
                                                                         <ul class="nav pl-4">
                                                                             <li @if ($pageSlug == 'profile') class="active " @endif>
                                                                                 <a href="{{ route('profile.edit') }}">
@@ -2315,7 +2333,7 @@
                                                                         </ul>
                                                                     </div>
 
-                                                                    <div class="collapse show" id="sudeste" aria-expanded="false">
+                                                                    <div class="collapse" id="sudeste" aria-expanded="false">
                                                                         <ul class="nav pl-4">
                                                                             <li @if ($pageSlug == 'profile') class="active " @endif>
                                                                                 <a href="{{ route('profile.edit') }}">
@@ -2327,7 +2345,7 @@
                                                                         </ul>
                                                                     </div>
 
-                                                                    <div class="collapse show" id="sudeste" aria-expanded="false">
+                                                                    <div class="collapse" id="sudeste" aria-expanded="false">
                                                                         <ul class="nav pl-4">
                                                                             <li @if ($pageSlug == 'profile') class="active " @endif>
                                                                                 <a href="{{ route('profile.edit') }}">
@@ -2339,7 +2357,7 @@
                                                                         </ul>
                                                                     </div>
 
-                                                                    <div class="collapse show" id="sudeste" aria-expanded="false">
+                                                                    <div class="collapse" id="sudeste" aria-expanded="false">
                                                                         <ul class="nav pl-4">
                                                                             <li @if ($pageSlug == 'profile') class="active " @endif>
                                                                                 <a href="{{ route('profile.edit') }}">
@@ -2357,7 +2375,7 @@
                                                         <!--fim do sudeste-->
                                                         <!--inicio do sul-->
 
-                                                            <div class="collapse show" id="estado" aria-expanded="false">
+                                                            <div class="collapse" id="estado" aria-expanded="false">
                                                                 <ul class="nav pl-4">
                                                                     <li @if ($pageSlug == 'profile') class="active " @endif>
                                                                         <a data-toggle="collapse" href="#sul" aria-expanded="false">
@@ -2365,7 +2383,7 @@
                                                                             <b class="caret mt-1"></b>
                                                                         </a>
 
-                                                                        <div class="collapse show" id="sul" aria-expanded="false">
+                                                                        <div class="collapse" id="sul" aria-expanded="false">
                                                                             <ul class="nav pl-4">
                                                                                 <li @if ($pageSlug == 'profile') class="active " @endif>
                                                                                     <a href="{{ route('profile.edit') }}">
@@ -2377,7 +2395,7 @@
                                                                             </ul>
                                                                         </div>
 
-                                                                        <div class="collapse show" id="sul" aria-expanded="false">
+                                                                        <div class="collapse" id="sul" aria-expanded="false">
                                                                             <ul class="nav pl-4">
                                                                                 <li @if ($pageSlug == 'profile') class="active " @endif>
                                                                                     <a href="{{ route('profile.edit') }}">
@@ -2389,7 +2407,7 @@
                                                                             </ul>
                                                                         </div>
 
-                                                                        <div class="collapse show" id="sul" aria-expanded="false">
+                                                                        <div class="collapse" id="sul" aria-expanded="false">
                                                                             <ul class="nav pl-4">
                                                                                 <li @if ($pageSlug == 'profile') class="active " @endif>
                                                                                     <a href="{{ route('profile.edit') }}">
@@ -2412,7 +2430,7 @@
                                     </ul>
                                 </div>
 
-                                <div  class="collapse show" id="configuracaoadministradores" aria-expanded="false" >
+                                <div  class="collapse" id="configuracaoadministradores" aria-expanded="false" >
                                     <ul class="nav pl-4">
                                         <li @if ($pageSlug == 'profile') class="active " @endif>
                                             <a  href="{{ route('profile.edit') }}">
@@ -2422,7 +2440,7 @@
                                                 <b class="caret mt-1"></b>
                                             </a>
 
-                                            <div  class="collapse show" id="configuracaoadministradoresfiltro" aria-expanded="false" >
+                                            <div  class="collapse" id="configuracaoadministradoresfiltro" aria-expanded="false" >
                                                 <ul class="nav pl-4">
                                                     <li @if ($pageSlug == 'profile') class="active " @endif>
                                                         <a  href="{{ route('profile.edit') }}">
@@ -2435,7 +2453,7 @@
                                                 </ul>
                                             </div>
 
-                                            <div  class="collapse show" id="configuracaoadministradoresfiltro" aria-expanded="false" >
+                                            <div  class="collapse" id="configuracaoadministradoresfiltro" aria-expanded="false" >
                                                 <ul class="nav pl-4">
                                                     <li @if ($pageSlug == 'profile') class="active " @endif>
                                                         <a  href="{{ route('profile.edit') }}">
@@ -2460,7 +2478,7 @@
                 </div>
 
                 
-                 <div  class="collapse show" id="configuracao" aria-expanded="false" >
+                 <div  class="collapse" id="configuracao" aria-expanded="false" >
                     <ul class="nav pl-4">
                         <li @if ($pageSlug == 'profile') class="active " @endif>
                             <a  href="{{ route('profile.edit') }}">
@@ -2471,7 +2489,7 @@
                     </ul>
                 </div>
 
-                <div  class="collapse show" id="configuracao" aria-expanded="false" >
+                <div  class="collapse" id="configuracao" aria-expanded="false" >
                     <ul class="nav pl-4">
                         <li @if ($pageSlug == 'profile') class="active " @endif>
                             <a  href="{{ route('profile.edit') }}">
@@ -2483,7 +2501,7 @@
                 </div>
 
                 
-                 <div  class="collapse show" id="configuracao" aria-expanded="false" >
+                 <div  class="collapse" id="configuracao" aria-expanded="false" >
                     <ul class="nav pl-4">
                         <li @if ($pageSlug == 'profile') class="active " @endif>
                             <a  href="{{ route('profile.edit') }}">
@@ -2494,7 +2512,7 @@
                     </ul>
                 </div>
 
-                <div  class="collapse show" id="configuracao" aria-expanded="false" >
+                <div  class="collapse" id="configuracao" aria-expanded="false" >
                     <ul class="nav pl-4">
                         <li @if ($pageSlug == 'profile') class="active " @endif>
                             <a  href="{{ route('profile.edit') }}">
