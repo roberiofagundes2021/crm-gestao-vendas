@@ -62,17 +62,7 @@ use App\Http\Controllers\Web4TarefaResponsavelController;
 use App\Http\Controllers\TarefaController;
 use App\Http\Controllers\EmpresaController;
 use App\Http\Controllers\NegocioController;
-
-
-
-
-
-
-
-
-
-
-
+use App\Http\Controllers\RelatorioController;
 
 
 /*
@@ -574,6 +564,22 @@ Route::get('/index/Negocio',[NegocioController::class,'index'])->name('Negocio.i
 Route::delete('/Negocio/{id}',[NegocioController::class,'destroy'])->name('Negocio.delete');
 Route::post('/Negocio/edit/{id}',[NegocioController::class,'edit'])->name('Negocio.edit');
 Route::put('/Negocio/update/{id}',[NegocioController::class,'update'])->name('Negocio.update');
+
+Route::get('/create/Tarefa',[TarefaController::class,'create'])->name('Tarefa.create');
+Route::post('/create/Tarefa',[TarefaController::class,'create'])->name('Tarefa.create');
+Route::post('/store/Tarefa',[TarefaController::class,'store'])->name('Tarefa.store');
+Route::get('/index/Tarefa',[TarefaController::class,'index'])->name('Tarefa.index');
+Route::delete('/Tarefa/{id}',[TarefaController::class,'destroy'])->name('Tarefa.delete');
+Route::post('/Tarefa/edit/{id}',[TarefaController::class,'edit'])->name('Tarefa.edit');
+Route::put('/Tarefa/update/{id}',[TarefaController::class,'update'])->name('Tarefa.update');
+
+Route::get('/create/Relatorio',[RelatorioController::class,'create'])->name('Relatorio.create');
+Route::post('/create/Relatorio',[RelatorioController::class,'create'])->name('Relatorio.create');
+Route::post('/store/Relatorio',[RelatorioController::class,'store'])->name('Relatorio.store');
+Route::get('/index/Relatorio',[RelatorioController::class,'index'])->name('Relatorio.index');
+Route::delete('/Relatorio/{id}',[RelatorioController::class,'destroy'])->name('Relatorio.delete');
+Route::post('/Relatorio/edit/{id}',[RelatorioController::class,'edit'])->name('Relatorio.edit');
+Route::put('/Relatorio/update/{id}',[RelatorioController::class,'update'])->name('Relatorio.update');
 
 
 
